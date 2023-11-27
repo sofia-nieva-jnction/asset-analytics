@@ -114,7 +114,7 @@ else:
 
     with col5:
         st.markdown(f'Available Dates')
-        st.dataframe(radar['datetime'].apply(lambda x: x.date()).drop_duplicates().sort_values(),
+        st.dataframe(pd.to_datetime(radar['datetime']).apply(lambda x: x.date()).drop_duplicates().sort_values(),
                      hide_index=True, use_container_width=True, height=250)
 
     if attribute_trace1 in radar_summary_day1.attribute.tolist():      
@@ -152,7 +152,7 @@ else:
 
     with col8:
         st.markdown(f'Available Dates')
-        st.dataframe(radar['datetime'].apply(lambda x: x.date()).drop_duplicates().sort_values(), 
+        st.dataframe(pd.to_datetime(radar['datetime']).apply(lambda x: x.date()).drop_duplicates().sort_values(), 
                      hide_index=True, use_container_width=True, height=250)
 
     if attribute_trace2 in radar_summary_day2.attribute.tolist():      
