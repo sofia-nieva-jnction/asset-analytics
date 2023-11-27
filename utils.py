@@ -93,7 +93,7 @@ def radar_trace_plot(asset_class, radar, day, timeline, attribute, other):
         fig.add_vline(x=pd.to_datetime(row['Time']))
 
         fig.add_annotation(x=pd.to_datetime(row['Time']), xanchor='left', 
-                        y=1-i*0.1, yref="paper", font_size=18, #font_color='black',
+                        y=1-i*0.1, yref="paper", font_size=18, font_color='black',
                         text=f"<b>{row['Event']}</b>", showarrow=False)
         
     fig.update_layout(height=450, width=1060,
