@@ -74,7 +74,7 @@ with col2:
 
 
 st.subheader(f'RADAR traces')
-if asset_number not in [563000, 884652, 7439162, 866066, 765267]:
+if asset_number not in ['563000', '884652', '7439162', '866066', '765267']:
     st.text('No RADAR Traces for this Asset')
 else:
     radar = get_radar_data(asset_number)
