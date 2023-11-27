@@ -16,7 +16,7 @@ def get_l1(route):
 @st.cache_data
 def get_l2(route, asset_class):
     df = pd.read_csv('l2.csv')
-    df_filtered = df[df.group_class==asset_class]
+    df_filtered = df[(df.group_class==asset_class) & (df.route==route)]
     return df_filtered.drop(columns=['group_class'])
 
 
