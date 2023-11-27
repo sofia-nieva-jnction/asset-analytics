@@ -81,7 +81,7 @@ else:
     class_attributes_traces = pd.read_csv(f'class_attributes_traces_{asset_class}.csv').values.flatten().tolist()
     class_attributes_other =  pd.read_csv(f'class_attributes_other_{asset_class}.csv').values.flatten().tolist()
     radar_summary = pd.read_csv(f'radar_summary_{asset_number}.csv')
-    radar['datetime'] = pd.to_datetime(radar['datetime'])
+    #radar['datetime'] = pd.to_datetime(radar['datetime'])
     radar_summary['date'] = pd.to_datetime(radar_summary['date'])
 
     st.markdown('Select days to analyse or compare:')
