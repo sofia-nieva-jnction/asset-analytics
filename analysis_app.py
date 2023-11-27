@@ -82,7 +82,7 @@ else:
     class_attributes_other =  pd.read_csv(f'class_attributes_other_{asset_class}.csv').values.flatten().tolist()
     radar_summary = pd.read_csv(f'radar_summary_{asset_number}.csv')
     #radar['datetime'] = pd.to_datetime(radar['datetime'])
-    radar_summary['date'] = pd.to_datetime(radar_summary['date'])
+    #radar_summary['date'] = pd.to_datetime(radar_summary['date'])
 
     st.markdown('Select days to analyse or compare:')
 
@@ -106,8 +106,8 @@ else:
 
     with col4:
         st.markdown(f"RADAR summary for {day1.strftime('%A')} {str(day1)}")
-        radar_summary_day1 = radar_summary[radar_summary['date']==day1].reset_index(drop=True)
-        st.dataframe(radar_summary_day1, use_container_width=True)
+        radar_summary_day1 = radar_summary[radar_summary['date']==str(day1)].reset_index(drop=True)
+        st.dataframe(radar_summary_day1, use_container_width=True)563000
 
     with space3:
         st.write('') 
@@ -144,7 +144,7 @@ else:
 
     with col7:
         st.markdown(f"RADAR summary for {day2.strftime('%A')} {str(day2)}")
-        radar_summary_day2 = radar_summary[radar_summary['date']==day2].reset_index(drop=True)
+        radar_summary_day2 = radar_summary[radar_summary['date']==str(day2)].reset_index(drop=True)
         st.dataframe(radar_summary_day2, use_container_width=True)
 
     with space5:
