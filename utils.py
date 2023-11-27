@@ -48,7 +48,7 @@ def timeline_plot(timeline, fault_number, asset_number):
     
     return fig
 
-#@st.cache_data
+@st.cache_data
 def radar_trace_plot(asset_class, radar, day, timeline, attribute, other):
     asset = radar.iloc[0]['asset']
     radar_day = radar[(radar.datetime > str(day)) & (radar.datetime < str(day + datetime.timedelta(days=1)))].copy().sort_values('datetime')
@@ -60,7 +60,7 @@ def radar_trace_plot(asset_class, radar, day, timeline, attribute, other):
         if other is not None and other.split('_')[-1] in ['Average', 'Peak']:
             attributes = attributes + [other]
         df = radar_day[radar_day.attribute.isin(attributes)]
-        df['datetime'] = pd.to_datetime(df['datetime'], format='%d/%m/%Y %H:%M:%S.%f')
+        df['datetime'] = pd.to_datetime(df['datetime'], format='%d-%m-%Y %H:%M:%S.%f')
         fig = px.scatter(df, x='datetime', y='value', labels={'value': f"{attribute.replace('_', ' ')} Value", 'datetime':''}, color='attribute',
                      template='plotly_white', color_discrete_map=dict(zip(attributes, ['blue', 'green', 'red'])))
         if other is not None and (other.split('_')[-1] == 'Length' or other=='Movement_Direction_Indicator'):
@@ -74,7 +74,7 @@ def radar_trace_plot(asset_class, radar, day, timeline, attribute, other):
         
     else:
         df = radar_day[radar_day.attribute.isin([attribute])]
-        df['datetime'] = pd.to_datetime(df['datetime'], format='%d/%m/%Y %H:%M:%S.%f')
+        df['datetime'] = pd.to_datetime(df['datetime'], format='%d-%m-%Y %H:%M:%S.%f')
         fig = px.scatter(df, x='datetime', y='value', labels={'value': f"{attribute.replace('_', ' ')} Value", 'datetime':''}, 
                      template='plotly_white')
 
