@@ -107,7 +107,7 @@ else:
     with col4:
         st.markdown(f"RADAR summary for {day1.strftime('%A')} {str(day1)}")
         radar_summary_day1 = radar_summary[radar_summary['date']==str(day1)].reset_index(drop=True)
-        st.dataframe(radar_summary_day1, use_container_width=True)563000
+        st.dataframe(radar_summary_day1, use_container_width=True)
 
     with space3:
         st.write('') 
