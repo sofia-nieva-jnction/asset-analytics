@@ -48,7 +48,7 @@ def timeline_plot(timeline, fault_number, asset_number):
     
     return fig
 
-@st.cache_data
+#@st.cache_data
 def radar_trace_plot(asset_class, radar, day, timeline, attribute, other):
     asset = radar.iloc[0]['asset']
     radar_day = radar[(radar.datetime > str(day)) & (radar.datetime < str(day + datetime.timedelta(days=1)))].copy().sort_values('datetime')
