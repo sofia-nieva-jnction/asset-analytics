@@ -89,12 +89,14 @@ def radar_trace_plot(asset_class, radar, day, timeline, attribute, other):
                      )
 
     day_timeline = timeline[(timeline['Time'] > str(day)) & (timeline['Time'] < str(day + datetime.timedelta(days=1)))]
+    count_vlines = 0
     for i, row in day_timeline.iterrows():
         fig.add_vline(x=pd.to_datetime(row['Time']))
 
         fig.add_annotation(x=pd.to_datetime(row['Time']), xanchor='left', 
                         y=1-i*0.1, yref="paper", font_size=18, font_color='black',
                         text=f"<b>{row['Event']}</b>", showarrow=False)
+        count_vlines = i
         
     fig.update_layout(height=450, width=1060,
                      title_yanchor ='top', #title_y=0.85,
@@ -108,7 +110,7 @@ def radar_trace_plot(asset_class, radar, day, timeline, attribute, other):
             fig.add_vline(x=d, line_color='darkmagenta', line_width=1)
         if other is not None:
             fig.add_annotation(x=d, xanchor='left', font_color='darkmagenta',
-                            y=1-(i+1)*0.1, yref="paper", font_size=18,
+                            y=1-(count_vlines+1)*0.1, yref="paper", font_size=18,
                             text=f"<b>{other.replace('_', ' ')}</b>", showarrow=False)
 
     return fig
