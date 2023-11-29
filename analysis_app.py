@@ -126,7 +126,10 @@ else:
     col6, space4, col7, space5, col8 = st.columns([0.4, 0.03, 0.5, 0.03, 0.1])
 
     with col6:
-        default_day2 = datetime.datetime.strptime(timeline[timeline['Event']=='In Order'].Time.values[0], '%Y-%m-%d %H:%M:%S').date()
+        try:
+            default_day2 = datetime.datetime.strptime(timeline[timeline['Event']=='In Order'].Time.values[0], '%Y-%m-%d %H:%M:%S').date()
+        except:
+            default_day2 = default_day1
         default_day2 = default_day2 if default_day2!=default_day1 else default_day2 + datetime.timedelta(days=1)
         day2 = st.date_input("Select Day", default_day2, key='day2')
         
