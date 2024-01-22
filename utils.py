@@ -7,6 +7,10 @@ import sqlalchemy
 import streamlit as st
 import numpy as np
 
+@st.cache_data
+def get_l0(route):
+    df = pd.read_csv('l0.csv')
+    return df[df.route==route]
 
 @st.cache_data
 def get_l1(route):
@@ -18,6 +22,82 @@ def get_l2(route, asset_class):
     df = pd.read_csv('l2.csv')
     df_filtered = df[(df.group_class==asset_class) & (df.route==route)]
     return df_filtered.drop(columns=['group_class'])
+
+@st.cache_data
+def get_work_orders(asset_number):
+    df = pd.read_csv(f'work_orders_{asset_number}.csv')
+    return df
+
+@st.cache_data
+def get_worst_perfoming_table(route, asset_class):
+    df = pd.read_csv(f'worst_performing_table_{route}_{asset_class}.csv')
+    return df
+
+
+@st.cache_data
+def get_data_example(asset_number, fault_number):
+    radar = pd.read_csv(f'radar_{asset_number}_{fault_number}_eg.csv')
+    timeline = pd.read_csv(f'timeline_{asset_number}_{fault_number}_eg.csv')
+    day1 = datetime.datetime.strptime(min(timeline.Time), '%Y-%m-%d %H:%M:%S').date()
+    ellipse_details = pd.read_csv(f'ellipse_details_{asset_number}_{fault_number}_eg.csv')
+    faults_list = pd.read_csv(f'faults_list_{asset_number}_{fault_number}_eg.csv')
+    return radar, day1, timeline, ellipse_details, faults_list
+
+@st.cache_data
+def get_berth_steps(asset_number):
+    return pd.read_csv(f'berth_steps_{asset_number}_{fault_number}_eg.csv')
+
+@st.cache_data
+def plot_vertical_histograms(table, y_col, y_name):
+    cat_order = table.sort_values('fms_failures_count_6m_2020', ascending=True)[y_col].to_list()
+
+    fig = make_subplots(rows=1, cols=2, shared_yaxes=True, 
+                        subplot_titles=['Number of Failures (Jan - Jun 2020)', 'Percentage of Assets with RADAR data'])
+
+    fig.add_trace(go.Bar(y=table[y_col], x=table['fms_failures_count_6m_2020'],
+                            hovertemplate="Total Failures: %{x}<br><extra></extra>", showlegend=False,
+                            # text=table['fms_failures_count_6m_2020'], textposition='auto'
+                            ), 
+                row=1, col=1)
+    fig.add_trace(go.Bar(y=table[y_col], x=table['count_service_affecting_faults_6m_2020'],
+                            hovertemplate="Service Affecting<br>Failures: %{x}<br><extra></extra>", showlegend=False,
+                            # text=table['count_service_affecting_faults_6m_2020'], textposition='auto'
+                            ),
+                row=1, col=1)
+    fig.add_trace(go.Bar(y=table[y_col], x=table['has_radar_percentage']/100, marker_color='green', opacity=0.7,
+                            hovertemplate="Assets with RADAR<br>data: %{x}<br><extra></extra>", showlegend=False,
+                            # text=table['has_radar_percentage']/100, textposition='auto'
+                            ), 
+                row=1, col=2)
+    
+    fig.update_yaxes(title=y_name, row=1, col=1, showgrid=True, showline=True) 
+    fig.update_xaxes(tickformat = '.0%', row=1, col=2, showgrid=True) 
+    fig.update_yaxes(row=1, col=2, showgrid=True, showline=True) 
+    fig.update_xaxes(row=1, col=1, showgrid=True) 
+    fig.update_traces(orientation = 'h')
+    fig.update_layout(barmode="overlay", bargap=0.1,
+                      yaxis={'categoryorder': 'array', 'categoryarray':cat_order},
+                      height=400, margin=dict(l=20,r=0,b=0,t=20))
+    
+    return fig
+
+@st.cache_data
+def highlight_threshold(cell, condition, threshold):
+    attr = 'background-color: {}'.format('rgba(229, 40, 23, 0.5)')
+    if condition=='Greater than':
+        highlight = (cell>threshold)
+    elif condition=='Less than':
+        highlight = (cell<threshold)
+    elif condition=='Equal to':
+        highlight = (cell==threshold)
+    elif condition=='Greater than or Equal to':
+        highlight = (cell>=threshold)
+    elif condition=='Less than or Equal to':
+        highlight = (cell<=threshold) 
+    return attr if highlight else ''
+
+
+
 
 
 @st.cache_data
