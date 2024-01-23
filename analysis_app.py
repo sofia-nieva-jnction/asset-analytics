@@ -207,13 +207,13 @@ with tab1:
                                                             min_value=datetime.date(year=2020, month=1, day=1))
             with s2:
                 st.write('')
-              
+
+            class_attributes_traces = pd.read_csv(f'class_attributes_traces_{asset_class}.csv')
+            class_attributes_other = pd.read_csv(f'class_attributes_other_{asset_class}.csv')
+            work_orders_asset = get_work_orders(asset_number)
             if asset_class=='Signalling - TC - DC':
                 attribute = 'Circuit_Current'
                 count_attribute = 'Total_Occupations_Count'
-                class_attributes_traces = pd.read_sql(f"SELECT attribute FROM attributes_per_class apc WHERE asset_class_group_desc || ' - ' || asset_class_desc='{asset_class}' AND trace", con=engine).values.flatten().tolist()
-                class_attributes_other = pd.read_sql(f"SELECT attribute FROM attributes_per_class apc WHERE asset_class_group_desc || ' - ' || asset_class_desc='{asset_class}' AND not trace", con=engine).values.flatten().tolist()
-                work_orders_asset = get_work_orders(asset_number)
                 if not attribute in radar.attribute.unique():
                     st.text('Not enough RADAR Data for this Asset')
                 else:
@@ -230,9 +230,6 @@ with tab1:
                                  'Current_Waveform_NR_Length', 'Current_Waveform_RN_Length'],
                                 key='att_long_term_poe')
                 count_attribute = 'Total_Operations_NR' if 'NR' in attribute else 'Total_Operations_RN'
-                class_attributes_traces = pd.read_sql(f"SELECT attribute FROM attributes_per_class apc WHERE asset_class_group_desc || ' - ' || asset_class_desc='{asset_class}' AND trace", con=engine).values.flatten().tolist()
-                class_attributes_other = pd.read_sql(f"SELECT attribute FROM attributes_per_class apc WHERE asset_class_group_desc || ' - ' || asset_class_desc='{asset_class}' AND not trace", con=engine).values.flatten().tolist()
-                work_orders_asset = get_work_orders(asset_number)
                 if not attribute in radar.attribute.unique():
                     st.text('Not enough RADAR Data for this Asset')
                 else:
