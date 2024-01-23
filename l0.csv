@@ -1,0 +1,25 @@
+route,ellipse_asset_class_group_desc,ellipse_asset_count,fms_failures_count_6m_2020,count_service_affecting_faults_6m_2020,has_radar_percentage
+LNW North,Signalling,1510,2160.0,474.0,8.08
+LNW South,Signalling,1308,1687.0,447.0,5.28
+LNW South,Track,600,1088.0,156.0,0.0
+LNW North,Telecoms,724,931.0,17.0,0.0
+LNW North,Track,364,667.0,56.0,0.27
+LNW South,Telecoms,510,657.0,22.0,0.0
+LNW North,S&C (Signalling),441,621.0,151.0,55.78
+LNW South,S&C (Signalling),361,530.0,161.0,37.12
+LNW North,Boundary Measures,150,475.0,18.0,0.0
+LNW North,Conductor Rail Equipment,147,458.0,40.0,0.0
+LNW South,Conductor Rail Equipment,156,428.0,89.0,0.0
+LNW South,Boundary Measures,188,413.0,15.0,0.0
+LNW North,Level Crossing,111,252.0,35.0,0.0
+LNW South,Overhead Line Equipment,212,226.0,23.0,0.0
+LNW South,Distribution,174,215.0,12.0,0.0
+LNW North,Distribution,178,212.0,14.0,0.0
+LNW North,Overhead Line Equipment,158,182.0,26.0,0.0
+LNW North,Access Points,120,146.0,0.0,0.0
+LNW South,Level Crossing,58,133.0,20.0,0.0
+LNW North,Buildings & Structures,63,77.0,4.0,6.35
+LNW North,Fixed Plant,52,56.0,3.0,1.92
+LNW South,Buildings & Structures,48,55.0,1.0,6.25
+LNW South,Fixed Plant,49,51.0,2.0,10.2
+LNW South,Signage,16,16.0,0.0,0.0
