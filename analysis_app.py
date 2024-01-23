@@ -205,8 +205,17 @@ with tab1:
             with s2:
                 st.write('')
 
-            class_attributes_traces = pd.read_csv(f'class_attributes_traces_{asset_class}.csv')
-            class_attributes_other = pd.read_csv(f'class_attributes_other_{asset_class}.csv')
+            class_attributes_traces = ['Circuit_Current'] if asset_class=='Signalling - TC - DC' else ['Current_Waveform_NR', 'Current_Waveform_RN']
+            class_attributes_other = ['Clear_Occupied_Clear_Flick_Count', 'COC_Flick_Count',
+                                    'Excess_Current', 'High_Occupied_Current_Count', 'High_Occupied_Current_Count_Value',
+                                    'Low_Clear_Current', 'Low_Clear_Current_Count', 
+                                    'Low_Clear_Current_Count_Value', 'Occupied_Clear_Occupied_Flick_Count',
+                                    'OCO_Flick_Count', 'Poor_Shunt_Count', 'Poor_Shunt_Count_Value', 
+                                    'Total_Occupations_Count', 'Unstable_Clear_Current_Count', 'Unstable_Clear_Current_Count_Value'
+                                    ]  if asset_class=='Signalling - TC - DC' else ['Current_Waveform_NR_Average', 'Current_Waveform_RN_Average',
+                                                                                      'Current_Waveform_NR_Peak', 'Current_Waveform_RN_Peak',
+                                                                                      'Current_Waveform_NR_Length', 'Current_Waveform_RN_Length',
+                                                                                      'Total_Operations', 'Total_Operations_NR', 'Total_Operations_RN']
             work_orders_asset = get_work_orders(asset_number)
             if asset_class=='Signalling - TC - DC':
                 attribute = 'Circuit_Current'
@@ -282,16 +291,12 @@ with tab1:
                                                     key='day1')
 
                 day1_attributes = radar[(radar.datetime >= str(day1_start)) & (radar.datetime <= str(pd.to_datetime(day1_end) + datetime.timedelta(days=1)))]['attribute'].unique()
-                st.write(day1_attributes)
-                st.write(class_attributes_traces.values[0])
-                
-                st.write(class_attributes_traces.values.tolist())
-                st.write([x for x in class_attributes_traces if x in day1_attributes])
+
                 attribute_trace1 = st.selectbox('Select Attribute to plot',
-                                                [x for x in class_attributes_traces.values[0] if x in day1_attributes],
+                                                [x for x in class_attributes_traces if x in day1_attributes],
                                                 key = 'att1')
                 attribute_other1 = st.selectbox('Select other Attribute to plot',
-                                                [None] + [x for x in class_attributes_other.values[0] if x in day1_attributes],
+                                                [None] + [x for x in class_attributes_other if x in day1_attributes],
                                                 key = 'other1')
                 
                 day2_start = st.date_input("Select day to compare", None, key='day2', max_value=datetime.date(year=2020, month=7, day=6))
@@ -330,10 +335,10 @@ with tab1:
                     day2_attributes = radar[(radar.datetime >= str(day2_start)) & (radar.datetime <= str(pd.to_datetime(day2_end) + datetime.timedelta(days=1)))]['attribute'].unique()
 
                     attribute_trace2 = st.selectbox('Select Attribute to plot',
-                                                    [x for x in class_attributes_traces.values[0] if x in day2_attributes],
+                                                    [x for x in class_attributes_traces if x in day2_attributes],
                                                     key = 'att2')
                     attribute_other2 = st.selectbox('Select other Attribute to plot',
-                                                    [None] + [x for x in class_attributes_other.values[0] if x in day2_attributes],
+                                                    [None] + [x for x in class_attributes_other if x in day2_attributes],
                                                     key = 'other2')
                     
                 with space4:
