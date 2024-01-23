@@ -205,8 +205,8 @@ with tab1:
             with s2:
                 st.write('')
 
-            class_attributes_traces = pd.read_csv(f'class_attributes_traces_{asset_class}.csv')
-            class_attributes_other = pd.read_csv(f'class_attributes_other_{asset_class}.csv')
+            class_attributes_traces = pd.read_csv(f'class_attributes_traces_{asset_class}.csv').tolist()
+            class_attributes_other = pd.read_csv(f'class_attributes_other_{asset_class}.csv').tolist()
             work_orders_asset = get_work_orders(asset_number)
             if asset_class=='Signalling - TC - DC':
                 attribute = 'Circuit_Current'
