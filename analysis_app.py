@@ -286,10 +286,10 @@ with tab1:
                 st.write(class_attributes_traces)
                 st.write([x for x in class_attributes_traces if x in day1_attributes])
                 attribute_trace1 = st.selectbox('Select Attribute to plot',
-                                                [x for x in class_attributes_traces.values.tolist() if x in day1_attributes],
+                                                [x for x in class_attributes_traces.values if x in day1_attributes],
                                                 key = 'att1')
                 attribute_other1 = st.selectbox('Select other Attribute to plot',
-                                                [None] + [x for x in class_attributes_other.values.tolist() if x in day1_attributes],
+                                                [None] + [x for x in class_attributes_other.values if x in day1_attributes],
                                                 key = 'other1')
                 
                 day2_start = st.date_input("Select day to compare", None, key='day2', max_value=datetime.date(year=2020, month=7, day=6))
