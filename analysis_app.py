@@ -283,7 +283,9 @@ with tab1:
 
                 day1_attributes = radar[(radar.datetime >= str(day1_start)) & (radar.datetime <= str(pd.to_datetime(day1_end) + datetime.timedelta(days=1)))]['attribute'].unique()
                 st.write(day1_attributes)
-                st.write(class_attributes_traces)
+                st.write(class_attributes_traces.values)
+                
+                st.write(class_attributes_traces.values.tolist()
                 st.write([x for x in class_attributes_traces if x in day1_attributes])
                 attribute_trace1 = st.selectbox('Select Attribute to plot',
                                                 [x for x in class_attributes_traces.values if x in day1_attributes],
@@ -328,10 +330,10 @@ with tab1:
                     day2_attributes = radar[(radar.datetime >= str(day2_start)) & (radar.datetime <= str(pd.to_datetime(day2_end) + datetime.timedelta(days=1)))]['attribute'].unique()
 
                     attribute_trace2 = st.selectbox('Select Attribute to plot',
-                                                    [x for x in class_attributes_traces.values.tolist() if x in day2_attributes],
+                                                    [x for x in class_attributes_traces.values if x in day2_attributes],
                                                     key = 'att2')
                     attribute_other2 = st.selectbox('Select other Attribute to plot',
-                                                    [None] + [x for x in class_attributes_other.values.tolist() if x in day2_attributes],
+                                                    [None] + [x for x in class_attributes_other.values if x in day2_attributes],
                                                     key = 'other2')
                     
                 with space4:
