@@ -438,7 +438,8 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
                       template='plotly_white',
                       title_text=f"{q} {attribute.replace('_', ' ')} - Average over {h} hour windows / {count_attribute.replace('_', ' ')} per day"
                     )
- 
+
+    faults_list['failed_datetime'] = pd.to_datetime(faults_list['failed_datetime'])                                  
     for i, row in faults_list.iterrows():
         if i<len(faults_list)-1:
             next_failure = pd.to_datetime(faults_list.loc[i+1, 'failed_datetime']).date()
@@ -671,7 +672,8 @@ def plot_max_smoothed_and_count_points(date_start, date_end, attribute, count_at
                       template='plotly_white',
                       title_text=f"{attribute.replace('_', ' ')} - Average over {h} hour windows / {count_attribute.replace('_', ' ')} per day"
                     )
-    
+
+    faults_list['failed_datetime'] = pd.to_datetime(faults_list['failed_datetime'])    
     for i, row in faults_list.iterrows():
         if i<len(faults_list)-1:
             next_failure = pd.to_datetime(faults_list.loc[i+1, 'failed_datetime']).date()
