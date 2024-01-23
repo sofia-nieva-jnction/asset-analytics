@@ -22,6 +22,13 @@ def get_l2(route, asset_class):
     df_filtered = df[(df.group_class==asset_class) & (df.route==route)]
     return df_filtered.drop(columns=['group_class'])
 
+def get_list_assets(asset_class):
+    if asset_class=='S&C (Signalling) - Point Operating Equipment':
+        ret = [557646, 557668, 765375]
+    else:
+        ret = [563000]
+    return ret
+
 @st.cache_data
 def get_work_orders(asset_number):
     df = pd.read_csv(f'work_orders_{asset_number}.csv')
