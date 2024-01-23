@@ -12,7 +12,6 @@ def get_l0(route):
     df = pd.read_csv('l0.csv')
     return df[df.route==route]
 
-@st.cache_data
 def get_l1(route):
     df = pd.read_csv('l1.csv')
     return df[df.route==route]
