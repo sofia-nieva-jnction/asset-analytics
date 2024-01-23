@@ -113,7 +113,7 @@ def get_radar_data(asset_number):
 
 def get_radar_summary(asset_number):
     df = pd.read_csv(f'radar_summary_{asset_number}.csv')
-    df['date'] = pd.to_datetime(df['date'])
+    df['date'] = pd.to_datetime(df['date']).dt.date
     return df
 
 def get_ellipse_details(asset_number):
