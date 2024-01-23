@@ -51,7 +51,7 @@ def get_data_example(asset_number, fault_number):
     return radar, day1, timeline, ellipse_details, faults_list
 
 @st.cache_data
-def get_berth_steps(asset_number):
+def get_berth_steps(asset_number, fault_number):
     return pd.read_csv(f'berth_steps_{asset_number}_{fault_number}_eg.csv')
 
 def plot_vertical_histograms(table, y_col, y_name):
