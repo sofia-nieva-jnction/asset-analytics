@@ -251,7 +251,10 @@ with tab1:
                     st.write('')
                     st.write('')
                     day_diff = (trend_end-trend_start).days
-                    st.write(f'The change between {trend_start} and {trend_end} ({day_diff} days) was: {custom_trend_change_text}')
+                    try:
+                        st.write(f'The change between {trend_start} and {trend_end} ({day_diff} days) was: {custom_trend_change_text}')
+                    except:
+                        st.write(f'Try selecting other dates')
             
 
             st.subheader(f'Timeline of Failures')
