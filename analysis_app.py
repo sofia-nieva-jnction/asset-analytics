@@ -367,7 +367,7 @@ with tab2:
         asset_number = 563000
         fault_number = 891199
         radar, day, timeline, ellipse_details, faults_list = get_data_example(asset_number, fault_number)
-        berth_steps = get_berth_steps(asset_number)
+        berth_steps = get_berth_steps(asset_number, fault_number)
         berth = '0054'
         td = 'KN'
 
@@ -393,7 +393,7 @@ with tab2:
         asset_number = 840343
         fault_number = 890321
         radar, day, timeline, ellipse_details, faults_list = get_data_example(asset_number, fault_number)
-        berth_steps = get_berth_steps(asset_number)
+        berth_steps = get_berth_steps(asset_number, fault_number)
         berth = '5351'
         td = 'R2'
 
@@ -419,7 +419,7 @@ with tab2:
         asset_number = 840569
         fault_number = 893459
         radar, day, timeline, ellipse_details, faults_list = get_data_example(asset_number, fault_number)
-        berth_steps = get_berth_steps(asset_number)
+        berth_steps = get_berth_steps(asset_number, fault_number)
         berth = '1031'
         td = 'R2'
 
