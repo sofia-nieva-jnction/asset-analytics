@@ -225,7 +225,7 @@ def headcodes_plot(radar, day, timeline, attribute, other, berth_steps, berth, t
     radar_day = radar[(radar.datetime > str(day)) & (radar.datetime < str(day + datetime.timedelta(days=1)))].copy().sort_values('datetime')
 
     df = radar_day[radar_day.attribute.isin([attribute])]
-    df['datetime'] = pd.to_datetime(df['datetime'], format='%d/%m/%Y %H:%M:%S.%f')
+    df['datetime'] = pd.to_datetime(df['datetime'], format='%Y/%m/%d %H:%M:%S.%f')
     
     
     fig = make_subplots(rows=2, cols=1, row_heights=[5,1.2], shared_xaxes=True, vertical_spacing=0.05)
@@ -393,7 +393,7 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
     df.loc[maxs, 'is_extremum'] = 'max'
     df.loc[mins, 'is_extremum'] = 'min'
     
-    df['datetime'] = pd.to_datetime(df['datetime'], format='%d/%m/%Y %H:%M:%S.%f')
+    df['datetime'] = pd.to_datetime(df['datetime'], format='%Y/%m/%d %H:%M:%S.%f')
     df_smoothed_maxs = df[df.is_max][['datetime', 'value']].rolling(f'{h}H', center=True, on='datetime').mean()
     df_smoothed_mins = df[df.is_min][['datetime', 'value']].rolling(f'{h}H', center=True, on='datetime').mean()
 
