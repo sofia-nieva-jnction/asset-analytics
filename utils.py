@@ -109,6 +109,7 @@ def get_trends_table(route, asset_class, attribute_line_chart):
 
 def get_radar_data(asset_number):
     df = pd.read_csv(f'radar_{asset_number}.csv')
+    df['datetime'] = pd.to_datetime(df['datetime'])
     return df
 
 def get_radar_summary(asset_number):
