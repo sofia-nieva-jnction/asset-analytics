@@ -6,6 +6,8 @@ import plotly.graph_objects as go
 import sqlalchemy
 import streamlit as st
 import numpy as np
+from scipy.signal import find_peaks
+from sklearn.linear_model import LinearRegression
 
 @st.cache_data
 def get_l0(route):
