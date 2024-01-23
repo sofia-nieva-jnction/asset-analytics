@@ -28,7 +28,7 @@ def get_list_assets(asset_class):
     if asset_class=='S&C (Signalling) - Point Operating Equipment':
         ret = [557646, 557668, 765375]
     else:
-        ret = [563000]
+        ret = [563000, 884639, 884689, 884673, 884735, 884652, 563463]
     return ret
 
 @st.cache_data
