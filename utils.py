@@ -441,7 +441,7 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
  
     for i, row in faults_list.iterrows():
         if i<len(faults_list)-1:
-            next_failure = faults_list.loc[i+1, 'failed_datetime'].date()
+            next_failure = pd.to_datetime(faults_list.loc[i+1, 'failed_datetime']).date()
             cond = (next_failure - row['failed_datetime'].date() > pd.to_timedelta('20D'))
         else: 
             cond = True
@@ -674,7 +674,7 @@ def plot_max_smoothed_and_count_points(date_start, date_end, attribute, count_at
     
     for i, row in faults_list.iterrows():
         if i<len(faults_list)-1:
-            next_failure = faults_list.loc[i+1, 'failed_datetime'].date()
+            next_failure = pd.to_datetime(faults_list.loc[i+1, 'failed_datetime']).date()
             cond = (next_failure - row['failed_datetime'].date() > pd.to_timedelta('20D'))
         else: 
             cond = True
