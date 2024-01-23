@@ -375,7 +375,7 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
     
     df = radar_days[radar_days.attribute.isin([attribute])].reset_index(drop=True).copy()
     df_count = radar_days[radar_days.attribute.isin([count_attribute])].reset_index(drop=True).copy()
-    df_count['date'] = pd.to_datetime(df_count['date'])
+    df_count['datetime'] = pd.to_datetime(df_count['datetime'])
     df_count['date'] = df_count['datetime'].apply(lambda x: x.date())#df_count['datetime'].apply(lambda x: str(x.date()) + ' ' + str(x.hour).zfill(2) + ':00:00.000')
     
     signal = df['value'].to_numpy()
@@ -620,7 +620,7 @@ def plot_max_smoothed_and_count_points(date_start, date_end, attribute, count_at
     
     df = radar_days[radar_days.attribute.isin([attribute])].reset_index(drop=True).copy()
     df_count = radar_days[radar_days.attribute.isin([count_attribute])].reset_index(drop=True).copy()
-    df_count['date'] = pd.to_datetime(df_count['date'])                                   
+    df_count['datetime'] = pd.to_datetime(df_count['datetime'])                                   
     df_count['date'] = df_count['datetime'].apply(lambda x: x.date())#df_count['datetime'].apply(lambda x: str(x.date()) + ' ' + str(x.hour).zfill(2) + ':00:00.000')
     # alarms_types = [x for x in class_attributes_other if x not in [count_attribute]]
     # alarms = radar_days[radar_days.attribute.isin(alarms_types)].reset_index(drop=True).copy()
