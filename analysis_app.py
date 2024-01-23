@@ -17,7 +17,7 @@ tab1, tab2, = st.tabs(["Ellipse-FMS-RADAR merge", "Berth Data Merge Examples"])
 with tab1:
 
     route = st.selectbox('Select Route',
-                        ['LNW South', 'LNW North'],
+                        ['LNW South'],
                         key = 'route')
     relevant_classes = ['Signalling - TC - DC', 'S&C (Signalling) - Point Operating Equipment'] #'Signalling - TC - High Freq',
     
