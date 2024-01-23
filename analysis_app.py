@@ -209,49 +209,39 @@ with tab1:
                 st.write('')
               
             if asset_class=='Signalling - TC - DC':
-                if pd.read_sql(f"""SELECT NOT is_in_radar FROM analysis_level_2 WHERE ellipse_asset_number = {asset_number}""", con=engine).values[0][0]:
-                    st.text('No RADAR Traces for this Asset')
-                elif l2[l2['ellipse_asset_number']==int(asset_number)]['radar_ref_count_per_asset'].values[0]>1:
-                    st.text('More than one RADAR reference for this Asset')
+                attribute = 'Circuit_Current'
+                count_attribute = 'Total_Occupations_Count'
+                class_attributes_traces = pd.read_sql(f"SELECT attribute FROM attributes_per_class apc WHERE asset_class_group_desc || ' - ' || asset_class_desc='{asset_class}' AND trace", con=engine).values.flatten().tolist()
+                class_attributes_other = pd.read_sql(f"SELECT attribute FROM attributes_per_class apc WHERE asset_class_group_desc || ' - ' || asset_class_desc='{asset_class}' AND not trace", con=engine).values.flatten().tolist()
+                work_orders_asset = get_work_orders(asset_number)
+                if not attribute in radar.attribute.unique():
+                    st.text('Not enough RADAR Data for this Asset')
                 else:
-                    attribute = 'Circuit_Current'
-                    count_attribute = 'Total_Occupations_Count'
-                    class_attributes_traces = pd.read_sql(f"SELECT attribute FROM attributes_per_class apc WHERE asset_class_group_desc || ' - ' || asset_class_desc='{asset_class}' AND trace", con=engine).values.flatten().tolist()
-                    class_attributes_other = pd.read_sql(f"SELECT attribute FROM attributes_per_class apc WHERE asset_class_group_desc || ' - ' || asset_class_desc='{asset_class}' AND not trace", con=engine).values.flatten().tolist()
-                    work_orders_asset = get_work_orders(asset_number)
-                    if not attribute in radar.attribute.unique():
-                        st.text('Not enough RADAR Data for this Asset')
+                    if option == 'Yes' and trend_start!=datetime.date(year=2020, month=7, day=6) and trend_end!=datetime.date(year=2020, month=7, day=6):
+                        fig, custom_trend_change_text = plot_max_smoothed_and_count_tc('2020-01', '2020-07', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other, add_trend=True, trend_start=trend_start, trend_end=trend_end)
+                        st.plotly_chart(fig, use_container_width=True)
                     else:
-                        if option == 'Yes' and trend_start!=datetime.date(year=2020, month=7, day=6) and trend_end!=datetime.date(year=2020, month=7, day=6):
-                            fig, custom_trend_change_text = plot_max_smoothed_and_count_tc('2020-01', '2020-07', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other, add_trend=True, trend_start=trend_start, trend_end=trend_end)
-                            st.plotly_chart(fig, use_container_width=True)
-                        else:
-                            fig, _ = plot_max_smoothed_and_count_tc('2020-01', '2020-07', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other)
-                            st.plotly_chart(fig, use_container_width=True)
+                        fig, _ = plot_max_smoothed_and_count_tc('2020-01', '2020-07', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other)
+                        st.plotly_chart(fig, use_container_width=True)
             elif asset_class == 'S&C (Signalling) - Point Operating Equipment':
-                if pd.read_sql(f"""SELECT NOT is_in_radar FROM analysis_level_2 WHERE ellipse_asset_number = {asset_number}""", con=engine).values[0][0]:
-                    st.text('No RADAR Traces for this Asset')
-                elif l2[l2['ellipse_asset_number']==int(asset_number)]['radar_ref_count_per_asset'].values[0]>1:
-                    st.text('More than one RADAR reference for this Asset')
+                attribute = st.selectbox('Select Attribute to plot',
+                                ['Current_Waveform_NR_Average', 'Current_Waveform_RN_Average',
+                                 'Current_Waveform_NR_Peak', 'Current_Waveform_RN_Peak',
+                                 'Current_Waveform_NR_Length', 'Current_Waveform_RN_Length'],
+                                key='att_long_term_poe')
+                count_attribute = 'Total_Operations_NR' if 'NR' in attribute else 'Total_Operations_RN'
+                class_attributes_traces = pd.read_sql(f"SELECT attribute FROM attributes_per_class apc WHERE asset_class_group_desc || ' - ' || asset_class_desc='{asset_class}' AND trace", con=engine).values.flatten().tolist()
+                class_attributes_other = pd.read_sql(f"SELECT attribute FROM attributes_per_class apc WHERE asset_class_group_desc || ' - ' || asset_class_desc='{asset_class}' AND not trace", con=engine).values.flatten().tolist()
+                work_orders_asset = get_work_orders(asset_number)
+                if not attribute in radar.attribute.unique():
+                    st.text('Not enough RADAR Data for this Asset')
                 else:
-                    attribute = st.selectbox('Select Attribute to plot',
-                                    ['Current_Waveform_NR_Average', 'Current_Waveform_RN_Average',
-                                     'Current_Waveform_NR_Peak', 'Current_Waveform_RN_Peak',
-                                     'Current_Waveform_NR_Length', 'Current_Waveform_RN_Length'],
-                                    key='att_long_term_poe')
-                    count_attribute = 'Total_Operations_NR' if 'NR' in attribute else 'Total_Operations_RN'
-                    class_attributes_traces = pd.read_sql(f"SELECT attribute FROM attributes_per_class apc WHERE asset_class_group_desc || ' - ' || asset_class_desc='{asset_class}' AND trace", con=engine).values.flatten().tolist()
-                    class_attributes_other = pd.read_sql(f"SELECT attribute FROM attributes_per_class apc WHERE asset_class_group_desc || ' - ' || asset_class_desc='{asset_class}' AND not trace", con=engine).values.flatten().tolist()
-                    work_orders_asset = get_work_orders(asset_number)
-                    if not attribute in radar.attribute.unique():
-                        st.text('Not enough RADAR Data for this Asset')
+                    if option == 'Yes' and trend_start!=datetime.date(year=2020, month=7, day=6) and trend_end!=datetime.date(year=2020, month=7, day=6):
+                        fig, custom_trend_change_text = plot_max_smoothed_and_count_points('2020-01', '2020-07', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other, add_trend=True, trend_start=trend_start, trend_end=trend_end)
+                        st.plotly_chart(fig, use_container_width=True)
                     else:
-                        if option == 'Yes' and trend_start!=datetime.date(year=2020, month=7, day=6) and trend_end!=datetime.date(year=2020, month=7, day=6):
-                            fig, custom_trend_change_text = plot_max_smoothed_and_count_points('2020-01', '2020-07', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other, add_trend=True, trend_start=trend_start, trend_end=trend_end)
-                            st.plotly_chart(fig, use_container_width=True)
-                        else:
-                            fig, _ = plot_max_smoothed_and_count_points('2020-01', '2020-07', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other)
-                            st.plotly_chart(fig, use_container_width=True)
+                        fig, _ = plot_max_smoothed_and_count_points('2020-01', '2020-07', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other)
+                        st.plotly_chart(fig, use_container_width=True)
 
             with c3:
                 if option == 'Yes':
@@ -285,97 +275,92 @@ with tab1:
 
 
             st.subheader(f'Detail of RADAR Traces')
-            if pd.read_sql(f"""SELECT NOT is_in_radar FROM analysis_level_2 WHERE ellipse_asset_number = {asset_number}""", con=engine).values[0][0]:
-                st.text('No RADAR Traces for this Asset')
-            elif l2[l2['ellipse_asset_number']==int(asset_number)]['radar_ref_count_per_asset'].values[0]>1:
-                st.text('More than one RADAR reference for this Asset')
+            radar_summary = get_radar_summary(asset_number)
+
+            st.markdown('Select days to analyse or compare:')
+
+            col3, space2, col4, space3, col5 = st.columns([0.4, 0.03, 0.5, 0.03, 0.1])
+
+            with col3:   
+                default_day1 = datetime.datetime.strptime(min(timeline.Time), '%Y-%m-%d %H:%M:%S').date()
+                day1_start, day1_end = st.date_input("Select days",
+                                                    (default_day1 - datetime.timedelta(days=1), default_day1 + datetime.timedelta(days=1)),
+                                                    key='day1')
+
+                day1_attributes = radar[(radar.datetime >= str(day1_start)) & (radar.datetime <= str(pd.to_datetime(day1_end) + datetime.timedelta(days=1)))]['attribute'].unique()
+
+                attribute_trace1 = st.selectbox('Select Attribute to plot',
+                                                [x for x in class_attributes_traces if x in day1_attributes],
+                                                key = 'att1')
+                attribute_other1 = st.selectbox('Select other Attribute to plot',
+                                                [None] + [x for x in class_attributes_other if x in day1_attributes],
+                                                key = 'other1')
+                
+                day2_start = st.date_input("Select day to compare", None, key='day2', max_value=datetime.date(year=2020, month=7, day=6))
+                day2_end = day2_start
+                
+            with space2:
+                st.write('')    
+
+            with col4:
+                st.markdown(f"RADAR summary")# for {day1.strftime('%A')} {str(day1)}")
+                radar_summary_day1 = radar_summary[(radar_summary['date']>=day1_start) 
+                                                & (radar_summary['date']<=day1_end)
+                                                & (radar_summary['attribute']!=attribute_trace1)].sort_values(['date', 'attribute'])
+                radar_summary_day1['day'] = radar_summary_day1['date'].apply(lambda x: x.strftime('%A'))
+                radar_summary_day1 = radar_summary_day1[['asset', 'attribute', 'day', 'date', 'records_count']]
+                st.dataframe(radar_summary_day1, use_container_width=True, hide_index=True, height=300)
+
+            with space3:
+                st.write('') 
+
+            with col5:
+                st.markdown(f'Available Dates')
+                st.dataframe(radar['datetime'].apply(lambda x: x.date()).drop_duplicates().sort_values(),
+                            hide_index=True, use_container_width=True, height=300)
+
+            if attribute_trace1 in radar_summary[(radar_summary['date']>=day1_start) & (radar_summary['date']<=day1_end)].attribute.tolist():      
+                fig1 = radar_trace_plot(asset_class, radar, day1_start, day1_end, all_faults_timeline, attribute_trace1, attribute_other1)
+                st.plotly_chart(fig1, use_container_width=True)
             else:
-                radar_summary = get_radar_summary(asset_number)
+                st.text('No RADAR Traces for this Day')
+                
+            if day2_start is not None:
+                col6, space4, col7, space5, col8 = st.columns([0.4, 0.03, 0.5, 0.03, 0.1])
 
-                st.markdown('Select days to analyse or compare:')
+                with col6:
+                    day2_attributes = radar[(radar.datetime >= str(day2_start)) & (radar.datetime <= str(pd.to_datetime(day2_end) + datetime.timedelta(days=1)))]['attribute'].unique()
 
-                col3, space2, col4, space3, col5 = st.columns([0.4, 0.03, 0.5, 0.03, 0.1])
-
-                with col3:   
-                    default_day1 = datetime.datetime.strptime(min(timeline.Time), '%Y-%m-%d %H:%M:%S').date()
-                    day1_start, day1_end = st.date_input("Select days",
-                                                        (default_day1 - datetime.timedelta(days=1), default_day1 + datetime.timedelta(days=1)),
-                                                        key='day1')
-
-                    day1_attributes = radar[(radar.datetime >= str(day1_start)) & (radar.datetime <= str(pd.to_datetime(day1_end) + datetime.timedelta(days=1)))]['attribute'].unique()
-
-                    attribute_trace1 = st.selectbox('Select Attribute to plot',
-                                                    [x for x in class_attributes_traces if x in day1_attributes],
-                                                    key = 'att1')
-                    attribute_other1 = st.selectbox('Select other Attribute to plot',
-                                                    [None] + [x for x in class_attributes_other if x in day1_attributes],
-                                                    key = 'other1')
+                    attribute_trace2 = st.selectbox('Select Attribute to plot',
+                                                    [x for x in class_attributes_traces if x in day2_attributes],
+                                                    key = 'att2')
+                    attribute_other2 = st.selectbox('Select other Attribute to plot',
+                                                    [None] + [x for x in class_attributes_other if x in day2_attributes],
+                                                    key = 'other2')
                     
-                    day2_start = st.date_input("Select day to compare", None, key='day2', max_value=datetime.date(year=2020, month=7, day=6))
-                    day2_end = day2_start
-                    
-                with space2:
-                    st.write('')    
+                with space4:
+                    st.write('')
 
-                with col4:
-                    st.markdown(f"RADAR summary")# for {day1.strftime('%A')} {str(day1)}")
-                    radar_summary_day1 = radar_summary[(radar_summary['date']>=day1_start) 
-                                                    & (radar_summary['date']<=day1_end)
-                                                    & (radar_summary['attribute']!=attribute_trace1)].sort_values(['date', 'attribute'])
-                    radar_summary_day1['day'] = radar_summary_day1['date'].apply(lambda x: x.strftime('%A'))
-                    radar_summary_day1 = radar_summary_day1[['asset', 'attribute', 'day', 'date', 'records_count']]
-                    st.dataframe(radar_summary_day1, use_container_width=True, hide_index=True, height=300)
+                with col7:
+                    st.markdown(f"RADAR summary")# for {day2.strftime('%A')} {str(day2)}")
+                    radar_summary_day2 = radar_summary[(radar_summary['date']>=day2_start) 
+                                                    & (radar_summary['date']<=day2_end)
+                                                    & (radar_summary['attribute']!=attribute_trace2)].sort_values(['date', 'attribute'])
+                    radar_summary_day2['day'] = radar_summary_day2['date'].apply(lambda x: x.strftime('%A'))
+                    radar_summary_day2 = radar_summary_day2[['asset', 'attribute', 'day', 'date', 'records_count']]
+                    st.dataframe(radar_summary_day2, use_container_width=True, hide_index=True)
 
-                with space3:
+                with space5:
                     st.write('') 
 
-                with col5:
-                    st.markdown(f'Available Dates')
-                    st.dataframe(radar['datetime'].apply(lambda x: x.date()).drop_duplicates().sort_values(),
-                                hide_index=True, use_container_width=True, height=300)
+                with col8:
+                    st.write('') 
 
-                if attribute_trace1 in radar_summary[(radar_summary['date']>=day1_start) & (radar_summary['date']<=day1_end)].attribute.tolist():      
-                    fig1 = radar_trace_plot(asset_class, radar, day1_start, day1_end, all_faults_timeline, attribute_trace1, attribute_other1)
-                    st.plotly_chart(fig1, use_container_width=True)
+                if attribute_trace2 in radar_summary[(radar_summary['date']>=day2_start) & (radar_summary['date']<=day2_end)].attribute.tolist():      
+                    fig2 = radar_trace_plot(asset_class, radar, day2_start, day2_end, all_faults_timeline, attribute_trace2, attribute_other2)     
+                    st.plotly_chart(fig2, use_container_width=True)
                 else:
                     st.text('No RADAR Traces for this Day')
-                    
-                if day2_start is not None:
-                    col6, space4, col7, space5, col8 = st.columns([0.4, 0.03, 0.5, 0.03, 0.1])
-
-                    with col6:
-                        day2_attributes = radar[(radar.datetime >= str(day2_start)) & (radar.datetime <= str(pd.to_datetime(day2_end) + datetime.timedelta(days=1)))]['attribute'].unique()
-
-                        attribute_trace2 = st.selectbox('Select Attribute to plot',
-                                                        [x for x in class_attributes_traces if x in day2_attributes],
-                                                        key = 'att2')
-                        attribute_other2 = st.selectbox('Select other Attribute to plot',
-                                                        [None] + [x for x in class_attributes_other if x in day2_attributes],
-                                                        key = 'other2')
-                        
-                    with space4:
-                        st.write('')
-
-                    with col7:
-                        st.markdown(f"RADAR summary")# for {day2.strftime('%A')} {str(day2)}")
-                        radar_summary_day2 = radar_summary[(radar_summary['date']>=day2_start) 
-                                                        & (radar_summary['date']<=day2_end)
-                                                        & (radar_summary['attribute']!=attribute_trace2)].sort_values(['date', 'attribute'])
-                        radar_summary_day2['day'] = radar_summary_day2['date'].apply(lambda x: x.strftime('%A'))
-                        radar_summary_day2 = radar_summary_day2[['asset', 'attribute', 'day', 'date', 'records_count']]
-                        st.dataframe(radar_summary_day2, use_container_width=True, hide_index=True)
-
-                    with space5:
-                        st.write('') 
-
-                    with col8:
-                        st.write('') 
-
-                    if attribute_trace2 in radar_summary[(radar_summary['date']>=day2_start) & (radar_summary['date']<=day2_end)].attribute.tolist():      
-                        fig2 = radar_trace_plot(asset_class, radar, day2_start, day2_end, all_faults_timeline, attribute_trace2, attribute_other2)     
-                        st.plotly_chart(fig2, use_container_width=True)
-                    else:
-                        st.text('No RADAR Traces for this Day')
 
 
 with tab2:
