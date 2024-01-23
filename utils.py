@@ -105,7 +105,6 @@ def get_trends_table(route, asset_class, attribute_line_chart):
     df = pd.read_csv(f'get_trends_table_{route}_{asset_class}_{attribute_line_chart}.csv')
     return df
 
-@st.cache_data
 def get_radar_data(asset_number):
     df = pd.read_csv(f'radar_{asset_number}.csv')
     return df
@@ -321,7 +320,6 @@ def headcodes_plot(radar, day, timeline, attribute, other, berth_steps, berth, t
     
     return fig
 
-@st.cache_data
 def alarms_near_failures(faults_list, radar, work_orders_asset, d=14):
     radar_filtered = radar.copy()
     radar_filtered['time'] = pd.to_datetime(radar_filtered.datetime).apply(lambda x: str(x.time()))
