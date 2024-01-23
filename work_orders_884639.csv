@@ -1,0 +1,16 @@
+route,asset_class,asset_number,work_order_number,work_order_description,raised_date,planned_start_date,completed_date,fault_code,extended_text,defect_desc,completion_comments
+LNW South,Signalling - TC - DC,884639,59411072,TRACK CIRCUITS: DC MEDIUM VOLTAGE,2019-12-13,2020-01-18,2020-01-20,,,,
+LNW South,Signalling - TC - DC,884639,60589115,TRACK CIRCUITS: DC MEDIUM VOLTAGE,2020-03-16,2020-03-21,2020-03-22,,,,
+LNW South,Signalling - TC - DC,884639,61533070,RESPOND TO RCM ALARM/ALERT,2020-04-16,,2020-04-16,," Checked through terminations 
+Checked IBJ's
+Checked through insulation's of points
+Tested cables from dis boxes to locat ions ",," Checked through terminations 
+Checked IBJ's
+Checked through insulation's of points
+Tested cables from dis boxes to locat ions "
+LNW South,Signalling - TC - DC,884639,61534037,PTS - ENHANCED POINT SERVICE,2020-05-07,,2020-05-07,,,," Investigated with instructions from. D.Perkin, please see eo sr for more detail "
+LNW South,Signalling - TC - DC,884639,61534045,RESPOND AND INVESTIGATE  S&T FAULT (SFI),2020-05-08,,2020-05-08,,,, Blockjoints cleaned 
+LNW South,Signalling - TC - DC,884639,61534398,RESPOND/INVESTIGATE S&T FAULT (NON SFI),2020-05-06,,2020-05-06,,,," Voltages taken,unable to replicate failure, temp restored se e EOSR "
+LNW South,Signalling - TC - DC,884639,61717088,TRACK CIRCUITS: DC MEDIUM VOLTAGE,2020-06-05,2020-06-13,2020-06-19,,,,
+LNW South,Signalling - TC - DC,884639,61717089,TRACK CIRCUITS: DC MEDIUM VOLTAGE,2020-06-05,2020-06-13,2020-06-19,,,,
+LNW South,Signalling - TC - DC,884639,61918573,TRACK CIRCUIT - MINOR REPAIR,2020-06-16,,2020-06-16,, Test track leads at feed end and relay end . Check through t rack and take. voltage ,, Test track leads at feed end and relay end . Check through t rack and take. voltage 

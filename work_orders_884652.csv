@@ -1,0 +1,9 @@
+route,asset_class,asset_number,work_order_number,work_order_description,raised_date,planned_start_date,completed_date,fault_code,extended_text,defect_desc,completion_comments
+LNW South,Signalling - TC - DC,884652,60272373,RESPOND TO RCM ALARM/ALERT,2020-02-18,,2020-02-19,, Check and test track . Door on location 122/2 open rain wate r on relay and fuses dry out fuse holders and relays ,, Check and test track . Door on location 122/2 open rain wate r on relay and fuses dry out fuse holders and relays 
+LNW South,Signalling - TC - DC,884652,60312276,TRACK CIRCUITS: HVI,2020-02-25,,2020-02-25,," Completed a u form on the affected track circuit 
+ ",," Completed a u form on the affected track circuit 
+ "
+LNW South,Signalling - TC - DC,884652,60389864,TRACK CIRCUITS: DC LOW VOLTAGE,2020-03-02,2020-03-07,2020-03-14,,,,
+LNW South,Signalling - TC - DC,884652,60389865,TRACK CIRCUITS: DC LOW VOLTAGE,2020-03-02,2020-03-07,2020-03-14,,,,
+LNW South,Signalling - TC - DC,884652,61036737,RECRIMP/RE-TERMINATE S&T CABLE CORE/WIRE,2020-04-09,,2020-04-09,, Replaced cam masters relay end ,, Replaced cam masters relay end 
+LNW South,Signalling - TC - DC,884652,61512810,TRACK CIRCUITS: DC LOW VOLTAGE,2020-05-21,2020-05-30,2020-06-02,,,,
