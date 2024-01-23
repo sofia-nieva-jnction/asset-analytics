@@ -1,678 +1,207 @@
-route,ellipse_asset_class_group_desc,ellipse_asset_class_desc,ellipse_asset_count,fms_failures_count_6m_2020,has_radar_percentage
-LNW North,S&C (Signalling),Point Operating Equipment,4654,666.0,28.08
-LNW South,S&C (Signalling),Point Operating Equipment,4818,556.0,16.67
-LNW North,Signalling,Sig - Colour,5593,508.0,0.0
-LNW South,Track,Track ID,6583,481.0,0.0
-LNW North,Boundary Measures,BOUNDARY SIDE,460,475.0,0.0
-LNW North,Conductor Rail Equipment,KE - Electrical Section,401,438.0,0.0
-LNW South,Conductor Rail Equipment,KE - Electrical Section,397,419.0,0.0
-LNW South,Track,S&C Unit,4869,405.0,0.0
-LNW North,Track,Track ID,4188,387.0,0.0
-LNW North,Signalling,TC - DC,8778,386.0,24.01
-LNW North,Level Crossing,Level Crossing,989,325.0,0.0
-LNW South,Boundary Measures,BOUNDARY SIDE,329,306.0,0.0
-LNW South,Signalling,Axle Counter,6106,277.0,0.0
-LNW North,Signalling,Sig - Semaphore,1285,254.0,0.0
-LNW South,Signalling,Sig - Colour,7213,236.0,0.0
-LNW South,Signalling,TC - DC,7103,222.0,11.71
-LNW South,Overhead Line Equipment,UI - OLE Structure,25709,216.0,0.0
-LNW North,Track,S&C Unit,5354,213.0,0.07
-LNW South,Telecoms,Telephones-LS,7788,195.0,0.0
-LNW North,Signalling,Mechanical Lever Equipment,1974,195.0,0.0
-LNW North,Telecoms,Telephone Non Lineside,4119,190.0,0.0
-LNW North,Overhead Line Equipment,UI - OLE Structure,27224,176.0,0.0
-LNW North,Telecoms,Telephones-LS,7052,172.0,0.0
-LNW South,Signalling,Intlok SS,14916,157.0,0.0
-LNW North,Access Points,Access Point,2831,146.0,0.04
-LNW South,Track,Underbridge,3700,144.0,0.0
-LNW South,Level Crossing,Level Crossing,589,139.0,0.0
-LNW North,Telecoms,Telecoms HMI,525,130.0,0.0
-LNW South,Signalling,TPWS,3748,130.0,0.0
-LNW South,Distribution,Signalling Supply,7475,127.0,0.0
-LNW South,Signalling,App Housing,12321,121.0,0.08
-LNW South,Boundary Measures,Access Point,2188,118.0,0.0
-LNW North,Signalling,Sigcont NX,99,117.0,0.0
-LNW North,Signalling,TC - High Freq,1844,114.0,2.93
-LNW North,Telecoms,Telecoms Concentrator,2434,99.0,0.0
-LNW North,Signalling,Axle Counter,1878,95.0,0.0
-LNW South,Telecoms,Telecoms HMI,433,94.0,0.0
-LNW North,Telecoms,Telecoms Power Supply,2812,93.0,0.0
-LNW North,Distribution,Signalling Supply,7391,88.0,0.0
-LNW South,Telecoms,Telecoms Radio Equipment,3063,86.0,0.0
-LNW North,Signalling,App Housing,11946,84.0,0.01
-LNW South,Signalling,SIGCONT,93,80.0,0.0
-LNW North,Signalling,TPWS,3282,78.0,0.0
-LNW South,Telecoms,Telecoms Power Supply,2527,75.0,0.0
-LNW South,Signalling,TC - High Freq,1581,70.0,4.68
-LNW North,Telecoms,Transmission (FTN),2654,66.0,0.0
-LNW North,Telecoms,Telecoms Radio Equipment,3328,65.0,0.0
-LNW South,Signalling,AWS,9643,57.0,0.0
-LNW North,Signalling,Train Describer,133,57.0,0.0
-LNW North,Telecoms,Transmission (Non FTN),1951,55.0,0.0
-LNW South,Telecoms,Transmission (FTN),2302,55.0,0.0
-LNW North,Signalling,Recorders,2670,53.0,0.45
-LNW South,Signalling,TC - Impulse,752,52.0,0.0
-LNW North,Signalling,AWS,6935,52.0,0.0
-LNW North,Buildings & Structures,Building,815,51.0,3.19
-LNW North,Signalling,Sig - Pos Light,2820,49.0,0.0
-LNW South,Signalling,Platform Indic,1072,45.0,0.0
-LNW South,Telecoms,Transmission (Non FTN),1229,45.0,0.0
-LNW South,Signalling,Sigcont NX,51,44.0,0.0
-LNW South,Signalling,HABD,176,44.0,0.0
-LNW South,Signalling,Sig - Pos Light,2496,43.0,0.0
-LNW South,Telecoms,Telecoms Concentrator,1718,42.0,0.0
-LNW South,Buildings & Structures,Building,944,41.0,3.07
-LNW South,Signalling,Train Describer,67,36.0,0.0
-LNW North,Signalling,Platform Indic,805,36.0,0.0
-LNW North,Signalling,Route Ind Sten,1425,35.0,0.0
-LNW South,Distribution,Circuit Breakers,1924,33.0,0.0
-LNW South,Telecoms,Telecoms Operational CCTV,514,33.0,0.0
-LNW North,Track,Underbridge,2026,33.0,0.0
-LNW South,Track,Overbridge,1532,32.0,0.0
-LNW North,Distribution,PV - Electricity Supply Point,1782,32.0,0.0
-LNW South,Signalling,Sig - Ban'r Rep,332,32.0,0.0
-LNW South,Telecoms,Telephone Non Lineside,1818,31.0,0.0
-LNW North,Signalling,Sigcont Elecmec,187,30.0,0.0
-LNW South,Distribution,PV - Electricity Supply Point,1425,30.0,0.0
-LNW North,Telecoms,Telecoms Recording Equipment,230,30.0,0.0
-LNW North,Buildings & Structures,Signal Box,163,29.0,0.0
-LNW South,Telecoms,Telecoms Site,2703,29.0,0.0
-LNW North,Signalling,HABD,121,28.0,0.0
-LNW South,Signalling,ATP,566,28.0,0.0
-LNW North,Distribution,JW - Traction Location,94,28.0,0.0
-LNW North,Signalling,Sig - Ban'r Rep,264,27.0,0.0
-LNW North,Signalling,Route Ind Jcn,899,26.0,0.0
-LNW North,Signalling,SIGCONT,75,25.0,0.0
-LNW North,Signalling,Sigcont Comb,19,24.0,0.0
-LNW North,Distribution,Circuit Breakers,1379,22.0,0.0
-LNW North,Fixed Plant,Point Heater,3282,22.0,0.09
-LNW North,Signalling,Intlok SS,2111,22.0,0.0
-LNW North,Signalling,TC - AC,303,22.0,15.51
-LNW North,Signalling,Route Ind Thr,508,21.0,0.0
-LNW North,Telecoms,Telecoms Remote Monitoring,636,21.0,0.0
-LNW North,Telecoms,Telecoms Site,4476,21.0,0.0
-LNW North,Conductor Rail Equipment,KF - Manual Sectioning Device,649,21.0,0.0
-LNW North,Signalling,RCS - TDM,391,20.0,0.0
-LNW South,Track,Access Point,218,19.0,0.0
-LNW North,Fixed Plant,Light InstalSys,2618,19.0,0.0
-LNW South,Distribution,JV - 25kV Switching Station,139,18.0,0.0
-LNW North,Signalling,TC - Impulse,324,18.0,0.0
-LNW North,Signalling,Intlok Relay,32,18.0,0.0
-LNW South,Distribution,Building,175,17.0,0.0
-LNW South,Signalling,Route Ind Sten,849,16.0,0.0
-LNW South,Signalling,Telemetry,305,16.0,0.0
-LNW South,Fixed Plant,Light InstalSys,3956,16.0,0.0
-LNW South,Signage,Reflective Sign,2464,16.0,0.0
-LNW South,Signalling,Route Ind Jcn,719,15.0,0.0
-LNW South,Signalling,Sig - Semaphore,603,15.0,0.0
-LNW South,Fixed Plant,Point Heater,3190,15.0,0.0
-LNW South,Signalling,Mechanical Lever Equipment,769,15.0,0.0
-LNW South,Telecoms,Telecoms Remote Monitoring,409,14.0,0.0
-LNW North,Telecoms,Telecoms Circuit,1120,14.0,0.0
-LNW South,Telecoms,Telecoms Recording Equipment,103,14.0,0.0
-LNW South,Signalling,Recorders,2257,13.0,1.55
-LNW South,Signalling,Route Ind Thr,700,13.0,0.0
-LNW North,Distribution,Circuit Short Devices,145,12.0,0.0
-LNW North,Level Crossing,Level Xing Gate,312,11.0,0.0
-LNW South,Fixed Plant,Diesel Alternator Set,168,11.0,0.0
-LNW North,Track,Overbridge,476,11.0,0.0
-LNW North,Signalling,Intlok Relay NG,70,11.0,0.0
-LNW South,Conductor Rail Equipment,KF - Manual Sectioning Device,305,11.0,0.0
-LNW North,Signalling,Telemetry,282,10.0,28.37
-LNW South,Signalling,Train Stop,52,10.0,0.0
-LNW South,Overhead Line Equipment,OLE Disconnectors,2451,10.0,0.0
-LNW North,Signalling,Intlok Elec,381,10.0,0.0
-LNW North,Distribution,SCADA Remote Terminal Units,62,10.0,0.0
-LNW North,Distribution,JV - 25kV Switching Station,82,9.0,0.0
-LNW North,Fixed Plant,Water Pumping Systems/Sets,151,8.0,0.0
-LNW North,Track,Reflective Sign,2214,8.0,0.0
-LNW South,Distribution,Transformers,1927,8.0,0.0
-LNW North,Distribution,Transformers,1669,8.0,0.0
-LNW South,Track,Illum Signs,1105,8.0,0.0
-LNW North,Track,End Stop,610,8.0,0.0
-LNW South,Buildings & Structures,Equip Support,4696,7.0,0.0
-LNW North,Track,Marker Post,5260,7.0,0.0
-LNW South,Buildings & Structures,Signal Box,84,6.0,0.0
-LNW North,Distribution,KA - AC High Voltage Cable,855,6.0,0.0
-LNW South,Level Crossing,Xing Warn Light,446,6.0,0.0
-LNW South,Track,End Stop,476,6.0,0.0
-LNW South,Fixed Plant,Point Heating Control Cabinet,632,6.0,37.82
-LNW North,Signalling,Intlok Mech,104,6.0,0.0
-LNW North,Track,RAIL FRICTION,2327,6.0,0.0
-LNW South,Telecoms,Internet Protocol,730,5.0,0.0
-LNW South,Signalling,Intlok Relay,60,5.0,0.0
-LNW North,Overhead Line Equipment,QJ - Neutral Section,151,5.0,0.0
-LNW South,Signalling,Intlok Elec,153,5.0,0.0
-LNW South,Track,Marker Post,2825,5.0,0.0
-LNW North,Fixed Plant,Diesel Alternator Set,93,5.0,0.0
-LNW South,Telecoms,Traction Supervisory Eqpt,125,4.0,0.0
-LNW South,Signalling,Lockout,1629,4.0,0.0
-LNW South,Signalling,Building,33,4.0,0.0
-LNW South,Telecoms,Telecoms Circuit,1266,4.0,0.0
-LNW North,Track,Tunnel Bore,86,3.0,0.0
-LNW North,Telecoms,Internet Protocol,509,3.0,0.0
-LNW South,Signalling,PSR Magnet,65,3.0,0.0
-LNW North,Fixed Plant,Building,802,3.0,0.0
-LNW North,Telecoms,Telecoms Operational CCTV,43,3.0,0.0
-LNW South,Telecoms,Virtual Telecoms Assets,28,3.0,0.0
-LNW North,Track,Illum Signs,2096,3.0,0.0
-LNW South,Track,Ex Bridge,357,3.0,0.0
-LNW South,Fixed Plant,Building,146,3.0,0.68
-LNW South,Track,RAIL FRICTION,1894,3.0,0.0
-LNW North,Signalling,RCS - Reed FDM,90,3.0,0.0
-LNW North,Signalling,Reflective Sign,792,3.0,0.0
-LNW South,Overhead Line Equipment,QJ - Neutral Section,205,3.0,0.0
-LNW South,Track,Sidebridge,319,2.0,0.0
-LNW South,Telecoms,TELECOMS CABLE - LINESIDE EQU,3435,2.0,0.0
-LNW North,Signalling,Train Stop,91,2.0,0.0
-LNW South,Distribution,SR - Earthing System,429,2.0,0.0
-LNW South,Distribution,SCADA Remote Terminal Units,4,2.0,0.0
-LNW North,Telecoms,Telecoms PABX Exchange,54,2.0,0.0
-LNW North,Telecoms,Telecoms Ops Lineside CCTV,25,2.0,0.0
-LNW North,Telecoms,Telecoms Mast,889,2.0,0.0
-LNW North,Signalling,Sig - LED,16,2.0,0.0
-LNW South,Signalling,Reflective Sign,431,2.0,0.0
-LNW South,Signalling,RCS - TDM,313,2.0,0.0
-LNW South,Distribution,KL - Harmonic Damper,68,2.0,0.0
-LNW South,Distribution,JW - Traction Location,38,2.0,0.0
-LNW North,Signalling,TC Interrupter,133,2.0,0.0
-LNW South,Distribution,HV Switches & Isolators,134,2.0,0.0
-LNW North,Boundary Measures,Access Point,622,2.0,0.0
-LNW South,Signalling,Ground Switch Panel,12,2.0,0.0
-LNW North,Distribution,Building,247,2.0,0.0
-LNW South,Fixed Plant,Water Pumping Systems/Sets,19,2.0,0.0
-LNW North,Distribution,KL - Harmonic Damper,46,1.0,0.0
-LNW South,Level Crossing,Level Xing Gate,72,1.0,0.0
-LNW South,Signalling,TC Interrupter,93,1.0,0.0
-LNW North,Signalling,Signalling Cable,895,1.0,0.0
-LNW North,Overhead Line Equipment,Transformers,218,1.0,0.0
-LNW South,Signalling,Signalling Cable,1809,1.0,0.0
-LNW South,Signalling,Sig - LED,280,1.0,0.0
-LNW North,Distribution,Dist Ctrl Panel,374,1.0,0.0
-LNW North,Telecoms,TELECOMS CABLE - LINESIDE EQU,4463,1.0,0.0
-LNW South,Signalling,Sigcont Comb,3,1.0,0.0
-LNW North,Fixed Plant,Isolator notOLE,66,1.0,0.0
-LNW North,Distribution,OBSOLETE: DO NOT USE,2,1.0,0.0
-LNW South,Telecoms,Telecoms PABX Exchange,78,1.0,0.0
-LNW North,Signalling,Intlok Elecmech,51,1.0,0.0
-LNW South,Signalling,Intlok Relay NG,33,1.0,0.0
-LNW South,Signalling,Intlok Mech,34,1.0,0.0
-LNW North,Fixed Plant,Point Heating Control Cabinet,703,1.0,32.01
-LNW North,Signalling,Ground Switch Panel,31,1.0,0.0
-LNW North,Overhead Line Equipment,OLE Disconnectors,1909,1.0,0.0
-LNW North,Telecoms,Traction Supervisory Eqpt,2,1.0,0.0
-LNW North,Distribution,HV Switches & Isolators,41,1.0,0.0
-LNW South,Signalling,Point Operating Equipment,18,1.0,0.0
-LNW South,Buildings & Structures,Retaining Wall,156,1.0,0.0
-LNW North,Signalling,TOWS,10,1.0,0.0
-LNW North,Buildings & Structures,Equip Support,2626,1.0,0.0
-LNW South,Signalling,Trip Cock Test,7,1.0,0.0
-LNW North,Signalling,Point Indicator,5,1.0,0.0
-LNW South,Signalling,BALISE Equipment,712,1.0,0.0
-LNW South,Buildings & Structures,ATP,1,0.0,0.0
-LNW South,Buildings & Structures,Depot,19,0.0,0.0
-LNW South,Buildings & Structures,OBSOLETE - DO NOT USE,2558,0.0,0.0
-LNW South,Buildings & Structures,Platform,695,0.0,0.0
-LNW South,Buildings & Structures,Security CCTV Systems,7,0.0,0.0
-LNW South,Buildings & Structures,Station,210,0.0,0.0
-LNW South,Buildings & Structures,Station Alarm System,112,0.0,0.0
-LNW South,Buildings & Structures,Subway,1,0.0,0.0
-LNW South,Buildings & Structures,Undertrack Xing,863,0.0,0.12
-LNW South,Buildings & Structures,VDU/PC Terminal,18,0.0,0.0
-LNW South,Conductor Rail Equipment,LV Cabling,240,0.0,0.0
-LNW South,Distribution,25Kv Fuse - SM,3,0.0,0.0
-LNW South,Distribution,Automatic re-configurator,992,0.0,0.0
-LNW South,Distribution,Busbars,288,0.0,0.0
-LNW South,Distribution,Circuit Short Devices,45,0.0,0.0
-LNW South,Distribution,Controlled Sectioning Devices,21,0.0,0.0
-LNW South,Distribution,Designated Earthing Point,2,0.0,0.0
-LNW South,Distribution,Diesel Alternator Set,3,0.0,0.0
-LNW South,Distribution,Dist Ctrl Panel,478,0.0,0.0
-LNW South,Distribution,High Volt Cble,5,0.0,0.0
-LNW South,Distribution,KA - AC High Voltage Cable,1580,0.0,0.0
-LNW South,Distribution,KB - Harmonic Filter,8,0.0,0.0
-LNW South,Distribution,LV Cabling,6217,0.0,0.0
-LNW South,Distribution,OBSOLETE: DO NOT USE,9,0.0,0.0
-LNW South,Distribution,OBSOLETE:  MSR AC & NTD DESIGN,3,0.0,0.0
-LNW South,Distribution,OBSOLETE:  MSR OLE DESIGN,323,0.0,0.0
-LNW South,Distribution,Phase Converter,1,0.0,0.0
-LNW South,Distribution,Pilot Cables,79,0.0,0.0
-LNW South,Distribution,Point Heater,18,0.0,0.0
-LNW South,Distribution,Point Heating Control Cabinet,5,0.0,0.0
-LNW South,Distribution,Power Transform,4,0.0,0.0
-LNW South,Distribution,Protection & Control Devices,2104,0.0,0.0
-LNW South,Distribution,QT - Charger,396,0.0,0.0
-LNW South,Distribution,Residual Current Circui Device,342,0.0,0.0
-LNW South,Distribution,RING MAIN UNIT,30,0.0,0.0
-LNW South,Distribution,SCADA CENTRAL,4,0.0,0.0
-LNW South,Distribution,SCADA Point to Point,13,0.0,0.0
-LNW South,Distribution,Shore Supply,32,0.0,0.0
-LNW South,Distribution,Switchboards,366,0.0,0.0
-LNW South,Distribution,Telemetry,4,0.0,0.0
-LNW South,Distribution,Temp Code for Eq Class JZ,72,0.0,0.0
-LNW South,Distribution,Temp Code for Eq Class KK,2,0.0,0.0
-LNW South,Distribution,Temp Code for Eq Class KL,1,0.0,0.0
-LNW South,Distribution,Temp Code for Eq Class RE,2,0.0,0.0
-LNW South,Distribution,TE - SCADA Distributed RTU,115,0.0,0.0
-LNW South,Distribution,UPS,255,0.0,0.0
-LNW South,Distribution,Volt Regulator,34,0.0,0.0
-LNW South,Drainage,Drainage 1/8 Mile Section,7747,0.0,0.0
-LNW South,Drainage,Drainage Area,730,0.0,0.0
-LNW South,Drainage,Drainage Link - Channel,4779,0.0,0.0
-LNW South,Drainage,Drainage Link -Covered Channel,567,0.0,0.0
-LNW South,Drainage,Drainage Link - Culvert,1990,0.0,0.0
-LNW South,Drainage,Drainage Link - Granular Drain,1261,0.0,0.0
-LNW South,Drainage,Drainage Link - Pipe,25285,0.0,0.0
-LNW South,Drainage,Drainage Link - Syphon,25,0.0,0.0
-LNW South,Drainage,Drainage Node - Chamber,24917,0.0,0.0
-LNW South,Drainage,Drainage Node - Inflow,817,0.0,0.0
-LNW South,Drainage,Drainage Node - Outfall,633,0.0,0.0
-LNW South,Drainage,Drainage Node - Point,10423,0.0,0.0
-LNW South,Drainage,Drainage Node - Pond,111,0.0,0.0
-LNW South,Drainage,Drainage Node - Soakaway,438,0.0,0.0
-LNW South,Drainage,Drainage Node - Structure,3488,0.0,0.0
-LNW South,Fixed Plant,Air Conditioning Systems,155,0.0,0.0
-LNW South,Fixed Plant,Air Con Sys,329,0.0,0.0
-LNW South,Fixed Plant,Air System/Compressor/Receiver,52,0.0,0.0
-LNW South,Fixed Plant,Anemometer,4,0.0,0.0
-LNW South,Fixed Plant,DOO Mirrors,114,0.0,0.0
-LNW South,Fixed Plant,Fire ProtectSys,21,0.0,0.0
-LNW South,Fixed Plant,Gas Supply,29,0.0,0.0
-LNW South,Fixed Plant,Generator,2,0.0,0.0
-LNW South,Fixed Plant,Lifting Equip,66,0.0,0.0
-LNW South,Fixed Plant,Security System,3,0.0,0.0
-LNW South,Fixed Plant,Sub Surface Heating,1,0.0,0.0
-LNW South,Fixed Plant,Sudbrook P.Stn,77,0.0,0.0
-LNW South,Fixed Plant,Water Supply,83,0.0,0.0
-LNW South,Level Crossing,CCTV Security,150,0.0,0.0
-LNW South,Level Crossing,Equip Support,1,0.0,0.0
-LNW South,Level Crossing,LC Aud Warn Sys,23,0.0,0.0
-LNW South,Level Crossing,LC Barrier Mech,229,0.0,0.0
-LNW South,Level Crossing,Level Xing Obstacle Detection,7,0.0,0.0
-LNW South,Level Crossing,Reflective Sign,8,0.0,0.0
-LNW South,Level Crossing,Surfacing,1,0.0,0.0
-LNW South,Level Crossing,TC - AC,8,0.0,0.0
-LNW South,Level Crossing,TC - DC,1,0.0,0.0
-LNW South,Lifting Equipment,UPS,1,0.0,0.0
-LNW South,Lighting System,Light InstalSys,1,0.0,0.0
-LNW South,Monitoring Equipment,Monitoring Equipment WILD/VHM,5,0.0,0.0
-LNW South,Overhead Line Equipment,MOSs,13,0.0,0.0
-LNW South,Overhead Line Equipment,OBSOLETE: DO NOT USE,1848,0.0,0.0
-LNW South,Overhead Line Equipment,OBSOLETE:  MSR OLE DESIGN,86,0.0,0.0
-LNW South,Overhead Line Equipment,OLE Area,53,0.0,0.0
-LNW South,Overhead Line Equipment,OLE Isol Motor,79,0.0,0.0
-LNW South,Overhead Line Equipment,OLE Patrol Area,349,0.0,0.0
-LNW South,Overhead Line Equipment,Other along-track conductors,739,0.0,0.0
-LNW South,Overhead Line Equipment,Pantograph Monitor,5,0.0,0.0
-LNW South,Overhead Line Equipment,QK - Section Insulator,1487,0.0,0.0
-LNW South,Overhead Line Equipment,QS - Traction Bonding,75,0.0,0.0
-LNW South,Overhead Line Equipment,Reflective Sign,256,0.0,0.0
-LNW South,Overhead Line Equipment,Structure Foundation / Fixing,4,0.0,0.0
-LNW South,Overhead Line Equipment,Temp Code for Eq Class QK,6,0.0,0.0
-LNW South,Overhead Line Equipment,Temp Code for Eq Class SD,276,0.0,0.0
-LNW South,Overhead Line Equipment,Transformers,261,0.0,0.0
-LNW South,Overhead Line Equipment,WR - OLE Wire Run,2134,0.0,0.0
-LNW South,Overhead Line Equipment,WT - OLE Wire Termination,4,0.0,0.0
-LNW South,Power Distribution,Designated Earthing Point,2,0.0,0.0
-LNW South,Power Distribution,Light InstalSys,1,0.0,0.0
-LNW South,Power Distribution,OLE Disconnectors,6,0.0,0.0
-LNW South,Power Distribution,Protection & Control Devices,9,0.0,0.0
-LNW South,Power Distribution,Transformers,1,0.0,0.0
-LNW South,Power Distribution,UPS,5,0.0,0.0
-LNW South,Power Supply Equipment,Residual Current Circui Device,1,0.0,0.0
-LNW South,S&C (Signalling),Free Standing Point Detection,3,0.0,0.0
-LNW South,S&C (Signalling),RAIL FRICTION,4,0.0,0.0
-LNW South,S&C (Signalling),Sig - Colour,1,0.0,0.0
-LNW South,S&C (Signalling),Stretcher Bar,13194,0.0,0.0
-LNW South,S&C (Signalling),Supplementary Drive,3851,0.0,0.0
-LNW South,S&C (Signalling),Switch Panel,8,0.0,0.0
-LNW South,Signalling,AirportTripWire,2,0.0,0.0
-LNW South,Signalling,Battery,214,0.0,0.0
-LNW South,Signalling,BOUNDARY MEASURE,3,0.0,0.0
-LNW South,Signalling,Busbar,203,0.0,0.0
-LNW South,Signalling,Cable Route,3505,0.0,0.0
-LNW South,Signalling,CCTV Security,2,0.0,0.0
-LNW South,Signalling,Data Logging Systems,16,0.0,0.0
-LNW South,Signalling,Discon Box,9831,0.0,0.0
-LNW South,Signalling,Equip Support,3,0.0,0.0
-LNW South,Signalling,Fence/Boundary,21,0.0,0.0
-LNW South,Signalling,Free Standing Point Detection,1118,0.0,0.0
-LNW South,Signalling,IBJ,12,0.0,0.0
-LNW South,Signalling,Illum Signs,11,0.0,0.0
-LNW South,Signalling,Impedance Bond,125,0.0,0.0
-LNW South,Signalling,Intlok Elecmech,18,0.0,0.0
-LNW South,Signalling,LC Aud Warn Sys,1,0.0,0.0
-LNW South,Signalling,Level Crossing,3,0.0,0.0
-LNW South,Signalling,Maintained Area,1250,0.0,0.0
-LNW South,Signalling,Monitoring Equipment WILD/VHM,7,0.0,0.0
-LNW South,Signalling,Neg Shoe Detect,1,0.0,0.0
-LNW South,Signalling,Past Sgl Indic,1,0.0,0.0
-LNW South,Signalling,POINT CONTROL,1,0.0,0.0
-LNW South,Signalling,Point Heater,7,0.0,0.0
-LNW South,Signalling,Point Indicator,23,0.0,0.0
-LNW South,Signalling,RCS - Direct,3,0.0,0.0
-LNW South,Signalling,RCS - FDM,26,0.0,0.0
-LNW South,Signalling,RCS - Reed FDM,215,0.0,0.0
-LNW South,Signalling,Route Ind Sema,1,0.0,0.0
-LNW South,Signalling,Sigcont Elecmec,15,0.0,0.0
-LNW South,Signalling,Sig - Drv W/L,23,0.0,0.0
-LNW South,Signalling,Signal Relay,2777,0.0,0.0
-LNW South,Signalling,Stretcher Bar,40,0.0,0.0
-LNW South,Signalling,Supplementary Drive,17,0.0,0.0
-LNW South,Signalling,Switch Half Set,1,0.0,0.0
-LNW South,Signalling,Telecoms Ops Lineside CCTV,24,0.0,0.0
-LNW South,Signalling,Telecoms Radio Equipment,3,0.0,0.0
-LNW South,Signalling,TOWS,24,0.0,0.0
-LNW South,Signalling,Treadle,332,0.0,0.0
-LNW South,Signalling,UI - OLE Structure,1,0.0,0.0
-LNW South,Signalling,UPS,42,0.0,0.0
-LNW South,Signalling,X,1,0.0,0.0
-LNW South,Signalling,Xing Warn Light,3,0.0,0.0
-LNW South,Station Information & Security Systems,Telecoms SISS,16695,0.0,0.0
-LNW South,Supply Integrity,Building,2,0.0,0.0
-LNW South,Supply Integrity,Recorders,8,0.0,0.0
-LNW South,Supply Integrity,UPS,545,0.0,0.0
-LNW South,Telecoms,Battery,1,0.0,0.0
-LNW South,Telecoms,Concentrator,1,0.0,0.0
-LNW South,Telecoms,DO NOT USE-CCTV - DOO,8,0.0,0.0
-LNW South,Telecoms,DO NOT USE-GSM-R MOBILE,5,0.0,0.0
-LNW South,Telecoms,DO NOT USE-OPS RADIO,1,0.0,0.0
-LNW South,Telecoms,DO NOT USE-TELEPHONES-NLS,38,0.0,0.0
-LNW South,Telecoms,Level Crossing,1,0.0,0.0
-LNW South,Telecoms,Lineside Radio Sign,167,0.0,0.0
-LNW South,Telecoms,Maintained Area,4,0.0,0.0
-LNW South,Telecoms,Multiplexor,33,0.0,0.0
-LNW South,Telecoms,RCS - TDM,1,0.0,0.0
-LNW South,Telecoms,Signalling Cable,8,0.0,0.0
-LNW South,Telecoms,TELECOMS CABLE - INTERNAL,16,0.0,0.0
-LNW South,Telecoms,TELECOMS CABLE - LINESIDE,6982,0.0,0.0
-LNW South,Telecoms,TELECOMS CABLE MANAGEMENT,2563,0.0,0.0
-LNW South,Telecoms,TELECOMS CABLE VLVT,1,0.0,0.0
-LNW South,Telecoms,Telecoms Mast,863,0.0,0.0
-LNW South,Telecoms,Telecoms Ops Lineside CCTV,33,0.0,0.0
-LNW South,Telecoms,Telecoms Transmission(Optical),66,0.0,0.0
-LNW South,Telecoms,VDU/PC Terminal,19,0.0,0.0
-LNW South,Track,Adjust Switch,1273,0.0,0.0
-LNW South,Track,ATP,1,0.0,0.0
-LNW South,Track,Crossing (S&C),4290,0.0,0.02
-LNW South,Track,Crossover (S&C),118,0.0,0.0
-LNW South,Track,ELR,4,0.0,0.0
-LNW South,Track,Fence/Boundary,20,0.0,0.0
-LNW South,Track,Free Standing Point Detection,13,0.0,0.0
-LNW South,Track,Half Side Switch Blade,72,0.0,0.0
-LNW South,Track,IBJ,11322,0.0,0.0
-LNW South,Track,Junction Area,281,0.0,0.0
-LNW South,Track,Level Xing Gate,37,0.0,0.0
-LNW South,Track,Long Bearers,248,0.0,0.0
-LNW South,Track,Maintained Area,25,0.0,0.0
-LNW South,Track,Point Operating Equipment,14,0.0,0.0
-LNW South,Track,PWAY WALKWAYS,2485,0.0,0.0
-LNW South,Track,Reflective Sign,31,0.0,0.0
-LNW South,Track,Sig - Colour,3,0.0,0.0
-LNW South,Track,Sign,325,0.0,0.0
-LNW South,Track,Sig - Pos Light,3,0.0,0.0
-LNW South,Track,Stretcher Bar,69,0.0,0.0
-LNW South,Track,Supplementary Drive,14,0.0,0.0
-LNW South,Track,Surfacing,655,0.0,0.0
-LNW South,Track,Switch Half Set,7920,0.0,0.0
-LNW South,Track,Switch Half Side,82,0.0,0.0
-LNW South,Track,Switch Panel,3856,0.0,0.0
-LNW South,Track,Track Circuit Operating Device,120,0.0,0.0
-LNW South,Track,Tunnel Bore,73,0.0,0.0
-LNW South,Track,Tunnel Shaft,55,0.0,0.0
-LNW South,Track,UPS,1,0.0,0.0
-LNW South,Track,Virtual Asset,11,0.0,0.0
-LNW South,Track,VISUAL TRACK INSPECTION,1796,0.0,0.0
-LNW South,Vegetation,Animal Habitat,120,0.0,0.0
-LNW South,Vegetation,Crossing (S&C),6,0.0,0.0
-LNW South,Vegetation,ECS Land Usage,123,0.0,0.0
-LNW South,Vegetation,S&C Unit,4,0.0,0.0
-LNW South,Vegetation,Switch Half Set,9,0.0,0.0
-LNW South,Vegetation,Switch Panel,4,0.0,0.0
-LNW South,Vegetation,VEGETATION,1,0.0,0.0
-LNW South,Vegetation,Vegetation - 1/8 Mile Section,15037,0.0,0.0
-LNW South,Vegetation,Vegetation Area,8079,0.0,0.0
-LNW South,Vegetation,Vegetation - Managed,4816,0.0,0.0
-LNW South,Vegetation,Vegetation Non-Lineside,20,0.0,0.0
-LNW South,Vegetation,VEGETATION SIDE,400,0.0,0.0
-LNW South,Virtual Asset,Virtual Asset,295,0.0,0.0
-LNW South,VISUAL TRACK INSPECTION,Virtual Asset,13,0.0,0.0
-LNW South,Walkways,PWAY WALKWAYS,324,0.0,0.0
-LNW South,Water Management,Drainage Node - Chamber,2,0.0,0.0
-LNW South,,ATP,3,0.0,0.0
-LNW South,,AWS,18,0.0,0.0
-LNW South,,Crossing (S&C),4,0.0,0.0
-LNW South,,Discon Box,71,0.0,0.0
-LNW South,,End Stop,1,0.0,0.0
-LNW South,,Intlok SS,4,0.0,0.0
-LNW South,,Junction Area,1,0.0,0.0
-LNW South,,Platform Indic,28,0.0,0.0
-LNW South,,RAIL FRICTION,100,0.0,0.0
-LNW South,,Recorders,2,0.0,0.0
-LNW South,,Reflective Sign,7,0.0,0.0
-LNW South,,Route Ind Jcn,3,0.0,0.0
-LNW South,,Route Ind Thr,7,0.0,0.0
-LNW South,,S&C Unit,4,0.0,0.0
-LNW South,,Sig - Ban'r Rep,13,0.0,0.0
-LNW South,,Sig - Colour,22,0.0,0.0
-LNW South,,Signalling Cable,11,0.0,0.0
-LNW South,,Sig - Pos Light,8,0.0,0.0
-LNW South,,Stretcher Bar,52,0.0,0.0
-LNW South,,Supplementary Drive,4,0.0,0.0
-LNW South,,Switch Half Set,4,0.0,0.0
-LNW South,,Switch Panel,4,0.0,0.0
-LNW South,,TC - DC,2,0.0,0.0
-LNW South,,TPWS,32,0.0,0.0
-LNW South,,UPS,1,0.0,0.0
-LNW South,,Virtual Asset,1,0.0,0.0
-LNW South,,VISUAL TRACK INSPECTION,1,0.0,0.0
-LNW South,,Xing Warn Light,2,0.0,0.0
-LNW North,Boundary Measures,Boundary Area,1683,0.0,0.0
-LNW North,Boundary Measures,BOUNDARY MEASURE,43102,0.0,0.0
-LNW North,Boundary Measures,Gate,2,0.0,0.0
-LNW North,Boundary Measures,Pedestrian Path,2,0.0,0.0
-LNW North,Boundary Measures,Reflective Sign,633,0.0,0.0
-LNW North,Buildings & Structures,Depot,8,0.0,0.0
-LNW North,Buildings & Structures,OBSOLETE - DO NOT USE,10081,0.0,0.0
-LNW North,Buildings & Structures,Platform,1009,0.0,0.0
-LNW North,Buildings & Structures,Retaining Wall,10,0.0,0.0
-LNW North,Buildings & Structures,Security CCTV Systems,61,0.0,0.0
-LNW North,Buildings & Structures,Station,277,0.0,0.0
-LNW North,Buildings & Structures,Telecoms SISS,1,0.0,0.0
-LNW North,Buildings & Structures,Undertrack Xing,121,0.0,0.0
-LNW North,Conductor Rail Equipment,AI - Conductor Rail Segment,153,0.0,0.0
-LNW North,Conductor Rail Equipment,LV Cabling,162,0.0,0.0
-LNW North,Conductor Rail Equipment,OBSOLETE:MSR 3RD R DESIGN,198,0.0,0.0
-LNW North,Conductor Rail Equipment,Temp Code for Eq Class KF,88,0.0,0.0
-LNW North,Distribution,25Kv Fuse - SM,1,0.0,0.0
-LNW North,Distribution,Busbars,101,0.0,0.0
-LNW North,Distribution,Controlled Sectioning Devices,11,0.0,0.0
-LNW North,Distribution,Isolator notOLE,2,0.0,0.0
-LNW North,Distribution,KB - Harmonic Filter,3,0.0,0.0
-LNW North,Distribution,LV Cabling,6294,0.0,0.0
-LNW North,Distribution,OBSOLETE:  MSR OLE DESIGN,895,0.0,0.0
-LNW North,Distribution,OLE Disconnectors,2,0.0,0.0
-LNW North,Distribution,Pilot Cables,2,0.0,0.0
-LNW North,Distribution,Point Heater,1,0.0,0.0
-LNW North,Distribution,Protection & Control Devices,1625,0.0,0.0
-LNW North,Distribution,QT - Charger,425,0.0,0.0
-LNW North,Distribution,Recorders,1,0.0,0.0
-LNW North,Distribution,Residual Current Circui Device,212,0.0,0.0
-LNW North,Distribution,RING MAIN UNIT,48,0.0,0.0
-LNW North,Distribution,SCADA Master Stations,2,0.0,0.0
-LNW North,Distribution,SCADA Point to Point,26,0.0,0.0
-LNW North,Distribution,SCADA Supervisory Hybrid,2,0.0,0.0
-LNW North,Distribution,Shore Supply,1,0.0,0.0
-LNW North,Distribution,SR - Earthing System,112,0.0,0.0
-LNW North,Distribution,Switchboards,103,0.0,0.0
-LNW North,Distribution,Telemetry,4,0.0,50.0
-LNW North,Distribution,Temp Code for Eq Class JW,4,0.0,0.0
-LNW North,Distribution,Temp Code for Eq Class JZ,45,0.0,0.0
-LNW North,Distribution,Temp Code for Eq Class KA,2,0.0,0.0
-LNW North,Distribution,Temp Code for Eq Class KK,16,0.0,0.0
-LNW North,Distribution,Temp Code for Eq Class KL,7,0.0,0.0
-LNW North,Distribution,TE - SCADA Distributed RTU,38,0.0,0.0
-LNW North,Distribution,Trackside Protection Device,3,0.0,0.0
-LNW North,Distribution,UPS,180,0.0,0.0
-LNW North,Distribution,Volt Regulator,50,0.0,0.0
-LNW North,Distribution,Water Pumping Systems/Sets,2,0.0,0.0
-LNW North,Drainage,Drainage 1/8 Mile Section,9568,0.0,0.0
-LNW North,Drainage,Drainage Area,877,0.0,0.0
-LNW North,Drainage,Drainage Link - Channel,4360,0.0,0.0
-LNW North,Drainage,Drainage Link -Covered Channel,1624,0.0,0.0
-LNW North,Drainage,Drainage Link - Culvert,2103,0.0,0.0
-LNW North,Drainage,Drainage Link - Granular Drain,1414,0.0,0.0
-LNW North,Drainage,Drainage Link - Pipe,21008,0.0,0.0
-LNW North,Drainage,Drainage Link - Syphon,8,0.0,0.0
-LNW North,Drainage,Drainage Node - Chamber,22475,0.0,0.0
-LNW North,Drainage,Drainage Node - Inflow,1862,0.0,0.0
-LNW North,Drainage,Drainage Node - Outfall,1225,0.0,0.0
-LNW North,Drainage,Drainage Node - Point,9862,0.0,0.0
-LNW North,Drainage,Drainage Node - Pond,105,0.0,0.0
-LNW North,Drainage,Drainage Node - Soakaway,334,0.0,0.0
-LNW North,Drainage,Drainage Node - Structure,2621,0.0,0.0
-LNW North,Drainage,Drainage System,1,0.0,0.0
-LNW North,Fixed Plant,Air Conditioning Systems,10,0.0,0.0
-LNW North,Fixed Plant,Air Con Sys,298,0.0,0.0
-LNW North,Fixed Plant,Air System/Compressor/Receiver,61,0.0,0.0
-LNW North,Fixed Plant,Anemometer,3,0.0,0.0
-LNW North,Fixed Plant,App Housing,1,0.0,0.0
-LNW North,Fixed Plant,Dist Ctrl Panel,1,0.0,0.0
-LNW North,Fixed Plant,Fire ProtectSys,50,0.0,0.0
-LNW North,Fixed Plant,Gas Supply,94,0.0,0.0
-LNW North,Fixed Plant,Generator,3,0.0,0.0
-LNW North,Fixed Plant,Kings Ferry,30,0.0,0.0
-LNW North,Fixed Plant,Lifting Equip,115,0.0,0.0
-LNW North,Fixed Plant,LV Cabling,10,0.0,0.0
-LNW North,Fixed Plant,Monitoring Equipment WILD/VHM,11,0.0,0.0
-LNW North,Fixed Plant,PV - Electricity Supply Point,1,0.0,0.0
-LNW North,Fixed Plant,Security System,51,0.0,0.0
-LNW North,Fixed Plant,Signalling Supply,7,0.0,0.0
-LNW North,Fixed Plant,Sudbrook P.Stn,18,0.0,0.0
-LNW North,Fixed Plant,Transformers,3,0.0,0.0
-LNW North,Fixed Plant,Water Supply,179,0.0,0.0
-LNW North,Level Crossing,CCTV Security,112,0.0,0.0
-LNW North,Level Crossing,LC Aud Warn Sys,168,0.0,0.0
-LNW North,Level Crossing,LC Barrier Mech,330,0.0,0.0
-LNW North,Level Crossing,Level Xing Obstacle Detection,27,0.0,0.0
-LNW North,Level Crossing,Xing Warn Light,893,0.0,0.0
-LNW North,Monitoring Equipment,Monitoring Equipment WILD/VHM,19,0.0,0.0
-LNW North,Overhead Line Equipment,MOSs,9,0.0,0.0
-LNW North,Overhead Line Equipment,OBSOLETE: DO NOT USE,1556,0.0,0.0
-LNW North,Overhead Line Equipment,OBSOLETE:  MSR OLE DESIGN,187,0.0,0.0
-LNW North,Overhead Line Equipment,OLE Area,8,0.0,0.0
-LNW North,Overhead Line Equipment,OLE Isol Motor,20,0.0,0.0
-LNW North,Overhead Line Equipment,OLE Patrol Area,2,0.0,0.0
-LNW North,Overhead Line Equipment,Other along-track conductors,445,0.0,0.0
-LNW North,Overhead Line Equipment,Pantograph Monitor,5,0.0,0.0
-LNW North,Overhead Line Equipment,QK - Section Insulator,1566,0.0,0.0
-LNW North,Overhead Line Equipment,QS - Traction Bonding,278,0.0,0.0
-LNW North,Overhead Line Equipment,Reflective Sign,316,0.0,0.0
-LNW North,Overhead Line Equipment,Structure Foundation / Fixing,1491,0.0,0.0
-LNW North,Overhead Line Equipment,Temp Code for Eq Class QK,5,0.0,0.0
-LNW North,Overhead Line Equipment,Temp Code for Eq Class RQ,4,0.0,0.0
-LNW North,Overhead Line Equipment,Temp Code for Eq Class SD,94,0.0,0.0
-LNW North,Overhead Line Equipment,Temp Code for Eq Class UI,33,0.0,0.0
-LNW North,Overhead Line Equipment,WR - OLE Wire Run,1936,0.0,0.0
-LNW North,Overhead Line Equipment,WS - Wire Run Support Assembly,528,0.0,0.0
-LNW North,Power Distribution,KA - AC High Voltage Cable,2,0.0,0.0
-LNW North,Power Distribution,PV - Electricity Supply Point,1,0.0,0.0
-LNW North,Power Distribution,Telemetry,6,0.0,33.33
-LNW North,S&C (Signalling),Stretcher Bar,16293,0.0,0.0
-LNW North,S&C (Signalling),Supplementary Drive,3364,0.0,0.0
-LNW North,S&C (Signalling),Switch Half Set,4,0.0,0.0
-LNW North,Signage,Reflective Sign,84,0.0,0.0
-LNW North,Signalling,AirportTripWire,1,0.0,0.0
-LNW North,Signalling,BALISE Equipment,553,0.0,0.0
-LNW North,Signalling,Battery,130,0.0,0.0
-LNW North,Signalling,Building,13,0.0,0.0
-LNW North,Signalling,Busbar,9964,0.0,0.0
-LNW North,Signalling,Cable Route,210,0.0,0.0
-LNW North,Signalling,CCTV Security,19,0.0,0.0
-LNW North,Signalling,Discon Box,9027,0.0,0.0
-LNW North,Signalling,Equip Support,3,0.0,0.0
-LNW North,Signalling,Flat Detector,1,0.0,0.0
-LNW North,Signalling,Free Standing Point Detection,1359,0.0,0.0
-LNW North,Signalling,Illum Signs,19,0.0,0.0
-LNW North,Signalling,Impedance Bond,161,0.0,0.0
-LNW North,Signalling,Level Crossing,13,0.0,0.0
-LNW North,Signalling,Lockout,1632,0.0,0.0
-LNW North,Signalling,LV Cabling,4,0.0,0.0
-LNW North,Signalling,Maintained Area,286,0.0,0.0
-LNW North,Signalling,Past Sgl Indic,2,0.0,0.0
-LNW North,Signalling,PSR Magnet,208,0.0,0.0
-LNW North,Signalling,PUSH BUTTON,13,0.0,0.0
-LNW North,Signalling,RCS - FDM,208,0.0,0.0
-LNW North,Signalling,Rem Eqpt Rm Mon,1,0.0,0.0
-LNW North,Signalling,Sig - Drv W/L,54,0.0,0.0
-LNW North,Signalling,Signalling Supply,8,0.0,0.0
-LNW North,Signalling,Signal Relay,7900,0.0,0.0
-LNW North,Signalling,Telecoms Ops Lineside CCTV,15,0.0,0.0
-LNW North,Signalling,Track Warning System,6,0.0,0.0
-LNW North,Signalling,Treadle,659,0.0,0.0
-LNW North,Signalling,Trip Cock Test,19,0.0,0.0
-LNW North,Signalling,UPS,97,0.0,0.0
-LNW North,Signalling,VDU/PC Terminal,15,0.0,0.0
-LNW North,Station Information & Security Systems,Telecoms SISS,17189,0.0,0.0
-LNW North,Supply Integrity,UPS,341,0.0,0.0
-LNW North,Telecoms,App Housing,8,0.0,0.0
-LNW North,Telecoms,Cable - Telecom,4,0.0,0.0
-LNW North,Telecoms,Concentrator,1,0.0,0.0
-LNW North,Telecoms,DO NOT USE-GSM-R MOBILE,3,0.0,0.0
-LNW North,Telecoms,DO NOT USE-TELEPHONES-NLS,3,0.0,0.0
-LNW North,Telecoms,IP SYSTEM (LINESIDE),13,0.0,0.0
-LNW North,Telecoms,Lineside Radio Sign,747,0.0,0.0
-LNW North,Telecoms,Station Alarm System,675,0.0,0.0
-LNW North,Telecoms,TELECOMS CABLE - INTERNAL,14,0.0,0.0
-LNW North,Telecoms,TELECOMS CABLE - LINESIDE,8188,0.0,0.0
-LNW North,Telecoms,TELECOMS CABLE MANAGEMENT,4212,0.0,0.0
-LNW North,Telecoms,TELECOMS CABLE VLVT,1,0.0,0.0
-LNW North,Telecoms,Telecoms Operational Clock,3,0.0,0.0
-LNW North,Telecoms,Telecoms Transmission(Optical),60,0.0,0.0
-LNW North,Telecoms,VDU/PC Terminal,57,0.0,0.0
-LNW North,Telecoms,Virtual Telecoms Assets,27,0.0,0.0
-LNW North,Track,Adjust Switch,2078,0.0,0.0
-LNW North,Track,Busbars,9,0.0,0.0
-LNW North,Track,Crossing (S&C),5020,0.0,0.0
-LNW North,Track,Crossover (S&C),611,0.0,0.0
-LNW North,Track,Ex Bridge,16,0.0,0.0
-LNW North,Track,Fence/Boundary,12,0.0,0.0
-LNW North,Track,Half Side Switch Blade,168,0.0,0.0
-LNW North,Track,IBJ,20567,0.0,0.0
-LNW North,Track,Junction Area,124,0.0,0.0
-LNW North,Track,Level Xing Gate,94,0.0,0.0
-LNW North,Track,Long Bearers,360,0.0,0.0
-LNW North,Track,PWAY WALKWAYS,1820,0.0,0.0
-LNW North,Track,Sidebridge,15,0.0,0.0
-LNW North,Track,Sign,391,0.0,0.0
-LNW North,Track,Surfacing,1052,0.0,0.0
-LNW North,Track,Switch Half Set,8495,0.0,0.0
-LNW North,Track,Switch Half Side,158,0.0,0.0
-LNW North,Track,Switch Panel,4503,0.0,0.0
-LNW North,Track,Track Circuit Operating Device,123,0.0,0.0
-LNW North,Track,Tunnel Shaft,7,0.0,0.0
-LNW North,Track,Undertrack Xing,1,0.0,0.0
-LNW North,Track,Virtual Asset,1,0.0,0.0
-LNW North,Track,VISUAL TRACK INSPECTION,4071,0.0,0.0
-LNW North,Train Detection Equipment,HABD,1,0.0,0.0
-LNW North,Vegetation,Vegetation - 1/8 Mile Section,19080,0.0,0.0
-LNW North,Vegetation,Vegetation Area,1075,0.0,0.0
-LNW North,Vegetation,Vegetation - Managed,8250,0.0,0.0
-LNW North,Vegetation,VEGETATION SIDE,494,0.0,0.0
-LNW North,VISUAL TRACK INSPECTION,VISUAL TRACK INSPECTION,5,0.0,0.0
-LNW North,,Route Ind Jcn,1,0.0,0.0
-LNW North,,Route Ind Thr,3,0.0,0.0
-LNW North,,Sig - Colour,1,0.0,0.0
-LNW North,,Sig - Pos Light,1,0.0,0.0
-LNW North,,TC - DC,10,0.0,0.0
-LNW North,,Virtual Asset,51,0.0,0.0
-LNW North,,VISUAL TRACK INSPECTION,3,0.0,0.0
-LNW South,Access Points,Access Point,19,0.0,0.0
-LNW South,Boundary Measures,App Housing,1,0.0,0.0
-LNW South,Boundary Measures,BOUNDARY,3,0.0,0.0
-LNW South,Boundary Measures,Boundary Area,1170,0.0,0.0
-LNW South,Boundary Measures,BOUNDARY MEASURE,25528,0.0,0.0
-LNW South,Boundary Measures,ECS Land Usage,9,0.0,0.0
-LNW South,Boundary Measures,Platform,2,0.0,0.0
-LNW South,Boundary Measures,Reflective Sign,498,0.0,0.0
-LNW South,Boundary Measures,Signalling Supply,1,0.0,0.0
+route,ellipse_asset_class_group_desc,ellipse_asset_class_desc,ellipse_asset_count,fms_failures_count_6m_2020,count_service_affecting_faults_6m_2020,has_radar_percentage
+LNW North,S&C (Signalling),Point Operating Equipment,441,621.0,151.0,55.78
+LNW South,S&C (Signalling),Point Operating Equipment,361,530.0,161.0,37.12
+LNW North,Boundary Measures,BOUNDARY SIDE,150,475.0,18.0,0.0
+LNW South,Track,Track ID,147,467.0,44.0,0.0
+LNW North,Conductor Rail Equipment,KE - Electrical Section,129,438.0,40.0,0.0
+LNW South,Conductor Rail Equipment,KE - Electrical Section,151,419.0,86.0,0.0
+LNW South,Track,S&C Unit,292,401.0,52.0,0.0
+LNW North,Signalling,Sig - Colour,309,391.0,90.0,0.0
+LNW North,Track,Track ID,114,386.0,31.0,0.0
+LNW North,Signalling,TC - DC,282,348.0,138.0,37.23
+LNW South,Boundary Measures,BOUNDARY SIDE,96,306.0,15.0,0.0
+LNW South,Signalling,Axle Counter,243,277.0,105.0,0.0
+LNW North,Signalling,Sig - Semaphore,147,246.0,28.0,0.0
+LNW North,Level Crossing,Level Crossing,106,242.0,35.0,0.0
+LNW South,Overhead Line Equipment,UI - OLE Structure,203,215.0,22.0,0.0
+LNW South,Signalling,Sig - Colour,173,208.0,62.0,0.0
+LNW North,Track,S&C Unit,175,203.0,15.0,0.57
+LNW North,Telecoms,Telephone Non Lineside,126,190.0,3.0,0.0
+LNW North,Signalling,Mechanical Lever Equipment,92,190.0,27.0,0.0
+LNW South,Signalling,TC - DC,149,188.0,78.0,41.61
+LNW South,Telecoms,Telephones-LS,160,185.0,5.0,0.0
+LNW North,Overhead Line Equipment,UI - OLE Structure,151,175.0,25.0,0.0
+LNW North,Telecoms,Telephones-LS,151,164.0,8.0,0.0
+LNW South,Signalling,Intlok SS,141,157.0,46.0,0.0
+LNW North,Access Points,Access Point,120,146.0,0.0,0.0
+LNW South,Track,Underbridge,93,144.0,55.0,0.0
+LNW South,Signalling,TPWS,101,127.0,15.0,0.0
+LNW North,Telecoms,Telecoms HMI,90,127.0,1.0,0.0
+LNW South,Level Crossing,Level Crossing,52,126.0,19.0,0.0
+LNW North,Signalling,Sigcont NX,22,112.0,14.0,0.0
+LNW South,Signalling,App Housing,95,111.0,3.0,0.0
+LNW South,Boundary Measures,Access Point,92,107.0,0.0,0.0
+LNW South,Distribution,Signalling Supply,80,102.0,7.0,0.0
+LNW North,Signalling,TC - High Freq,75,101.0,33.0,6.67
+LNW North,Signalling,Axle Counter,63,95.0,53.0,0.0
+LNW North,Telecoms,Telecoms Power Supply,82,92.0,0.0,0.0
+LNW North,Telecoms,Telecoms Concentrator,52,90.0,0.0,0.0
+LNW South,Telecoms,Telecoms Radio Equipment,59,85.0,6.0,0.0
+LNW North,Distribution,Signalling Supply,72,83.0,9.0,0.0
+LNW North,Signalling,App Housing,78,82.0,8.0,0.0
+LNW South,Signalling,SIGCONT,32,80.0,9.0,0.0
+LNW North,Signalling,TPWS,63,76.0,13.0,0.0
+LNW South,Telecoms,Telecoms Power Supply,55,72.0,0.0,0.0
+LNW South,Telecoms,Telecoms HMI,48,72.0,5.0,0.0
+LNW South,Signalling,TC - High Freq,53,68.0,48.0,11.32
+LNW North,Telecoms,Transmission (FTN),57,66.0,0.0,0.0
+LNW North,Telecoms,Telecoms Radio Equipment,52,65.0,2.0,0.0
+LNW South,Signalling,AWS,48,57.0,10.0,0.0
+LNW South,Telecoms,Transmission (FTN),52,55.0,1.0,0.0
+LNW South,Signalling,TC - Impulse,41,52.0,24.0,0.0
+LNW North,Signalling,AWS,41,51.0,9.0,0.0
+LNW North,Buildings & Structures,Building,40,50.0,1.0,10.0
+LNW North,Signalling,Train Describer,30,47.0,4.0,0.0
+LNW North,Signalling,Sig - Pos Light,40,46.0,7.0,0.0
+LNW North,Signalling,Recorders,40,44.0,0.0,0.0
+LNW South,Telecoms,Transmission (Non FTN),29,43.0,0.0,0.0
+LNW South,Signalling,Sig - Pos Light,34,42.0,6.0,0.0
+LNW North,Telecoms,Transmission (Non FTN),35,42.0,1.0,0.0
+LNW South,Buildings & Structures,Building,35,41.0,0.0,8.57
+LNW South,Telecoms,Telecoms Concentrator,17,37.0,1.0,0.0
+LNW South,Signalling,Sigcont NX,7,37.0,3.0,0.0
+LNW South,Signalling,HABD,20,36.0,2.0,0.0
+LNW South,Signalling,Platform Indic,27,35.0,3.0,0.0
+LNW South,Signalling,Train Describer,8,33.0,0.0,0.0
+LNW North,Track,Underbridge,32,33.0,7.0,0.0
+LNW South,Distribution,Circuit Breakers,24,32.0,2.0,0.0
+LNW South,Track,Overbridge,28,32.0,4.0,0.0
+LNW North,Distribution,PV - Electricity Supply Point,26,31.0,5.0,0.0
+LNW North,Signalling,Sigcont Elecmec,14,30.0,3.0,0.0
+LNW South,Telecoms,Telecoms Site,24,29.0,0.0,0.0
+LNW North,Telecoms,Telecoms Recording Equipment,21,29.0,1.0,0.0
+LNW South,Distribution,PV - Electricity Supply Point,23,29.0,0.0,0.0
+LNW South,Signalling,ATP,17,28.0,3.0,0.0
+LNW North,Distribution,JW - Traction Location,19,28.0,0.0,0.0
+LNW North,Signalling,HABD,13,28.0,11.0,0.0
+LNW North,Buildings & Structures,Signal Box,22,26.0,3.0,0.0
+LNW North,Signalling,Route Ind Sten,26,26.0,0.0,0.0
+LNW South,Signalling,Sig - Ban'r Rep,13,26.0,5.0,0.0
+LNW North,Signalling,Sigcont Comb,8,23.0,3.0,0.0
+LNW North,Signalling,SIGCONT,16,23.0,1.0,0.0
+LNW North,Signalling,TC - AC,13,22.0,1.0,61.54
+LNW South,Telecoms,Telephone Non Lineside,21,22.0,0.0,0.0
+LNW North,Telecoms,Telecoms Site,20,21.0,0.0,0.0
+LNW North,Distribution,Circuit Breakers,20,21.0,0.0,0.0
+LNW North,Fixed Plant,Point Heater,21,21.0,2.0,0.0
+LNW North,Signalling,Platform Indic,18,21.0,0.0,0.0
+LNW North,Signalling,Route Ind Jcn,18,20.0,6.0,0.0
+LNW North,Signalling,Intlok SS,17,20.0,0.0,0.0
+LNW North,Conductor Rail Equipment,KF - Manual Sectioning Device,18,20.0,0.0,0.0
+LNW North,Telecoms,Telecoms Remote Monitoring,14,19.0,0.0,0.0
+LNW South,Track,Access Point,18,19.0,0.0,0.0
+LNW South,Distribution,JV - 25kV Switching Station,16,18.0,2.0,0.0
+LNW North,Signalling,TC - Impulse,14,18.0,3.0,0.0
+LNW North,Signalling,RCS - TDM,15,18.0,1.0,0.0
+LNW North,Signalling,Intlok Relay,8,18.0,8.0,0.0
+LNW North,Fixed Plant,Light InstalSys,13,17.0,0.0,0.0
+LNW South,Distribution,Building,16,17.0,0.0,0.0
+LNW South,Telecoms,Telecoms Operational CCTV,14,17.0,3.0,0.0
+LNW South,Signage,Reflective Sign,16,16.0,0.0,0.0
+LNW South,Fixed Plant,Light InstalSys,14,16.0,0.0,0.0
+LNW South,Fixed Plant,Point Heater,15,15.0,0.0,0.0
+LNW South,Signalling,Mechanical Lever Equipment,8,15.0,1.0,0.0
+LNW South,Signalling,Sig - Semaphore,10,15.0,3.0,0.0
+LNW South,Signalling,Telemetry,15,15.0,0.0,0.0
+LNW South,Telecoms,Telecoms Remote Monitoring,6,14.0,0.0,0.0
+LNW North,Telecoms,Telecoms Circuit,11,13.0,0.0,0.0
+LNW South,Signalling,Recorders,12,13.0,0.0,8.33
+LNW South,Signalling,Route Ind Jcn,13,13.0,4.0,0.0
+LNW North,Distribution,Circuit Short Devices,11,12.0,0.0,0.0
+LNW North,Signalling,Route Ind Thr,10,11.0,3.0,0.0
+LNW North,Track,Overbridge,11,11.0,1.0,0.0
+LNW North,Level Crossing,Level Xing Gate,5,10.0,0.0,0.0
+LNW North,Signalling,Intlok Elec,3,10.0,0.0,0.0
+LNW South,Overhead Line Equipment,OLE Disconnectors,8,10.0,0.0,0.0
+LNW North,Distribution,SCADA Remote Terminal Units,8,10.0,0.0,0.0
+LNW South,Signalling,Train Stop,7,10.0,8.0,0.0
+LNW South,Conductor Rail Equipment,KF - Manual Sectioning Device,5,9.0,3.0,0.0
+LNW South,Fixed Plant,Diesel Alternator Set,9,9.0,1.0,0.0
+LNW North,Signalling,Intlok Relay NG,5,9.0,5.0,0.0
+LNW North,Distribution,JV - 25kV Switching Station,6,9.0,0.0,0.0
+LNW North,Track,Reflective Sign,8,8.0,1.0,0.0
+LNW South,Distribution,Transformers,8,8.0,0.0,0.0
+LNW South,Telecoms,Telecoms Recording Equipment,7,8.0,0.0,0.0
+LNW South,Track,Illum Signs,7,8.0,0.0,0.0
+LNW North,Fixed Plant,Water Pumping Systems/Sets,8,8.0,0.0,0.0
+LNW North,Signalling,Telemetry,7,7.0,1.0,57.14
+LNW North,Track,End Stop,6,7.0,1.0,0.0
+LNW South,Signalling,Route Ind Thr,7,7.0,2.0,0.0
+LNW South,Signalling,Route Ind Sten,7,7.0,3.0,0.0
+LNW South,Buildings & Structures,Equip Support,7,7.0,0.0,0.0
+LNW North,Distribution,Transformers,6,7.0,0.0,0.0
+LNW North,Signalling,Sig - Ban'r Rep,5,7.0,0.0,0.0
+LNW North,Track,Marker Post,7,7.0,0.0,0.0
+LNW South,Fixed Plant,Point Heating Control Cabinet,6,6.0,1.0,83.33
+LNW South,Buildings & Structures,Signal Box,5,6.0,0.0,0.0
+LNW North,Distribution,KA - AC High Voltage Cable,5,6.0,0.0,0.0
+LNW North,Track,RAIL FRICTION,6,6.0,0.0,0.0
+LNW South,Level Crossing,Xing Warn Light,5,6.0,1.0,0.0
+LNW North,Fixed Plant,Diesel Alternator Set,5,5.0,1.0,0.0
+LNW South,Telecoms,Internet Protocol,5,5.0,0.0,0.0
+LNW South,Track,Marker Post,4,5.0,0.0,0.0
+LNW North,Overhead Line Equipment,QJ - Neutral Section,5,5.0,1.0,0.0
+LNW North,Signalling,Intlok Mech,4,4.0,2.0,0.0
+LNW South,Telecoms,Traction Supervisory Eqpt,4,4.0,0.0,0.0
+LNW South,Track,End Stop,3,4.0,0.0,0.0
+LNW South,Signalling,Intlok Elec,4,4.0,1.0,0.0
+LNW South,Signalling,Building,4,4.0,0.0,0.0
+LNW South,Signalling,Lockout,2,4.0,0.0,0.0
+LNW South,Telecoms,Telecoms Circuit,3,3.0,0.0,0.0
+LNW South,Telecoms,Virtual Telecoms Assets,3,3.0,1.0,0.0
+LNW South,Fixed Plant,Building,3,3.0,0.0,0.0
+LNW North,Track,Illum Signs,3,3.0,0.0,0.0
+LNW South,Track,Ex Bridge,3,3.0,1.0,0.0
+LNW North,Signalling,RCS - Reed FDM,3,3.0,0.0,0.0
+LNW South,Track,RAIL FRICTION,3,3.0,0.0,0.0
+LNW North,Fixed Plant,Building,3,3.0,0.0,0.0
+LNW North,Signalling,Reflective Sign,3,3.0,0.0,0.0
+LNW North,Telecoms,Telecoms Operational CCTV,3,3.0,0.0,0.0
+LNW North,Telecoms,Internet Protocol,3,3.0,0.0,0.0
+LNW North,Track,Tunnel Bore,2,3.0,0.0,0.0
+LNW South,Signalling,PSR Magnet,3,3.0,1.0,0.0
+LNW South,Distribution,JW - Traction Location,2,2.0,1.0,0.0
+LNW South,Distribution,SCADA Remote Terminal Units,1,2.0,0.0,0.0
+LNW South,Fixed Plant,Water Pumping Systems/Sets,2,2.0,0.0,0.0
+LNW South,Track,Sidebridge,2,2.0,0.0,0.0
+LNW South,Signalling,Ground Switch Panel,1,2.0,0.0,0.0
+LNW South,Signalling,Intlok Relay,2,2.0,0.0,0.0
+LNW South,Signalling,Reflective Sign,2,2.0,0.0,0.0
+LNW North,Signalling,Sig - LED,1,2.0,0.0,0.0
+LNW South,Telecoms,TELECOMS CABLE - LINESIDE EQU,2,2.0,0.0,0.0
+LNW North,Telecoms,Telecoms Ops Lineside CCTV,2,2.0,0.0,0.0
+LNW North,Telecoms,Telecoms Mast,2,2.0,0.0,0.0
+LNW North,Signalling,Train Stop,2,2.0,0.0,0.0
+LNW North,Distribution,Building,2,2.0,0.0,0.0
+LNW North,Signalling,TC Interrupter,1,2.0,0.0,0.0
+LNW South,Distribution,HV Switches & Isolators,1,2.0,0.0,0.0
+LNW South,Distribution,KL - Harmonic Damper,2,2.0,0.0,0.0
+LNW South,Signalling,Sigcont Comb,1,1.0,0.0,0.0
+LNW South,Level Crossing,Level Xing Gate,1,1.0,0.0,0.0
+LNW South,Signalling,RCS - TDM,1,1.0,0.0,0.0
+LNW North,Overhead Line Equipment,OLE Disconnectors,1,1.0,0.0,0.0
+LNW North,Fixed Plant,Isolator notOLE,1,1.0,0.0,0.0
+LNW South,Signalling,Intlok Relay NG,1,1.0,0.0,0.0
+LNW South,Telecoms,Telecoms PABX Exchange,1,1.0,0.0,0.0
+LNW North,Distribution,HV Switches & Isolators,1,1.0,0.0,0.0
+LNW North,Distribution,Dist Ctrl Panel,1,1.0,0.0,0.0
+LNW South,Signalling,Intlok Mech,1,1.0,0.0,0.0
+LNW South,Buildings & Structures,Retaining Wall,1,1.0,1.0,0.0
+LNW South,Signalling,BALISE Equipment,1,1.0,0.0,0.0
+LNW North,Telecoms,TELECOMS CABLE - LINESIDE EQU,1,1.0,1.0,0.0
+LNW North,Signalling,Intlok Elecmech,1,1.0,1.0,0.0
+LNW North,Signalling,Ground Switch Panel,1,1.0,0.0,0.0
+LNW South,Distribution,SR - Earthing System,1,1.0,0.0,0.0
+LNW North,Overhead Line Equipment,Transformers,1,1.0,0.0,0.0
+LNW North,Fixed Plant,Point Heating Control Cabinet,1,1.0,0.0,100.0
+LNW North,Signalling,TOWS,1,1.0,0.0,0.0
+LNW North,Signalling,Signalling Cable,1,1.0,1.0,0.0
+LNW South,Signalling,Signalling Cable,1,1.0,0.0,0.0
+LNW North,Telecoms,Traction Supervisory Eqpt,1,1.0,0.0,0.0
+LNW North,Distribution,KL - Harmonic Damper,1,1.0,0.0,0.0
+LNW South,Signalling,TC Interrupter,1,1.0,1.0,0.0
+LNW South,Signalling,Sig - LED,1,1.0,0.0,0.0
+LNW North,Buildings & Structures,Equip Support,1,1.0,0.0,0.0
+LNW North,Telecoms,Telecoms PABX Exchange,1,1.0,0.0,0.0
+LNW South,Overhead Line Equipment,QJ - Neutral Section,1,1.0,1.0,0.0
+LNW South,Signalling,Trip Cock Test,1,1.0,1.0,0.0

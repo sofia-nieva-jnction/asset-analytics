@@ -1,0 +1,15 @@
+route,asset_class,asset_number,work_order_number,work_order_description,raised_date,planned_start_date,completed_date,fault_code,extended_text,defect_desc,completion_comments
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,59319771,RESPOND/INVESTIGATE S&F FAULT,2019-12-06,2020-03-27,2020-05-14,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,60039641,FPL TEST (CLAMP LOCK),2020-02-04,2020-02-14,2020-02-21,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,60039642,CLAMP LOCK HYDRAULIC POINTS,2020-02-04,2020-02-14,2020-02-21,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,60039643,POINT INSPECTION,2020-02-04,2020-02-14,2020-02-21,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,60039644,POINT FITTINGS - MAINTAIN [C],2020-02-04,2020-02-14,2020-02-21,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,60039645,POINTS - SWITCH ROLLERS,2020-02-04,2020-02-14,2020-02-21,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,60134308,CLAMP LOCK HYDRAULIC POINTS,2020-02-11,2020-02-21,2020-02-21,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,60477117,CLAMP LOCK HYDRAULIC POINTS,2020-02-28,,2020-02-28,,,," WP762A points inspected found N clamp lock arm (G) to have a build up, cleaned. Cleaned and lubricated points as require d. Removed ballast that could potentially cause failure. Ope rated several times and passed an FPL test."
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,61285708,FPL TEST (CLAMP LOCK),2020-05-05,2020-05-15,2020-05-14,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,61285709,CLAMP LOCK HYDRAULIC POINTS,2020-05-05,2020-05-15,2020-05-14,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,61285710,POINT INSPECTION,2020-05-05,2020-05-15,2020-05-14,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,61285711,POINT FITTINGS - MAINTAIN [C],2020-05-05,2020-05-15,2020-05-14,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,61285712,POINTS - SWITCH ROLLERS,2020-05-05,2020-05-15,2020-05-14,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,557668,61647658,REPLACE A SECONDARY CELL/BATTERY,2020-04-09,,2020-05-19,, Replaced faulty batteries with new like for like units and t ested after. ,, Replaced faulty batteries with new like for like units and t ested after. 

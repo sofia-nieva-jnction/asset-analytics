@@ -1,0 +1,2 @@
+occurred_date,fault_number,delivery_unit,trust_incident_numbers,is_service_affecting,elr_description,place_name,asset_description,suffix_system_asset_type,component_level_1_2,incident_type,location_narrative,priority,symptom,risk,sincs_status,fms_place_start_miles,fms_place_start_yards,fms_place_end_miles,fms_place_end_yards
+2020-05-09,890321,BLETCHLEY DU,[950052.0],True,HANSLOPE JCN - RUGBY,DAVENTRY NORTH,RUGBY SCC : NREK : Down Fast/Main,TRACK CIRCUIT -- TRACK CCT -DC MED VOLT AC IMMUNE,IRJ - SWARF ACROSS IRJ,,,3,ASSET DEFECT,NEGLIGIBLE,UNDER INVESTIGATION,80,693,82,704

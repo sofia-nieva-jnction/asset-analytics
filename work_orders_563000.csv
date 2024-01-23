@@ -1,0 +1,7 @@
+route,asset_class,asset_number,work_order_number,work_order_description,raised_date,planned_start_date,completed_date,fault_code,extended_text,defect_desc,completion_comments
+LNW South,Signalling - TC - DC,563000,59439499,TRACK CIRCUITS: DC MEDIUM VOLTAGE,2019-12-17,2019-12-27,2020-04-16,,,,
+LNW South,Signalling - TC - DC,563000,59439500,TRACK CIRCUITS: DC MEDIUM VOLTAGE,2019-12-17,2019-12-27,2020-04-16,,,,
+LNW South,Signalling - TC - DC,563000,61546413,TRACK CIRCUITS: DC LOW VOLTAGE,2020-05-19,,2020-05-19,, Replaced temporary 4A fuse for 6A fuse ,,
+LNW South,Signalling - TC - DC,563000,61647879,TRACK CIRCUITS: DC LOW VOLTAGE,2020-05-19,,2020-05-19,,,, Replaced temporary 4A fuse for 6A fuse 
+LNW South,Signalling - TC - DC,563000,61679216,REPLACE A BARRELLED/CLIP IN COMPONENT,2020-05-21,,2020-05-21,,,, Fuse replaced. 
+LNW South,Signalling - TC - DC,563000,61847008,TRACK CIRCUITS: DC MEDIUM VOLTAGE,2020-06-16,2020-06-26,2020-06-17,,,,
