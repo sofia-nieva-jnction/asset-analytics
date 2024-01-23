@@ -343,6 +343,7 @@ def alarms_near_failures(faults_list, radar, work_orders_asset, d=14):
     for alarm in alarms_types:
         column_name = alarm.replace('_', ' ').replace('Count', '')
         alarms_dict[column_name] = []
+    faults_list['occurred_date'] = pd.to_datetime(faults_list['occurred_date']).dt.date
     for i, row in faults_list.iterrows():
         if i == 0:
             alarms_dict['Days since last Fault'].append('-')
