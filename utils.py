@@ -33,7 +33,6 @@ def get_worst_perfoming_table(route, asset_class):
     df = pd.read_csv(f'worst_performing_table_{route}_{asset_class}.csv')
     return df
 
-
 @st.cache_data
 def get_data_example(asset_number, fault_number):
     radar = pd.read_csv(f'radar_{asset_number}_{fault_number}_eg.csv')
@@ -106,24 +105,34 @@ def get_radar_data(asset_number):
     df = pd.read_csv(f'radar_{asset_number}.csv')
     return df
 
+@st.cache_data
+def get_radar_summary(asset_number):
+    df = pd.read_csv(f'radar_summary_{asset_number}.csv')
+    return df
+
+@st.cache_data
 def get_ellipse_details(asset_number):
     df = pd.read_csv(f'ellipse_details_{asset_number}.csv')
     return df
 
+@st.cache_data
 def get_faults_list(asset_number):
     df = pd.read_csv(f'faults_list_{asset_number}.csv')
     return df
 
+@st.cache_data
 def get_all_faults_timeline(asset_number, faults_number):
     timeline = get_fault_timeline(asset_number, faults_number[0])
     for f in faults_number[1:]:
         timeline = pd.concat([timeline, get_fault_timeline(asset_number, f)])
     return timeline
 
+@st.cache_data
 def get_fault_timeline(asset_number, fault_number):
     timeline = pd.read_csv(f'timeline_{asset_number}_{fault_number}.csv')
     return timeline
 
+@st.cache_data
 def timeline_plot(timeline, fault_number, asset_number):
     df = timeline.copy()
     df['temp'] = 0
