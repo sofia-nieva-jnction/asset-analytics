@@ -46,7 +46,6 @@ def get_data_example(asset_number, fault_number):
 def get_berth_steps(asset_number):
     return pd.read_csv(f'berth_steps_{asset_number}_{fault_number}_eg.csv')
 
-@st.cache_data
 def plot_vertical_histograms(table, y_col, y_name):
     cat_order = table.sort_values('fms_failures_count_6m_2020', ascending=True)[y_col].to_list()
 
