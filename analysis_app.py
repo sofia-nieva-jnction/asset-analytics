@@ -285,7 +285,7 @@ with tab1:
                 st.write(day1_attributes)
                 st.write(class_attributes_traces.values)
                 
-                st.write(class_attributes_traces.values.tolist()
+                st.write(class_attributes_traces.values.tolist())
                 st.write([x for x in class_attributes_traces if x in day1_attributes])
                 attribute_trace1 = st.selectbox('Select Attribute to plot',
                                                 [x for x in class_attributes_traces.values if x in day1_attributes],
