@@ -4,7 +4,7 @@ import datetime
 import sqlalchemy
 import streamlit as st
 import numpy as np
-from utils import get_l0, get_l1, get_worst_perfoming_table, plot_vertical_histograms, get_l2, highlight_threshold, get_radar_data, get_fault_timeline, get_all_faults_timeline, timeline_plot, get_work_orders, get_radar_summary
+from utils import get_l0, get_l1, get_worst_perfoming_table, plot_vertical_histograms, get_l2, highlight_threshold, get_radar_data, get_fault_timeline, get_all_faults_timeline, timeline_plot, get_work_orders, get_radar_summary, get_list_assets
 from utils import radar_trace_plot, headcodes_plot, get_data_example, get_berth_steps, plot_max_smoothed_and_count_tc, plot_max_smoothed_and_count_points, alarms_near_failures, get_trends_table, get_ellipse_details, get_faults_list
 
 st.set_page_config(layout="wide", page_icon="", page_title="Asset Analysis")
@@ -143,7 +143,7 @@ with tab1:
         l2 = get_l2(route, asset_class)
 
         asset_number = st.selectbox('Select Asset Number',
-                                    l2[l2['is_in_radar']]['ellipse_asset_number'].astype(int).tolist(),
+                                    get_list_assets(asset_class),
                                     key='assets')
         
         ellipse_details = get_ellipse_details(asset_number)
