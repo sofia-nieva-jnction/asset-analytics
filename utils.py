@@ -14,6 +14,7 @@ def get_l0(route):
     df = pd.read_csv('l0.csv')
     return df[df.route==route]
 
+@st.cache_data
 def get_l1(route):
     df = pd.read_csv('l1.csv')
     return df[df.route==route]
@@ -24,6 +25,7 @@ def get_l2(route, asset_class):
     df_filtered = df[(df.group_class==asset_class) & (df.route==route)]
     return df_filtered.drop(columns=['group_class'])
 
+@st.cache_data
 def get_list_assets(asset_class):
     if asset_class=='S&C (Signalling) - Point Operating Equipment':
         ret = [557646, 557668, 765375]
@@ -54,6 +56,7 @@ def get_data_example(asset_number, fault_number):
 def get_berth_steps(asset_number, fault_number):
     return pd.read_csv(f'berth_steps_{asset_number}_{fault_number}_eg.csv')
 
+@st.cache_data
 def plot_vertical_histograms(table, y_col, y_name):
     cat_order = table.sort_values('fms_failures_count_6m_2020', ascending=True)[y_col].to_list()
 
@@ -107,20 +110,24 @@ def get_trends_table(route, asset_class, attribute_line_chart):
     df = pd.read_csv(f'get_trends_table_{route}_{asset_class}_{attribute_line_chart}.csv')
     return df
 
+@st.cache_data
 def get_radar_data(asset_number):
     df = pd.read_csv(f'radar_{asset_number}.csv')
     df['datetime'] = pd.to_datetime(df['datetime'])
     return df
 
+@st.cache_data
 def get_radar_summary(asset_number):
     df = pd.read_csv(f'radar_summary_{asset_number}.csv')
     df['date'] = pd.to_datetime(df['date']).dt.date
     return df
 
+@st.cache_data
 def get_ellipse_details(asset_number):
     df = pd.read_csv(f'ellipse_details_{asset_number}.csv')
     return df
-    
+
+@st.cache_data
 def get_faults_list(asset_number):
     df = pd.read_csv(f'faults_list_{asset_number}.csv')
     return df
@@ -132,6 +139,7 @@ def get_all_faults_timeline(asset_number, faults_number):
         timeline = pd.concat([timeline, get_fault_timeline(asset_number, f)])
     return timeline
 
+@st.cache_data
 def get_fault_timeline(asset_number, fault_number):
     timeline = pd.read_csv(f'timeline_{asset_number}_{fault_number}.csv')
     return timeline
@@ -155,6 +163,7 @@ def timeline_plot(timeline, fault_number, asset_number):
     
     return fig
 
+@st.cache_data
 def radar_trace_plot(asset_class, radar, day_start, day_end, timeline, attribute, other):
     asset = radar.iloc[0]['asset']
     radar_day = radar[(radar.datetime >= str(day_start)) & (radar.datetime <= str(pd.to_datetime(day_end) + datetime.timedelta(days=1)))].copy().sort_values('datetime')
@@ -367,6 +376,7 @@ def alarms_near_failures(faults_list, radar, work_orders_asset, d=14):
                                       & (alarms.datetime >= row['failed_datetime'] - datetime.timedelta(days=d))))
     return pd.DataFrame(alarms_dict)
 
+@st.cache_data
 def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attribute, radar, faults_list, work_orders,
                                    class_attributes_other, h=24, add_trend=False, trend_start=None, trend_end=None):
     date_start = pd.to_datetime(date_start)
@@ -578,6 +588,7 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
     
     return fig, custom_trend_change_text
 
+@st.cache_data
 def add_trend_to_plot(fig, df_smoothed_maxs, trend_start, trend_end):
     color_seq_trends = px.colors.qualitative.Antique[0]
     lr_start = pd.to_datetime(trend_start) 
@@ -612,7 +623,7 @@ def add_trend_to_plot(fig, df_smoothed_maxs, trend_start, trend_end):
 
     return fig, change_text
 
-
+@st.cache_data
 def plot_max_smoothed_and_count_points(date_start, date_end, attribute, count_attribute, radar, faults_list, work_orders,
                                        class_attributes_other, h=24, add_trend=False, trend_start=None, trend_end=None):
     date_start = pd.to_datetime(date_start)
