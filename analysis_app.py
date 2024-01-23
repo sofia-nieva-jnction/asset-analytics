@@ -283,15 +283,15 @@ with tab1:
 
                 day1_attributes = radar[(radar.datetime >= str(day1_start)) & (radar.datetime <= str(pd.to_datetime(day1_end) + datetime.timedelta(days=1)))]['attribute'].unique()
                 st.write(day1_attributes)
-                st.write(class_attributes_traces.values)
+                st.write(class_attributes_traces.values[0])
                 
                 st.write(class_attributes_traces.values.tolist())
                 st.write([x for x in class_attributes_traces if x in day1_attributes])
                 attribute_trace1 = st.selectbox('Select Attribute to plot',
-                                                [x for x in class_attributes_traces.values if x in day1_attributes],
+                                                [x for x in class_attributes_traces.values[0] if x in day1_attributes],
                                                 key = 'att1')
                 attribute_other1 = st.selectbox('Select other Attribute to plot',
-                                                [None] + [x for x in class_attributes_other.values if x in day1_attributes],
+                                                [None] + [x for x in class_attributes_other.values[0] if x in day1_attributes],
                                                 key = 'other1')
                 
                 day2_start = st.date_input("Select day to compare", None, key='day2', max_value=datetime.date(year=2020, month=7, day=6))
@@ -330,10 +330,10 @@ with tab1:
                     day2_attributes = radar[(radar.datetime >= str(day2_start)) & (radar.datetime <= str(pd.to_datetime(day2_end) + datetime.timedelta(days=1)))]['attribute'].unique()
 
                     attribute_trace2 = st.selectbox('Select Attribute to plot',
-                                                    [x for x in class_attributes_traces.values if x in day2_attributes],
+                                                    [x for x in class_attributes_traces.values[0] if x in day2_attributes],
                                                     key = 'att2')
                     attribute_other2 = st.selectbox('Select other Attribute to plot',
-                                                    [None] + [x for x in class_attributes_other.values if x in day2_attributes],
+                                                    [None] + [x for x in class_attributes_other.values[0] if x in day2_attributes],
                                                     key = 'other2')
                     
                 with space4:
