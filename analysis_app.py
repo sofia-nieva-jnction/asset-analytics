@@ -224,10 +224,10 @@ with tab1:
                     st.text('Not enough RADAR Data for this Asset')
                 else:
                     if option == 'Yes' and trend_start!=datetime.date(year=2020, month=7, day=6) and trend_end!=datetime.date(year=2020, month=7, day=6):
-                        fig, custom_trend_change_text = plot_max_smoothed_and_count_tc('2020-01', '2020-07', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other, add_trend=True, trend_start=trend_start, trend_end=trend_end)
+                        fig, custom_trend_change_text = plot_max_smoothed_and_count_tc('2020-01', '2020-07-06', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other, add_trend=True, trend_start=trend_start, trend_end=trend_end)
                         st.plotly_chart(fig, use_container_width=True)
                     else:
-                        fig, _ = plot_max_smoothed_and_count_tc('2020-01', '2020-07', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other)
+                        fig, _ = plot_max_smoothed_and_count_tc('2020-01', '2020-07-06', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other)
                         st.plotly_chart(fig, use_container_width=True)
             elif asset_class == 'S&C (Signalling) - Point Operating Equipment':
                 attribute = st.selectbox('Select Attribute to plot',
@@ -240,10 +240,10 @@ with tab1:
                     st.text('Not enough RADAR Data for this Asset')
                 else:
                     if option == 'Yes' and trend_start!=datetime.date(year=2020, month=7, day=6) and trend_end!=datetime.date(year=2020, month=7, day=6):
-                        fig, custom_trend_change_text = plot_max_smoothed_and_count_points('2020-01', '2020-07', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other, add_trend=True, trend_start=trend_start, trend_end=trend_end)
+                        fig, custom_trend_change_text = plot_max_smoothed_and_count_points('2020-01', '2020-07-06', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other, add_trend=True, trend_start=trend_start, trend_end=trend_end)
                         st.plotly_chart(fig, use_container_width=True)
                     else:
-                        fig, _ = plot_max_smoothed_and_count_points('2020-01', '2020-07', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other)
+                        fig, _ = plot_max_smoothed_and_count_points('2020-01', '2020-07-06', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other)
                         st.plotly_chart(fig, use_container_width=True)
 
             with c3:
