@@ -9,9 +9,6 @@ from utils import radar_trace_plot, headcodes_plot, get_data_example, get_berth_
 
 st.set_page_config(layout="wide", page_icon="", page_title="Asset Analysis")
 
-DATABASE_URL = 'postgresql://localhost:54321/postgres'
-engine = sqlalchemy.create_engine(DATABASE_URL)
-
 tab1, tab2, = st.tabs(["Ellipse-FMS-RADAR merge", "Berth Data Merge Examples"])
 
 with tab1:
