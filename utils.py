@@ -109,17 +109,14 @@ def get_radar_data(asset_number):
     df = pd.read_csv(f'radar_{asset_number}.csv')
     return df
 
-@st.cache_data
 def get_radar_summary(asset_number):
     df = pd.read_csv(f'radar_summary_{asset_number}.csv')
     return df
 
-@st.cache_data
 def get_ellipse_details(asset_number):
     df = pd.read_csv(f'ellipse_details_{asset_number}.csv')
     return df
-
-@st.cache_data
+    
 def get_faults_list(asset_number):
     df = pd.read_csv(f'faults_list_{asset_number}.csv')
     return df
@@ -131,7 +128,6 @@ def get_all_faults_timeline(asset_number, faults_number):
         timeline = pd.concat([timeline, get_fault_timeline(asset_number, f)])
     return timeline
 
-@st.cache_data
 def get_fault_timeline(asset_number, fault_number):
     timeline = pd.read_csv(f'timeline_{asset_number}_{fault_number}.csv')
     return timeline
@@ -155,7 +151,6 @@ def timeline_plot(timeline, fault_number, asset_number):
     
     return fig
 
-@st.cache_data
 def radar_trace_plot(asset_class, radar, day_start, day_end, timeline, attribute, other):
     asset = radar.iloc[0]['asset']
     radar_day = radar[(radar.datetime >= str(day_start)) & (radar.datetime <= str(pd.to_datetime(day_end) + datetime.timedelta(days=1)))].copy().sort_values('datetime')
@@ -368,7 +363,6 @@ def alarms_near_failures(faults_list, radar, work_orders_asset, d=14):
                                       & (alarms.datetime >= row['failed_datetime'] - datetime.timedelta(days=d))))
     return pd.DataFrame(alarms_dict)
 
-@st.cache_data
 def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attribute, radar, faults_list, work_orders,
                                    class_attributes_other, h=24, add_trend=False, trend_start=None, trend_end=None):
     date_start = pd.to_datetime(date_start)
@@ -381,6 +375,7 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
     
     df = radar_days[radar_days.attribute.isin([attribute])].reset_index(drop=True).copy()
     df_count = radar_days[radar_days.attribute.isin([count_attribute])].reset_index(drop=True).copy()
+    df_count['date'] = pd.to_datetime(df_count['date'])
     df_count['date'] = df_count['datetime'].apply(lambda x: x.date())#df_count['datetime'].apply(lambda x: str(x.date()) + ' ' + str(x.hour).zfill(2) + ':00:00.000')
     
     signal = df['value'].to_numpy()
@@ -578,8 +573,6 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
     
     return fig, custom_trend_change_text
 
-
-@st.cache_data
 def add_trend_to_plot(fig, df_smoothed_maxs, trend_start, trend_end):
     color_seq_trends = px.colors.qualitative.Antique[0]
     lr_start = pd.to_datetime(trend_start) 
@@ -615,7 +608,6 @@ def add_trend_to_plot(fig, df_smoothed_maxs, trend_start, trend_end):
     return fig, change_text
 
 
-@st.cache_data
 def plot_max_smoothed_and_count_points(date_start, date_end, attribute, count_attribute, radar, faults_list, work_orders,
                                        class_attributes_other, h=24, add_trend=False, trend_start=None, trend_end=None):
     date_start = pd.to_datetime(date_start)
@@ -628,6 +620,7 @@ def plot_max_smoothed_and_count_points(date_start, date_end, attribute, count_at
     
     df = radar_days[radar_days.attribute.isin([attribute])].reset_index(drop=True).copy()
     df_count = radar_days[radar_days.attribute.isin([count_attribute])].reset_index(drop=True).copy()
+    df_count['date'] = pd.to_datetime(df_count['date'])                                   
     df_count['date'] = df_count['datetime'].apply(lambda x: x.date())#df_count['datetime'].apply(lambda x: str(x.date()) + ' ' + str(x.hour).zfill(2) + ':00:00.000')
     # alarms_types = [x for x in class_attributes_other if x not in [count_attribute]]
     # alarms = radar_days[radar_days.attribute.isin(alarms_types)].reset_index(drop=True).copy()
