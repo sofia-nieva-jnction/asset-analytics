@@ -73,67 +73,62 @@ with tab1:
                                 'total alarms': 'Total Alarms'},
                     use_container_width=True)
 
-        # st.header('Latest Changes in Trend (valid as of 2020/07/06)')
+        st.header('Latest Changes in Trend (valid as of 2020/07/06)')
                 
-        # c1, c2, c3 = st.columns([0.06, 0.2, 0.2])
-        # with c1:
-        #     st.write('')
-        #     st.write('')
-        #     st.write('Choose values to highlight')
-        # with c2:
-        #     condition = st.selectbox('Select Condition', ['Greater than', 'Less than', 'Equal to', 'Greater than or Equal to', 'Less than or Equal to'])
-        # with c3:
-        #     threshold = st.number_input("Input percentage", step=0.1)
+        c1, c2, c3 = st.columns([0.06, 0.2, 0.2])
+        with c1:
+            st.write('')
+            st.write('')
+            st.write('Choose values to highlight')
+        with c2:
+            condition_list  = ['Greater than', 'Less than', 'Equal to', 'Greater than or Equal to', 'Less than or Equal to'] if asset_class=='S&C (Signalling) - Point Operating Equipment' else ['Less than', 'Greater than', 'Equal to', 'Less than or Equal to', 'Greater than or Equal to']
+            condition = st.selectbox('Select Condition', condition_list)
+        with c3:
+            threshold = st.number_input("Input percentage", step=0.5)/100
 
-        # if asset_class == 'S&C (Signalling) - Point Operating Equipment':
-        #     attribute_line_chart = st.selectbox('Select Attribute to plot', 
-        #                                             ['Current_Waveform_NR_Average', 'Current_Waveform_RN_Average',
-        #                                              'Current_Waveform_NR_Peak', 'Current_Waveform_RN_Peak',
-        #                                              'Current_Waveform_NR_Length', 'Current_Waveform_RN_Length'])
-        # else:
-        #     attribute_line_chart = 'Circuit_Current'
+        if asset_class == 'S&C (Signalling) - Point Operating Equipment':
+            attribute_line_chart = st.selectbox('Select Attribute to plot', 
+                                                    ['Current_Waveform_NR_Average', 'Current_Waveform_RN_Average',
+                                                     'Current_Waveform_NR_Peak', 'Current_Waveform_RN_Peak',
+                                                     'Current_Waveform_NR_Length', 'Current_Waveform_RN_Length'])
+        else:
+            attribute_line_chart = 'Circuit_Current'
 
-        # asset_number_search = st.text_input('Search Asset', placeholder = 'Input Asset Number')        
+        asset_number_search = st.text_input('Search Asset', placeholder = 'Input Asset Number')        
 
-        # trends_df = get_trends_table(route, asset_class, attribute_line_chart)
-        # trends_df['highlight_15d'] = trends_df['change_15d'] > threshold
-        # trends_df['highlight_1m'] = trends_df['change_1m'] > threshold
-        # trends_df['highlight_2m'] = trends_df['change_2m'] > threshold
-        # trends_df['highlight_3m'] = trends_df['change_3m'] > threshold
-        # trends_df.sort_values(['highlight_15d', 'highlight_1m', 'highlight_2m', 'highlight_3m'], ascending=[False, False, False, False], inplace=True)
-        # trends_df = trends_df[['asset_number', 'days_since_last_fault', 'change_15d', 'change_1m', 'change_2m', 'change_3m'] + [attribute_line_chart]]
-        # trends_df = trends_df.style.applymap(highlight_threshold, condition=condition, threshold=threshold, subset=['change_15d', 'change_1m', 'change_2m', 'change_3m'])
+        trends_df = get_trends_table(route, asset_class, attribute_line_chart)
+        trends_df['highlight_15d'] = trends_df['change15'] > threshold
+        trends_df['highlight_1m'] = trends_df['change30'] > threshold
+        trends_df['highlight_2m'] = trends_df['change60'] > threshold
+        trends_df['highlight_3m'] = trends_df['change90'] > threshold
+        trends_df.sort_values(['highlight_15d', 'highlight_1m', 'highlight_2m', 'highlight_3m'], ascending=[False, False, False, False], inplace=True)
+        trends_df = trends_df[['asset_number', 'days_since_last_fault', 'change15', 'change30', 'change60', 'change90', 'values']]
+        
+        if asset_number_search!='':
+            try: 
+                trends_df = trends_df[trends_df.asset_number==int(asset_number_search)]
+            except:
+                st.write('Input a valid Asset Number')
+        
+        trends_df_styled = trends_df.style.applymap(highlight_threshold, condition=condition, threshold=threshold, subset=['change15', 'change30', 'change60', 'change90'])
+        trends_df_styled = trends_df_styled.format("{:+.2%}", subset=['change15', 'change30', 'change60', 'change90'])
 
-        # trends_df = trends_df[trends_df.asset_number==asset_number_search] if asset_number_search is not None else trends_df
-
-        # if len(trends_df) > 0:
-        #     st.dataframe(
-        #         trends_df,
-        #         column_config={
-        #             'asset_number': 'Asset Number',
-        #             'days_since_last_fault': 'Days since last Fault', 
-        #             'change_15d': st.column_config.NumberColumn('Change last 15 days', format = "%.2f %%"), 
-        #             'change_1m': st.column_config.NumberColumn('Change last 30 days', format = "%.2f %%"), 
-        #             'change_2m': st.column_config.NumberColumn('Change last 60 days', format = "%.2f %%"), 
-        #             'change_3m': st.column_config.NumberColumn('Change last 90 days', format = "%.2f %%"), 
-        #             "Current_Waveform_NR_Average": st.column_config.LineChartColumn(
-        #                 "Average Current Waveform NR (past 6 months)", width='Large'),
-        #             "Current_Waveform_RN_Average": st.column_config.LineChartColumn(
-        #                 "Average Current Waveform RN (past 6 months)", width='Large'),
-        #             "Current_Waveform_NR_Peak": st.column_config.LineChartColumn(
-        #                 "Peak Current Waveform NR (past 6 months)", width='Large'),
-        #             "Current_Waveform_RN_Peak": st.column_config.LineChartColumn(
-        #                 "Peak Current Waveform RN (past 6 months)", width='Large'),
-        #             "Current_Waveform_NR_Length": st.column_config.LineChartColumn(
-        #                 "Length Current Waveform NR (past 6 months)", width='Large'),
-        #             "Current_Waveform_RN_Length": st.column_config.LineChartColumn(
-        #                 "Length Current Waveform RN (past 6 months)", width='Large'),
-        #             "Circuit_Current": st.column_config.LineChartColumn(
-        #                 "Circuit Current (past 6 months)", width='Large'),
-        #         },
-        #         use_container_width=True, hide_index=True)
-        # else:
-        #     st.write('Asset Not Found')
+        if len(trends_df) > 0:
+            st.dataframe(
+                trends_df_styled,
+                column_config={
+                    'asset_number': st.column_config.TextColumn('Asset Number', disabled=True), 
+                    'days_since_last_fault': 'Days since last Fault', 
+                    'change15': st.column_config.NumberColumn('Change last 15 days', format = "%.2f %%"), 
+                    'change30': st.column_config.NumberColumn('Change last 30 days', format = "%.2f %%"), 
+                    'change60': st.column_config.NumberColumn('Change last 60 days', format = "%.2f %%"), 
+                    'change90': st.column_config.NumberColumn('Change last 90 days', format = "%.2f %%"), 
+                    "values": st.column_config.LineChartColumn(
+                        f"{attribute_line_chart.replace('_', ' ')} (past 6 months)", width='large')
+                },
+                use_container_width=True, hide_index=True)
+        else:
+            st.write('Asset Not Found')
 
 
     with tab13:
@@ -230,10 +225,12 @@ with tab1:
                         fig, _ = plot_max_smoothed_and_count_tc('2020-01', '2020-07-06', attribute, count_attribute, radar, faults_list, work_orders_asset, class_attributes_other)
                         st.plotly_chart(fig, use_container_width=True)
             elif asset_class == 'S&C (Signalling) - Point Operating Equipment':
+                other_atts = ['Current_Waveform_NR_Average', 'Current_Waveform_RN_Average',
+                                     'Current_Waveform_NR_Peak', 'Current_Waveform_RN_Peak',
+                                     'Current_Waveform_NR_Length', 'Current_Waveform_RN_Length']
+                other_atts.remove(attribute_line_chart)
                 attribute = st.selectbox('Select Attribute to plot',
-                                ['Current_Waveform_NR_Average', 'Current_Waveform_RN_Average',
-                                 'Current_Waveform_NR_Peak', 'Current_Waveform_RN_Peak',
-                                 'Current_Waveform_NR_Length', 'Current_Waveform_RN_Length'],
+                                [attribute_line_chart] + other_atts,
                                 key='att_long_term_poe')
                 count_attribute = 'Total_Operations_NR' if 'NR' in attribute else 'Total_Operations_RN'
                 if not attribute in radar.attribute.unique():
