@@ -84,8 +84,14 @@ with tab1:
             condition_list  = ['Greater than', 'Less than', 'Equal to', 'Greater than or Equal to', 'Less than or Equal to'] if asset_class=='S&C (Signalling) - Point Operating Equipment' else ['Less than', 'Greater than', 'Equal to', 'Less than or Equal to', 'Greater than or Equal to']
             condition = st.selectbox('Select Condition', condition_list)
         with c3:
-            threshold = st.number_input("Input percentage", step=0.5)/100
-
+            if asset_class == 'S&C (Signalling) - Point Operating Equipment':
+                val = 5.0 
+            else:
+                val = -5.0
+            threshold = st.number_input("Input percentage", 
+                                        value=val,
+                                        step=0.5)/100
+            
         if asset_class == 'S&C (Signalling) - Point Operating Equipment':
             attribute_line_chart = st.selectbox('Select Attribute to plot', 
                                                     ['Current_Waveform_NR_Average', 'Current_Waveform_RN_Average',
