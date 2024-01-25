@@ -230,7 +230,6 @@ def radar_trace_plot(asset_class, radar, day_start, day_end, timeline, attribute
     return fig
 
 
-@st.cache_data
 def headcodes_plot(radar, day, timeline, attribute, other, berth_steps, berth, td):
     asset = radar.iloc[0]['asset']
     radar_day = radar[(radar.datetime > str(day)) & (radar.datetime < str(day + datetime.timedelta(days=1)))].copy().sort_values('datetime')
