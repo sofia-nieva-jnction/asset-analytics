@@ -28,9 +28,9 @@ def get_l2(route, asset_class):
 @st.cache_data
 def get_list_assets(asset_class):
     if asset_class=='S&C (Signalling) - Point Operating Equipment':
-        ret = [557646, 557668, 765375]
+        ret = [557646, 557668, 765375, 1653200, 548731]
     else:
-        ret = [563000, 884639, 884689, 884673, 884735, 884652, 563463]
+        ret = [563000, 884639, 884689, 884673, 884735, 884652, 563463, 840591, 840548]
     return ret
 
 @st.cache_data
