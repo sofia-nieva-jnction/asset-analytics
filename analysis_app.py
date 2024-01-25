@@ -79,7 +79,7 @@ with tab1:
         with c1:
             st.write('')
             st.write('')
-            st.write('Choose values to highlight')
+            st.write('Choose changes to highlight')
         with c2:
             condition_list  = ['Greater than', 'Less than', 'Equal to', 'Greater than or Equal to', 'Less than or Equal to'] if asset_class=='S&C (Signalling) - Point Operating Equipment' else ['Less than', 'Greater than', 'Equal to', 'Less than or Equal to', 'Greater than or Equal to']
             condition = st.selectbox('Select Condition', condition_list)
