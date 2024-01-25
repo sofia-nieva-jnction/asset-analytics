@@ -514,34 +514,37 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
         
     color_seq_trends = px.colors.qualitative.Antique[3:]
     for i, d in enumerate([15, 30, 60, 90]):
-        lr_start = pd.to_datetime(date_end) - datetime.timedelta(days=d)
-        df_lr = df_smoothed_maxs[df_smoothed_maxs['datetime']>=lr_start].copy()
-        df_lr['time_ms'] = (df_lr['datetime'] - lr_start) / datetime.timedelta(seconds=1)
-        df_lr['x'] = df_lr['time_ms']/df_lr['time_ms'].max()
-        
-        x = df_lr['x'].tolist()
-        y = df_lr['value']
-        model = LinearRegression().fit(np.array(x).reshape(-1, 1), np.array(y))
-        change = model.coef_[0]/(x[0]*model.coef_[0] + model.intercept_)
-        sign = '+' if change > 0 else ''
-        change_text = f"{sign}{change:.2%}"
-
-        x_plot = [df_lr['datetime'].min(), df_lr['datetime'].max()]
-        y_plot = [x[0]*model.coef_[0] + model.intercept_, x[-1]*model.coef_[0] + model.intercept_]
-
-        fig.add_trace(go.Scatter(x=x_plot,
-                                 y=y_plot,
-                                 mode='lines',
-                                 line_color=color_seq_trends[i],
-                                 name=f'Last {d} Days: Change {change_text}',
-                                 showlegend=True,
-                                 visible='legendonly',
-                                 legendgroup="trends", 
-                                 legendgrouptitle_text="Recent Trends",
-                                 line_width=2,
-                                 line_dash='dash',
-                                 hovertemplate="%{x|%d %b}<br>%{y:.3f}<br><extra></extra>"), 
-                        row=1, col=1)
+        try:
+            lr_start = pd.to_datetime(date_end) - datetime.timedelta(days=d)
+            df_lr = df_smoothed_maxs[df_smoothed_maxs['datetime']>=lr_start].copy()
+            df_lr['time_ms'] = (df_lr['datetime'] - lr_start) / datetime.timedelta(seconds=1)
+            df_lr['x'] = df_lr['time_ms']/df_lr['time_ms'].max()
+            
+            x = df_lr['x'].tolist()
+            y = df_lr['value']
+            model = LinearRegression().fit(np.array(x).reshape(-1, 1), np.array(y))
+            change = model.coef_[0]/(x[0]*model.coef_[0] + model.intercept_)
+            sign = '+' if change > 0 else ''
+            change_text = f"{sign}{change:.2%}"
+    
+            x_plot = [df_lr['datetime'].min(), df_lr['datetime'].max()]
+            y_plot = [x[0]*model.coef_[0] + model.intercept_, x[-1]*model.coef_[0] + model.intercept_]
+    
+            fig.add_trace(go.Scatter(x=x_plot,
+                                     y=y_plot,
+                                     mode='lines',
+                                     line_color=color_seq_trends[i],
+                                     name=f'Last {d} Days: Change {change_text}',
+                                     showlegend=True,
+                                     visible='legendonly',
+                                     legendgroup="trends", 
+                                     legendgrouptitle_text="Recent Trends",
+                                     line_width=2,
+                                     line_dash='dash',
+                                     hovertemplate="%{x|%d %b}<br>%{y:.3f}<br><extra></extra>"), 
+                            row=1, col=1)
+        except:
+            pass
         
     ###### Work Orders ######
         
@@ -708,34 +711,37 @@ def plot_max_smoothed_and_count_points(date_start, date_end, attribute, count_at
         
     color_seq_trends = px.colors.qualitative.Antique[3:]
     for i, d in enumerate([15, 30, 60, 90]):
-        lr_start = pd.to_datetime(date_end) - datetime.timedelta(days=d)
-        df_lr = df_smoothed_nr[df_smoothed_nr['datetime']>=lr_start].copy()
-        df_lr['time_ms'] = (df_lr['datetime'] - lr_start) / datetime.timedelta(seconds=1)
-        df_lr['x'] = df_lr['time_ms']/df_lr['time_ms'].max()
-        
-        x = df_lr['x'].tolist()
-        y = df_lr['value']
-        model = LinearRegression().fit(np.array(x).reshape(-1, 1), np.array(y))
-        change = model.coef_[0]/(x[0]*model.coef_[0] + model.intercept_)
-        sign = '+' if change > 0 else ''
-        change_text = f"{sign}{change:.2%}"
-
-        x_plot = [df_lr['datetime'].min(), df_lr['datetime'].max()]
-        y_plot = [x[0]*model.coef_[0] + model.intercept_, x[-1]*model.coef_[0] + model.intercept_]
-
-        fig.add_trace(go.Scatter(x=x_plot,
-                                 y=y_plot,
-                                 mode='lines',
-                                 line_color=color_seq_trends[i],
-                                 name=f'Last {d} Days: Change {change_text}',
-                                 showlegend=True,
-                                 visible='legendonly',
-                                 legendgroup="trends", 
-                                 legendgrouptitle_text="Recent Trends",
-                                 line_width=2,
-                                 line_dash='dash',
-                                 hovertemplate="%{x|%d %b}<br>%{y:.3f}<br><extra></extra>"), 
-                        row=1, col=1)
+        try:
+            lr_start = pd.to_datetime(date_end) - datetime.timedelta(days=d)
+            df_lr = df_smoothed_nr[df_smoothed_nr['datetime']>=lr_start].copy()
+            df_lr['time_ms'] = (df_lr['datetime'] - lr_start) / datetime.timedelta(seconds=1)
+            df_lr['x'] = df_lr['time_ms']/df_lr['time_ms'].max()
+            
+            x = df_lr['x'].tolist()
+            y = df_lr['value']
+            model = LinearRegression().fit(np.array(x).reshape(-1, 1), np.array(y))
+            change = model.coef_[0]/(x[0]*model.coef_[0] + model.intercept_)
+            sign = '+' if change > 0 else ''
+            change_text = f"{sign}{change:.2%}"
+    
+            x_plot = [df_lr['datetime'].min(), df_lr['datetime'].max()]
+            y_plot = [x[0]*model.coef_[0] + model.intercept_, x[-1]*model.coef_[0] + model.intercept_]
+    
+            fig.add_trace(go.Scatter(x=x_plot,
+                                     y=y_plot,
+                                     mode='lines',
+                                     line_color=color_seq_trends[i],
+                                     name=f'Last {d} Days: Change {change_text}',
+                                     showlegend=True,
+                                     visible='legendonly',
+                                     legendgroup="trends", 
+                                     legendgrouptitle_text="Recent Trends",
+                                     line_width=2,
+                                     line_dash='dash',
+                                     hovertemplate="%{x|%d %b}<br>%{y:.3f}<br><extra></extra>"), 
+                            row=1, col=1)
+        except:
+            pass
         
     ###### Work Orders ######
         
