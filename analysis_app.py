@@ -107,7 +107,8 @@ with tab1:
         trends_df['highlight_1m'] = trends_df['change30'] > threshold
         trends_df['highlight_2m'] = trends_df['change60'] > threshold
         trends_df['highlight_3m'] = trends_df['change90'] > threshold
-        trends_df.sort_values(['highlight_15d', 'highlight_1m', 'highlight_2m', 'highlight_3m'], ascending=[False, False, False, False], inplace=True)
+        asc = [False, False, False, False] if asset_class == 'S&C (Signalling) - Point Operating Equipment' else [True, True, True, True,]
+        trends_df.sort_values(['highlight_15d', 'highlight_1m', 'highlight_2m', 'highlight_3m'], ascending=asc, inplace=True)
         trends_df = trends_df[['asset_number', 'days_since_last_fault', 'change15', 'change30', 'change60', 'change90', 'values']]
         
         if asset_number_search!='':
