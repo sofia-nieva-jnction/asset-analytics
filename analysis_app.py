@@ -101,7 +101,7 @@ with tab1:
         else:
             attribute_line_chart = 'Circuit_Current'
 
-        asset_number_search = st.text_input('Search Asset', placeholder = 'Input Asset Number')        
+        asset_number_search_trend = st.text_input('Search Asset', placeholder = 'Input Asset Number', key='search_trend')        
 
         trends_df = get_trends_table(route, asset_class, attribute_line_chart)
         trends_df['highlight_15d'] = trends_df['change15'] > threshold
@@ -112,9 +112,9 @@ with tab1:
         trends_df.sort_values(['highlight_15d', 'highlight_1m', 'highlight_2m', 'highlight_3m'], ascending=asc, inplace=True)
         trends_df = trends_df[['asset_number', 'days_since_last_fault', 'change15', 'change30', 'change60', 'change90', 'values']]
         
-        if asset_number_search!='':
+        if asset_number_search_trend!='':
             try: 
-                trends_df = trends_df[trends_df.asset_number==int(asset_number_search)]
+                trends_df = trends_df[trends_df.asset_number==int(asset_number_search_trend)]
             except:
                 st.write('Input a valid Asset Number')
         
