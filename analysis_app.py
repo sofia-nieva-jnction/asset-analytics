@@ -61,19 +61,31 @@ with tab1:
     with tab12:
         st.header('Failures, Work Orders and Alarms (for the period Jan-July 2020)')
         st.write('Default order by number of Service Affecting Failures. Click on the name of another column to reorder based on that column.')
+      
         worst_perfoming_table = get_worst_perfoming_table(route, asset_class)
-        st.dataframe(worst_perfoming_table,
-                    column_config={'route': 'Route', 
-                                'ellipse_asset_class_group_desc': 'Class Group',
-                                'ellipse_asset_class_desc': 'Class',
-                                'ellipse_asset_number': 'Asset Number',
-                                'fms_failures_count_6m_2020': 'Total Failures',
-                                'count_service_affecting_faults_6m_2020': 'Service Affecting Failures', 
-                                'is_in_radar': 'In RADAR',
-                                'total_work_orders': 'Total Work Orders', 
-                                'total alarms': 'Total Alarms'},
-                    use_container_width=True)
+        
+        asset_number_search_worst = st.text_input('Search Asset', placeholder = 'Input Asset Number', key='search_worst')        
+        
+        if asset_number_search_worst!='':
+            try: 
+                worst_perfoming_table = worst_perfoming_table[worst_perfoming_table.asset_number==int(asset_number_search_worst)]
+            except:
+                st.write('Input a valid Asset Number')
 
+        if len(worst_perfoming_table) > 0:
+            st.dataframe(worst_perfoming_table,
+                        column_config={'route': 'Route', 
+                                    'ellipse_asset_class_group_desc': 'Class Group',
+                                    'ellipse_asset_class_desc': 'Class',
+                                    'ellipse_asset_number': 'Asset Number',
+                                    'fms_failures_count_6m_2020': 'Total Failures',
+                                    'count_service_affecting_faults_6m_2020': 'Service Affecting Failures', 
+                                    'is_in_radar': 'In RADAR',
+                                    'total_work_orders': 'Total Work Orders', 
+                                    'total alarms': 'Total Alarms'},
+                        use_container_width=True)
+        else:
+            st.write('Asset Not Found')
         st.header('Latest Changes in Trend (valid as of 2020/07/06)')
                 
         c1, c2, c3 = st.columns([0.06, 0.2, 0.2])
