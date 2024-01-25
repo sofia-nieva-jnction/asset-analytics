@@ -261,7 +261,7 @@ def headcodes_plot(radar, day, timeline, attribute, other, berth_steps, berth, t
 
     berth_steps_day = berth_steps[(berth_steps.message_datetime > str(day)) 
                                   & (berth_steps.message_datetime < str(day + datetime.timedelta(days=1)))].copy().sort_values('message_datetime')
-    #berth_steps_day['message_datetime'] = pd.to_datetime(berth_steps_day['message_datetime'])
+    berth_steps_day['message_datetime'] = pd.to_datetime(berth_steps_day['message_datetime'])
     entry = berth_steps_day[berth_steps_day['to_berth']==berth]
     exit = berth_steps_day[berth_steps_day['from_berth']==berth]
     entry_exit = entry.merge(exit, on=['headcode', 'headcode_hour'])
