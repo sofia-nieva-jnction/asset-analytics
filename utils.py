@@ -92,7 +92,7 @@ def plot_vertical_histograms(table, y_col, y_name):
 
 @st.cache_data
 def highlight_threshold(cell, condition, threshold):
-    attr = 'background-color: {}'.format('rgba(229, 40, 23, 0.4)')
+    attr = 'background-color: {}'.format('rgba(229, 40, 23, 0.2)')
     if condition=='Greater than':
         highlight = (cell>threshold)
     elif condition=='Less than':
