@@ -77,7 +77,7 @@ with tab1:
                         column_config={'route': 'Route', 
                                     'ellipse_asset_class_group_desc': 'Class Group',
                                     'ellipse_asset_class_desc': 'Class',
-                                    'ellipse_asset_number': 'Asset Number',
+                                    'ellipse_asset_number':  st.column_config.TextColumn('Asset Number', disabled=True),
                                     'fms_failures_count_6m_2020': 'Total Failures',
                                     'count_service_affecting_faults_6m_2020': 'Service Affecting Failures', 
                                     'is_in_radar': 'In RADAR',
