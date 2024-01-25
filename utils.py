@@ -54,7 +54,7 @@ def get_data_example(asset_number, fault_number):
 
 @st.cache_data
 def get_berth_steps(asset_number, fault_number):
-    return pd.read_csv(f'berth_steps_{asset_number}_{fault_number}_eg.csv')
+    return pd.read_csv(f'berth_steps_{asset_number}_{fault_number}_eg.csv', dtype={'to_berth': str, 'from_berth': str})
 
 @st.cache_data
 def plot_vertical_histograms(table, y_col, y_name):
@@ -263,7 +263,7 @@ def headcodes_plot(radar, day, timeline, attribute, other, berth_steps, berth, t
                                   & (berth_steps.message_datetime < str(day + datetime.timedelta(days=1)))].copy().sort_values('message_datetime')
     berth_steps_day['message_datetime'] = pd.to_datetime(berth_steps_day['message_datetime']) #
     entry = berth_steps_day[berth_steps_day['to_berth']==berth]
-    st.dataframe(entry)
+    st.dataframe(entry) #
     exit = berth_steps_day[berth_steps_day['from_berth']==berth]
     entry_exit = entry.merge(exit, on=['headcode', 'headcode_hour'])
     entry_exit['runtime'] = entry_exit['message_datetime_y'] - entry_exit['message_datetime_x'] 
