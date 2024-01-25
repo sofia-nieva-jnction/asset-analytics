@@ -267,7 +267,7 @@ def headcodes_plot(radar, day, timeline, attribute, other, berth_steps, berth, t
     entry_exit = entry.merge(exit, on=['headcode', 'headcode_hour'])
     entry_exit['runtime'] = entry_exit['message_datetime_y'] - entry_exit['message_datetime_x'] 
     entry_exit['runtime_s'] = entry_exit['runtime'].apply(lambda x: str(int(x.total_seconds())))
-    #st.dataframe(entry_exit['message_datetime_x'])
+    st.dataframe(entry_exit['message_datetime_x'])
 
     fig.add_trace(
         go.Scatter(x=entry_exit['message_datetime_x'], y=[0]*len(entry_exit),
