@@ -54,7 +54,8 @@ with tab1:
                                             'has_radar_percentage': '% in RADAR'},
                         hide_index=True, use_container_width=True)
         with col2:
-            fig = plot_vertical_histograms(l1[l1.has_radar_percentage>0], y_col='ellipse_asset_class_desc', y_name='Asset Class')
+            l1['group_class'] = l1['ellipse_asset_class_group_desc'] + ' -<br>' + l1['ellipse_asset_class_desc']
+            fig = plot_vertical_histograms(l1[l1.has_radar_percentage>0], y_col='group_class', y_name='Asset Class Group - Class')
             st.plotly_chart(fig, use_container_width=True)
 
     with tab12:
