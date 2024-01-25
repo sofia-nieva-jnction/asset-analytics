@@ -1,0 +1,21 @@
+route,asset_class,asset_number,work_order_number,work_order_description,raised_date,planned_start_date,completed_date,fault_code,extended_text,defect_desc,completion_comments
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,57715152,CLAMP LOCK - REPLACE CRANK,2019-08-03,2020-01-18,2020-02-09,, Rear crank loose on sleeper with only slight movement but un able to secure. ,, Me + 3 contractors 
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,59660856,CLAMP LOCK HYDRAULIC POINTS,2020-01-07,2020-01-17,2020-01-20,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,59660857,CLAMP LOCK HYDRAULIC POINTS,2020-01-07,2020-01-17,2020-01-20,,,, Completed by vital contractors 
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,59660858,POINT INSPECTION,2020-01-07,2020-01-17,2020-01-20,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,59660859,POINTS - SWITCH ROLLERS,2020-01-07,2020-01-17,2020-01-20,,,, Completed by vital contractors 
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,59758633,POINT FITTINGS - MAINTAIN [C],2020-01-14,2020-01-18,2020-01-20,,,, Completed by vital contractors 
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,59758643,FPL TEST (CLAMP LOCK),2020-01-14,2020-01-24,2020-01-20,,,, Completed by vital contractors 
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,60321936,FPL TEST (CLAMP LOCK),2020-02-25,2020-02-29,2020-03-01,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,60815091,CLAMP LOCK HYDRAULIC POINTS,2020-03-31,2020-04-10,2020-04-05,,,," Completed By Carmine(error In FDCS hence manual closure)
+ "
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,60815092,POINT INSPECTION,2020-03-31,2020-04-10,2020-04-05,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,60815093,POINTS - SWITCH ROLLERS,2020-03-31,2020-04-10,2020-04-05,,,," Completed By Carmine(error In FDCS hence manual closure)
+ "
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,60915373,POINT FITTINGS - MAINTAIN [C],2020-04-07,2020-04-11,2020-04-11,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,60915379,FPL TEST (CLAMP LOCK),2020-04-07,2020-04-17,2020-04-11,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,61470329,FPL TEST (CLAMP LOCK),2020-05-19,2020-05-29,2020-05-24,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,61941766,CLAMP LOCK HYDRAULIC POINTS,2020-06-23,2020-07-04,2020-07-05,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,61941767,POINT INSPECTION,2020-06-23,2020-07-04,2020-07-05,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,61941768,POINTS - SWITCH ROLLERS,2020-06-23,2020-07-04,2020-07-05,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,1653200,62033904,POINT FITTINGS - MAINTAIN [C],2020-06-30,2020-07-04,2020-07-05,,,,

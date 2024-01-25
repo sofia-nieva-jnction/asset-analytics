@@ -1,0 +1,16 @@
+route,asset_class,asset_number,work_order_number,work_order_description,raised_date,planned_start_date,completed_date,fault_code,extended_text,defect_desc,completion_comments
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,59515198,FPL TEST (MACHINE),2019-12-24,2020-01-03,2020-01-05,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,59515199,POINT MACHINE - HW STYLE,2019-12-24,2020-01-03,2020-01-05,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,59515200,POINT MACHINE - HW STYLE,2019-12-24,2020-01-03,2020-01-05,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,59515201,POINT INSPECTION,2019-12-24,2020-01-03,2020-01-05,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,59515202,POINT FITTINGS - MAINTAIN [C],2019-12-24,2020-01-03,2020-01-05,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,60156700,POINT MACHINE PREP,2020-01-30,,2020-01-30,, Remove points chok ,, Remove points chok 
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,60611583,FPL TEST (MACHINE),2020-03-17,2020-03-27,2020-03-26,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,60611584,POINT MACHINE - HW STYLE,2020-03-17,2020-03-27,2020-03-26,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,60611585,POINT INSPECTION,2020-03-17,2020-03-27,2020-03-26,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,60611586,POINT FITTINGS - MAINTAIN [C],2020-03-17,2020-03-27,2020-03-26,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,61257082,POINT MACHINE - HW STYLE,2020-03-03,,2020-03-03,," Original fault report reported that fault was with 612 pts, tested on arrival and no fault found. Then signaller stayed fault was with 604 pts, c or d end. ",," Originally reported as 612 pts, fault wasn't with 604 pts, D end, LH sw not locking. Reshimmed, slide chairs and schwiag rollers cleaned and lubricated. Gauged and tested to restor e."
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,61752063,FPL TEST (MACHINE),2020-06-09,2020-06-19,2020-06-17,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,61752064,POINT MACHINE - HW STYLE,2020-06-09,2020-06-19,2020-06-17,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,61752065,POINT INSPECTION,2020-06-09,2020-06-19,2020-06-17,,,,
+LNW South,S&C (Signalling) - Point Operating Equipment,548731,61752066,POINT FITTINGS - MAINTAIN [C],2020-06-09,2020-06-19,2020-06-17,,,,
