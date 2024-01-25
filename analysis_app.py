@@ -68,7 +68,7 @@ with tab1:
         
         if asset_number_search_worst!='':
             try: 
-                worst_perfoming_table = worst_perfoming_table[worst_perfoming_table.asset_number==int(asset_number_search_worst)]
+                worst_perfoming_table = worst_perfoming_table[worst_perfoming_table.ellipse_asset_number==int(asset_number_search_worst)]
             except:
                 st.write('Input a valid Asset Number')
 
