@@ -122,19 +122,25 @@ with tab1:
         trends_df_styled = trends_df_styled.format("{:+.2%}", subset=['change15', 'change30', 'change60', 'change90'])
 
         if len(trends_df) > 0:
-            st.dataframe(
-                trends_df_styled,
-                column_config={
-                    'asset_number': st.column_config.TextColumn('Asset Number', disabled=True), 
-                    'days_since_last_fault': 'Days since last Fault', 
-                    'change15': st.column_config.NumberColumn('Change last 15 days', format = "%.2f %%"), 
-                    'change30': st.column_config.NumberColumn('Change last 30 days', format = "%.2f %%"), 
-                    'change60': st.column_config.NumberColumn('Change last 60 days', format = "%.2f %%"), 
-                    'change90': st.column_config.NumberColumn('Change last 90 days', format = "%.2f %%"), 
-                    "values": st.column_config.LineChartColumn(
-                        f"{attribute_line_chart.replace('_', ' ')} (past 6 months)", width='large')
-                },
-                use_container_width=True, hide_index=True)
+            c4, c5, c6 = st.columns([0.05, 0.5, 0.05])
+            
+            with c4:
+                st.write('')
+            with c5:
+                st.dataframe(trends_df_styled,
+                             column_config={
+                                'asset_number': st.column_config.TextColumn('Asset Number', disabled=True), 
+                                'days_since_last_fault': 'Days since last Fault', 
+                                'change15': st.column_config.NumberColumn('Change last 15 days', format = "%.2f %%", width='small'), 
+                                'change30': st.column_config.NumberColumn('Change last 30 days', format = "%.2f %%", width='small'), 
+                                'change60': st.column_config.NumberColumn('Change last 60 days', format = "%.2f %%", width='small'), 
+                                'change90': st.column_config.NumberColumn('Change last 90 days', format = "%.2f %%", width='small'), 
+                                "values": st.column_config.LineChartColumn(
+                                    f"{attribute_line_chart.replace('_', ' ')} (past 6 months)", width='large')
+                             },
+                             use_container_width=True, hide_index=True)
+            with c6:
+                st.write('')
         else:
             st.write('Asset Not Found')
 
