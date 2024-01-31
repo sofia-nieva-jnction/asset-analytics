@@ -34,7 +34,7 @@ with tab1:
                                             'ellipse_asset_class_group_desc': 'Class Group (Ellipse)',
                                             'ellipse_asset_count': 'Asset Count (Ellipse)',
                                             'fms_failures_count_6m_2020': 'Total Failures (FMS)',
-                                            'count_service_affecting_faults_6m_2020': 'Service Affecting Failures (FMS)', 
+                                            'count_service_affecting_faults_6m_2020': 'Service Affecting (FMS)', 
                                             'has_radar_percentage': '% in RADAR'},
                         hide_index=True, use_container_width=True)
         with col2:
