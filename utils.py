@@ -64,17 +64,17 @@ def plot_vertical_histograms(table, y_col, y_name):
                         subplot_titles=['Number of Failures (Jan - Jun 2020)', 'Percentage of Assets with RADAR data'])
 
     fig.add_trace(go.Bar(y=table[y_col], x=table['fms_failures_count_6m_2020'],
-                            hovertemplate="Total Failures: %{x}<br><extra></extra>",# showlegend=False,
+                            hovertemplate="Total Failures: %{x}<br><extra></extra>", name='Total Failures', # showlegend=False,
                             # text=table['fms_failures_count_6m_2020'], textposition='auto'
                             ), 
                 row=1, col=1)
     fig.add_trace(go.Bar(y=table[y_col], x=table['count_service_affecting_faults_6m_2020'],
-                            hovertemplate="Service Affecting<br>Failures: %{x}<br><extra></extra>",# showlegend=False,
+                            hovertemplate="Service Affecting<br>Failures: %{x}<br><extra></extra>", name='Service Affecting Failures', # showlegend=False,
                             # text=table['count_service_affecting_faults_6m_2020'], textposition='auto'
                             ),
                 row=1, col=1)
     fig.add_trace(go.Bar(y=table[y_col], x=table['has_radar_percentage']/100, marker_color='green', opacity=0.7,
-                            hovertemplate="Assets with RADAR<br>data: %{x}<br><extra></extra>", showlegend=False,
+                            hovertemplate="Assets with RADAR<br>data: %{x}<br><extra></extra>",  name='Assets in RADAR', # showlegend=False,
                             # text=table['has_radar_percentage']/100, textposition='auto'
                             ), 
                 row=1, col=2)
@@ -86,7 +86,9 @@ def plot_vertical_histograms(table, y_col, y_name):
     fig.update_traces(orientation = 'h')
     fig.update_layout(barmode="overlay", bargap=0.1,
                       yaxis={'categoryorder': 'array', 'categoryarray':cat_order},
-                      height=400, margin=dict(l=20,r=0,b=0,t=20))
+                      height=400, margin=dict(l=20,r=0,b=0,t=20),
+                      legend=dict(orientation="h", yanchor="bottom", y=0, xanchor="right", x=0.5)
+                     )
     
     return fig
 
