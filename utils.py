@@ -64,12 +64,12 @@ def plot_vertical_histograms(table, y_col, y_name):
                         subplot_titles=['Number of Failures (Jan - Jun 2020)', 'Percentage of Assets with RADAR data'])
 
     fig.add_trace(go.Bar(y=table[y_col], x=table['fms_failures_count_6m_2020'],
-                            hovertemplate="Total Failures: %{x}<br><extra></extra>", showlegend=False,
+                            hovertemplate="Total Failures: %{x}<br><extra></extra>",# showlegend=False,
                             # text=table['fms_failures_count_6m_2020'], textposition='auto'
                             ), 
                 row=1, col=1)
     fig.add_trace(go.Bar(y=table[y_col], x=table['count_service_affecting_faults_6m_2020'],
-                            hovertemplate="Service Affecting<br>Failures: %{x}<br><extra></extra>", showlegend=False,
+                            hovertemplate="Service Affecting<br>Failures: %{x}<br><extra></extra>",# showlegend=False,
                             # text=table['count_service_affecting_faults_6m_2020'], textposition='auto'
                             ),
                 row=1, col=1)
