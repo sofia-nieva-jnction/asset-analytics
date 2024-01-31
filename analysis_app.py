@@ -178,15 +178,18 @@ with tab1:
 
         with st.expander("Faults Details", expanded=True):
             st.subheader(f'Faults List (Jan-July 2020)')
-            st.dataframe(faults_list[['occurred_date', 'fault_number', 'delivery_unit', 'trust_incident_numbers', 'is_service_affecting', 'component_level_1_2', 'priority', 'symptom', 'risk', 'sincs_status']].dropna(axis=1), use_container_width=True)
-            st.subheader(f'Alarms')
-            st.write('Showing the number of alarms in the 14 days preceding each failure')
+            faults_list_table = faults_list[['occurred_date', 'fault_number', 'delivery_unit', 'trust_incident_numbers', 'is_service_affecting', 'component_level_1_2', 'priority', 'symptom', 'risk', 'sincs_status']].dropna(axis=1)
             radar = get_radar_data(asset_number)
             work_orders_asset = get_work_orders(asset_number)
             if asset_class == 'Signalling - TC - DC':
+                st.dataframe(faults_list_table, use_container_width=True)
+                st.subheader(f'Alarms')
+                st.write('Showing the number of alarms in the 14 days preceding each failure')
                 st.dataframe(alarms_near_failures(faults_list, radar, work_orders_asset, d=14), use_container_width=True)
             else:
-                st.dataframe(alarms_near_failures(faults_list, radar, work_orders_asset, d=14)[['Date', 'Fault Number', 'Days since last Fault', 'Days since last Work Order']], use_container_width=True)
+                st.dataframe(
+                    faults_list_table.merge(alarms_near_failures(faults_list, radar, work_orders_asset, d=14)[['Fault Number', 'Days since last Fault', 'Days since last Work Order']], how='left', left_on='fault_number', right_on='Fault Number'),
+                    use_container_width=True)
 
 
         with st.expander("Work Orders Details", expanded=True):
