@@ -27,14 +27,14 @@ with tab1:
     with tab11:
 
         st.header(f'Failures and RADAR data by Asset Class Group​')
-        col1, col2 = st.columns([0.5, 0.47])
+        col1, col2 = st.columns([0.5, 0.45])
         with col1:
             l0 = get_l0(route)
             st.dataframe(l0, column_config={'route': 'Route', 
                                             'ellipse_asset_class_group_desc': 'Class Group',
                                             'ellipse_asset_count': 'Asset Count (Ellipse)',
                                             'fms_failures_count_6m_2020': 'Total Failures (FMS)',
-                                            'count_service_affecting_faults_6m_2020': 'Service Affecting (FMS)', 
+                                            'count_service_affecting_faults_6m_2020': 'Service Affecting', 
                                             'has_radar_percentage': '% in RADAR'},
                         hide_index=True, use_container_width=True)
         with col2:
