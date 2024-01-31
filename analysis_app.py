@@ -165,6 +165,8 @@ with tab1:
             st.subheader(f'Name and Type')
             st.dataframe(pd.concat([ellipse_details[['asset_number', 'colloquial_name_1', 'colloquial_name_2', 'colloquial_name_3', 'colloquial_name_4', 'colloquial_name_5', 'colloquial_name_6', 'colloquial_name_7', 'colloquial_name_8', 'egi_desc', 'egi_code', 'asset_status_code_desc']].dropna(axis=1), 
                                     faults_list[['delivery_unit', 'asset_description']].dropna(axis=1).drop_duplicates()], axis=1),
+                         column_config={
+                            'asset_number': st.column_config.TextColumn('asset_number', disabled=True)},
                          use_container_width=True, hide_index=True)
             st.subheader(f'Location')
             fms_ellipse = pd.concat([ellipse_details[['route', 'start_miles', 'start_yards', 'end_miles', 'end_yards']].dropna(axis=1), 
