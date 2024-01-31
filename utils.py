@@ -87,7 +87,7 @@ def plot_vertical_histograms(table, y_col, y_name):
     fig.update_layout(barmode="overlay", bargap=0.1,
                       yaxis={'categoryorder': 'array', 'categoryarray':cat_order},
                       height=400, margin=dict(l=20,r=0,b=0,t=20),
-                      legend=dict(orientation="h", yanchor="bottom", y=-0.15, xanchor="center", x=0.5)
+                      legend=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
                      )
     
     return fig
