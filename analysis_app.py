@@ -27,7 +27,7 @@ with tab1:
     with tab11:
 
         st.header(f'Failures and RADAR data by Asset Class Group​')
-        col1, col2 = st.columns([0.5, 0.45])
+        col1, col2 = st.columns([0.5, 0.5])
         with col1:
             l0 = get_l0(route)
             st.dataframe(l0, column_config={'route': 'Route', 
@@ -43,7 +43,7 @@ with tab1:
 
 
         st.header(f'Breakdown by Asset Class​')
-        col1, col2 = st.columns([0.5, 0.45])
+        col1, col2 = st.columns([0.5, 0.5])
         with col1:
             l1 = get_l1(route).drop(columns=['route'])
             st.dataframe(l1, column_config={'ellipse_asset_class_group_desc': 'Class Group',
