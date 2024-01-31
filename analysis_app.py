@@ -36,9 +36,9 @@ with tab1:
                                             'fms_failures_count_6m_2020': 'Total Failures (FMS)',
                                             'count_service_affecting_faults_6m_2020': 'Service Affecting', 
                                             'has_radar_percentage': '% in RADAR'},
-                        hide_index=True, use_container_width=True)
+                        hide_index=True, use_container_width=True, height=500)
         with col2:
-            fig = plot_vertical_histograms(l0, y_col='ellipse_asset_class_group_desc', y_name='Asset Class Group')
+            fig = plot_vertical_histograms(l0, y_col='ellipse_asset_class_group_desc', y_name='Asset Class Group', height=500)
             st.plotly_chart(fig, use_container_width=True)
 
 
