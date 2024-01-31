@@ -43,7 +43,7 @@ with tab1:
 
 
         st.header(f'Breakdown by Asset Class​')
-        col1, col2 = st.columns([0.5, 0.47])
+        col1, col2 = st.columns([0.5, 0.45])
         with col1:
             l1 = get_l1(route).drop(columns=['route'])
             st.dataframe(l1, column_config={'ellipse_asset_class_group_desc': 'Class Group',
