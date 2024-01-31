@@ -28,7 +28,7 @@ with tab1:
 
         st.header(f'Failures and RADAR data by Asset Class Group​')
         col1, col2 = st.columns([0.5, 0.5])
-        h=450
+        h=460
         with col1:
             l0 = get_l0(route)
             st.dataframe(l0, column_config={'route': 'Route', 
