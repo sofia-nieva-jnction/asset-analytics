@@ -57,7 +57,7 @@ def get_berth_steps(asset_number, fault_number):
     return pd.read_csv(f'berth_steps_{asset_number}_{fault_number}_eg.csv', dtype={'to_berth': str, 'from_berth': str})
 
 @st.cache_data
-def plot_vertical_histograms(table, y_col, y_name):
+def plot_vertical_histograms(table, y_col, y_name, height=400):
     cat_order = table.sort_values('fms_failures_count_6m_2020', ascending=True)[y_col].to_list()
 
     fig = make_subplots(rows=1, cols=2, shared_yaxes=True, 
@@ -86,7 +86,7 @@ def plot_vertical_histograms(table, y_col, y_name):
     fig.update_traces(orientation = 'h')
     fig.update_layout(barmode="overlay", bargap=0.1,
                       yaxis={'categoryorder': 'array', 'categoryarray':cat_order},
-                      height=400, margin=dict(l=20,r=0,b=0,t=20),
+                      height=height, margin=dict(l=20,r=0,b=0,t=20),
                       legend=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5)
                      )
     
