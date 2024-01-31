@@ -28,6 +28,7 @@ with tab1:
 
         st.header(f'Failures and RADAR data by Asset Class Group​')
         col1, col2 = st.columns([0.5, 0.5])
+        h=475
         with col1:
             l0 = get_l0(route)
             st.dataframe(l0, column_config={'route': 'Route', 
@@ -36,9 +37,9 @@ with tab1:
                                             'fms_failures_count_6m_2020': 'Total Failures (FMS)',
                                             'count_service_affecting_faults_6m_2020': 'Service Affecting', 
                                             'has_radar_percentage': '% in RADAR'},
-                        hide_index=True, use_container_width=True, height=500)
+                        hide_index=True, use_container_width=True, height=h)
         with col2:
-            fig = plot_vertical_histograms(l0, y_col='ellipse_asset_class_group_desc', y_name='Asset Class Group', height=500)
+            fig = plot_vertical_histograms(l0, y_col='ellipse_asset_class_group_desc', y_name='Asset Class Group', height=h)
             st.plotly_chart(fig, use_container_width=True)
 
 
