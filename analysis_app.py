@@ -188,7 +188,8 @@ with tab1:
                 st.dataframe(alarms_near_failures(faults_list, radar, work_orders_asset, d=14), use_container_width=True)
             else:
                 st.dataframe(
-                    faults_list_table.merge(alarms_near_failures(faults_list, radar, work_orders_asset, d=14)[['Fault Number', 'Days since last Fault', 'Days since last Work Order']], how='left', left_on='fault_number', right_on='Fault Number'),
+                    faults_list_table.merge(alarms_near_failures(faults_list, radar, work_orders_asset, d=14)[['Fault Number', 'Days since last Fault', 'Days since last Work Order']],
+                                            how='left', left_on='fault_number', right_on='Fault Number').drop(columns='Fault Number'),
                     use_container_width=True)
 
 
