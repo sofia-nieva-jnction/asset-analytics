@@ -569,7 +569,7 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
     hovertemplate="Value: %{y}<br><extra></extra>" #f"<b>{attribute.replace('_', ' ')}</b><br>" + "Value: %{y}<br>" + "<extra></extra>"
     fig.add_trace(go.Scatter(x=df_merged[df_merged.is_max]['datetime'],
                              y=df_merged[df_merged.is_max]['value_smoothed'],
-                             line_color='red', name='Max', hovertemplate=hovertemplate, showlegend=False), 
+                             line_color='red', line_width=1, name='Max', hovertemplate=hovertemplate, showlegend=False), 
                  row=1, col=1)
                                        
     fig.update_layout(legend_groupclick="toggleitem")#legend_title_text='Alarms')
