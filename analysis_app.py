@@ -182,14 +182,17 @@ with tab1:
             radar = get_radar_data(asset_number)
             work_orders_asset = get_work_orders(asset_number)
             if asset_class == 'Signalling - TC - DC':
-                st.dataframe(faults_list_table, use_container_width=True)
+                st.dataframe(faults_list_table, use_container_width=True, 
+                             column_config={'asset_number': st.column_config.TextColumn('asset_number', disabled=True)})
                 st.subheader(f'Alarms')
                 st.write('Showing the number of alarms in the 14 days preceding each failure')
-                st.dataframe(alarms_near_failures(faults_list, radar, work_orders_asset, d=14), use_container_width=True)
+                st.dataframe(alarms_near_failures(faults_list, radar, work_orders_asset, d=14), use_container_width=True,
+                             column_config={'asset_number': st.column_config.TextColumn('asset_number', disabled=True)})
             else:
                 st.dataframe(
                     faults_list_table.merge(alarms_near_failures(faults_list, radar, work_orders_asset, d=14)[['Fault Number', 'Days since last Fault', 'Days since last Work Order']],
                                             how='left', left_on='fault_number', right_on='Fault Number').drop(columns='Fault Number'),
+                    column_config={'asset_number': st.column_config.TextColumn('asset_number', disabled=True)},
                     use_container_width=True)
 
 
