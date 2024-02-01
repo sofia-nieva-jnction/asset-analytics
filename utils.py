@@ -430,24 +430,6 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
                       template='plotly_white',
                       title_text=f"{q} {attribute.replace('_', ' ')} - Average over {h} hour windows / {count_attribute.replace('_', ' ')} per day"
                     )
-
-    faults_list['failed_datetime'] = pd.to_datetime(faults_list['failed_datetime'])                                  
-    for i, row in faults_list.iterrows():
-        if i<len(faults_list)-1:
-            next_failure = pd.to_datetime(faults_list.loc[i+1, 'failed_datetime']).date()
-            cond = (next_failure - row['failed_datetime'].date() > pd.to_timedelta('20D'))
-        else: 
-            cond = True
-        fig.add_vline(x=pd.to_datetime(row['failed_datetime']), line_color='grey')
-        fig.add_annotation(x=pd.to_datetime(row['failed_datetime']),
-                           xanchor='left' if cond else 'right', 
-                           align='left' if cond else 'right', 
-                           y=1, yref="paper", font_size=14, font_color='black',
-                           text=f"Fault<br><b>{row['fault_number']}</b><br><br>" 
-                              + f"{row['failed_datetime'].strftime('%d %b')}<br>"
-                              + f"{row['failed_datetime'].strftime('%H:%M')}<br><br>"
-                              #+ ("<b>Service<br>Affecting</b>" if row['is_service_affecting'] else  "")
-                              , showarrow=False)
         
     ###### Alarms ######
         
@@ -573,7 +555,25 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
                  row=1, col=1)
                                        
     fig.update_layout(legend_groupclick="toggleitem")#legend_title_text='Alarms')
-    
+
+    faults_list['failed_datetime'] = pd.to_datetime(faults_list['failed_datetime'])                                  
+    for i, row in faults_list.iterrows():
+        if i<len(faults_list)-1:
+            next_failure = pd.to_datetime(faults_list.loc[i+1, 'failed_datetime']).date()
+            cond = (next_failure - row['failed_datetime'].date() > pd.to_timedelta('20D'))
+        else: 
+            cond = True
+        fig.add_vline(x=pd.to_datetime(row['failed_datetime']), line_color='grey')
+        fig.add_annotation(x=pd.to_datetime(row['failed_datetime']),
+                           xanchor='left' if cond else 'right', 
+                           align='left' if cond else 'right', 
+                           y=1, yref="paper", font_size=14, font_color='black',
+                           text=f"Fault<br><b>{row['fault_number']}</b><br><br>" 
+                              + f"{row['failed_datetime'].strftime('%d %b')}<br>"
+                              + f"{row['failed_datetime'].strftime('%H:%M')}<br><br>"
+                              #+ ("<b>Service<br>Affecting</b>" if row['is_service_affecting'] else  "")
+                              , showarrow=False)
+                                       
     return fig, custom_trend_change_text
 
 def add_trend_to_plot(fig, df_smoothed_maxs, trend_start, trend_end):
