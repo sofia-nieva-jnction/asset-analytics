@@ -401,12 +401,6 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
 
     q = 'Max' if attribute=='Circuit_Current' else 'Average'
     fig = make_subplots(rows=2, cols=1, row_heights=[5,2], shared_xaxes=True, vertical_spacing=0.1)
-
-    hovertemplate="Value: %{y}<br><extra></extra>" #f"<b>{attribute.replace('_', ' ')}</b><br>" + "Value: %{y}<br>" + "<extra></extra>"
-    fig.add_trace(go.Scatter(x=df_merged[df_merged.is_max]['datetime'],
-                             y=df_merged[df_merged.is_max]['value_smoothed'],
-                             line_color='red', name='Max', hovertemplate=hovertemplate, showlegend=False), 
-                 row=1, col=1)
     
     fig.update_xaxes(
             type='date',
@@ -572,7 +566,12 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
     else:
         custom_trend_change_text = None
 
-
+    hovertemplate="Value: %{y}<br><extra></extra>" #f"<b>{attribute.replace('_', ' ')}</b><br>" + "Value: %{y}<br>" + "<extra></extra>"
+    fig.add_trace(go.Scatter(x=df_merged[df_merged.is_max]['datetime'],
+                             y=df_merged[df_merged.is_max]['value_smoothed'],
+                             line_color='red', name='Max', hovertemplate=hovertemplate, showlegend=False), 
+                 row=1, col=1)
+                                       
     fig.update_layout(legend_groupclick="toggleitem")#legend_title_text='Alarms')
     
     return fig, custom_trend_change_text
