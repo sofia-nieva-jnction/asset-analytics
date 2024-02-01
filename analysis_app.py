@@ -187,7 +187,7 @@ with tab1:
                 st.subheader(f'Alarms')
                 st.write('Showing the number of alarms in the 14 days preceding each failure')
                 st.dataframe(alarms_near_failures(faults_list, radar, work_orders_asset, d=14), use_container_width=True,
-                             column_config={'fault_number': st.column_config.TextColumn('fault_number', disabled=True)})
+                             column_config={'Fault Number': st.column_config.TextColumn('fault_number', disabled=True)})
             else:
                 st.dataframe(
                     faults_list_table.merge(alarms_near_failures(faults_list, radar, work_orders_asset, d=14)[['Fault Number', 'Days since last Fault', 'Days since last Work Order']],
