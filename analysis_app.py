@@ -328,8 +328,9 @@ with tab1:
                                                 [None] + [x for x in class_attributes_other if x in day1_attributes],
                                                 key = 'other1')
                 
-                day2_start = st.date_input("Select day to compare", None, key='day2', max_value=datetime.date(year=2020, month=7, day=6))
-                day2_end = day2_start
+                # day2_start = st.date_input("Select day to compare", None, key='day2', max_value=datetime.date(year=2020, month=7, day=6))
+                # day2_end = day2_start
+                day2_start = None
                 
             with space2:
                 st.write('')    
@@ -341,7 +342,7 @@ with tab1:
                                                 & (radar_summary['attribute']!=attribute_trace1)].sort_values(['date', 'attribute'])
                 radar_summary_day1['day'] = radar_summary_day1['date'].apply(lambda x: x.strftime('%A'))
                 radar_summary_day1 = radar_summary_day1[['asset', 'attribute', 'day', 'date', 'records_count']]
-                st.dataframe(radar_summary_day1, use_container_width=True, hide_index=True, height=300)
+                st.dataframe(radar_summary_day1, use_container_width=True, hide_index=True, height=250)
 
             with space3:
                 st.write('') 
@@ -349,7 +350,7 @@ with tab1:
             with col5:
                 st.markdown(f'Available Dates')
                 st.dataframe(radar['datetime'].apply(lambda x: x.date()).drop_duplicates().sort_values(),
-                            hide_index=True, use_container_width=True, height=300)
+                            hide_index=True, use_container_width=True, height=250)
 
             if attribute_trace1 in radar_summary[(radar_summary['date']>=day1_start) & (radar_summary['date']<=day1_end)].attribute.tolist():      
                 fig1 = radar_trace_plot(asset_class, radar, day1_start, day1_end, all_faults_timeline, attribute_trace1, attribute_other1)
