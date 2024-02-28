@@ -212,18 +212,18 @@ with tab1:
         with st.expander("RADAR Data", expanded=True):
             st.subheader(f'Long Term Aggregation of RADAR Traces')
 
-            col1, col2 = st.columns([0.1, 0.9])
+            # col1, col2 = st.columns([0.1, 0.9])
 
-            with col1:
-                st.write('')
-                st.markdown('Last 6 Months Counts:')
-            with col2:
-                st.dataframe(worst_perfoming_table[worst_perfoming_table.ellipse_asset_number==asset_number].drop(columns=['ellipse_asset_number', 'is_in_radar']),
-                column_config={'fms_failures_count_6m_2020': 'Total Failures',
-                            'count_service_affecting_faults_6m_2020': 'Service Affecting Failures', 
-                            'total_work_orders': 'Total Work Orders', 
-                            'total alarms': 'Total Alarms'},
-                            use_container_width=True, hide_index=True)
+            # with col1:
+            #     st.write('')
+            #     st.markdown('Last 6 Months Counts:')
+            # with col2:
+            #     st.dataframe(worst_perfoming_table[worst_perfoming_table.ellipse_asset_number==asset_number].drop(columns=['ellipse_asset_number', 'is_in_radar']),
+            #     column_config={'fms_failures_count_6m_2020': 'Total Failures',
+            #                 'count_service_affecting_faults_6m_2020': 'Service Affecting Failures', 
+            #                 'total_work_orders': 'Total Work Orders', 
+            #                 'total alarms': 'Total Alarms'},
+            #                 use_container_width=True, hide_index=True)
 
             c1, s1, c2, s2, c3 = st.columns([0.3, 0.04, 0.3, 0.04, 0.5])
 
