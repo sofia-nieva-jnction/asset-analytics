@@ -281,7 +281,13 @@ with tab1:
                         st.write(f'The change between {trend_start} and {trend_end} ({day_diff} days) was: {custom_trend_change_text}')
                     except:
                         st.write(f'Try selecting other dates')
-            
+
+            st.dataframe(worst_perfoming_table[worst_perfoming_table.ellipse_asset_number==asset_number].drop(columns=['ellipse_asset_number', 'is_in_radar']),
+                        column_config={'fms_failures_count_6m_2020': 'Total Failures',
+                                    'count_service_affecting_faults_6m_2020': 'Service Affecting Failures', 
+                                    'total_work_orders': 'Total Work Orders', 
+                                    'total alarms': 'Total Alarms'},
+                        use_container_width=True)
 
             st.subheader(f'Timeline of Failures')
 
