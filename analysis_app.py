@@ -65,7 +65,7 @@ with tab1:
       
         worst_perfoming_table = get_worst_perfoming_table(route, asset_class)
 
-        c1, s1, c2 = st.columns([0.26, 0.05, 0.2])
+        c1, s1, c2 = st.columns([0.26, 0.15, 0.05])
         with c1:
             asset_number_search_worst = st.text_input('Search Asset', placeholder = 'Input Asset Number', key='search_worst')   
         with s1:
