@@ -215,7 +215,8 @@ with tab1:
             col1, col2 = st.columns([0.1, 0.9])
 
             with col1:
-                st.markdown('Total Alarms Count')
+                st.write('')
+                st.markdown('Last 6 Months Counts:')
             with col2:
                 st.dataframe(worst_perfoming_table[worst_perfoming_table.ellipse_asset_number==asset_number].drop(columns=['ellipse_asset_number', 'is_in_radar']),
                 column_config={'fms_failures_count_6m_2020': 'Total Failures',
