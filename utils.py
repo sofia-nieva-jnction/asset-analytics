@@ -324,6 +324,7 @@ def alarms_near_failures(faults_list, radar, work_orders_asset, d=14):
     alarms = radar_filtered[radar_filtered.attribute.isin(alarms_types)].reset_index(drop=True).copy()
     alarms['attribute'] = alarms['attribute'].replace({'High_Occupied_Current_Count_Value': 'High_Occupied_Current_Count', 
                                                     'Low_Clear_Current_Count_Value': 'Low_Clear_Current_Count',
+                                                    'Low_Clear_Current': 'Low_Clear_Current_Count',
                                                     'Clear_Occupied_Clear_Flick_Count': 'COC_Flick_Count',
                                                     'Occupied_Clear_Occupied_Flick_Count': 'OCO_Flick_Count',
                                                     'Poor_Shunt_Count_Value': 'Poor_Shunt_Count',
@@ -331,6 +332,7 @@ def alarms_near_failures(faults_list, radar, work_orders_asset, d=14):
     alarms = alarms.drop(columns='value').drop_duplicates()
     alarms_types = pd.Series(alarms_types).replace({'High_Occupied_Current_Count_Value': 'High_Occupied_Current_Count', 
                                                     'Low_Clear_Current_Count_Value': 'Low_Clear_Current_Count',
+                                                    'Low_Clear_Current': 'Low_Clear_Current_Count',
                                                     'Clear_Occupied_Clear_Flick_Count': 'COC_Flick_Count',
                                                     'Occupied_Clear_Occupied_Flick_Count': 'OCO_Flick_Count',
                                                     'Poor_Shunt_Count_Value': 'Poor_Shunt_Count',
@@ -443,6 +445,7 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
     alarms = radar_days[radar_days.attribute.isin(alarms_types)].reset_index(drop=True).copy()
     alarms['attribute'] = alarms['attribute'].replace({'High_Occupied_Current_Count_Value': 'High_Occupied_Current_Count', 
                                                        'Low_Clear_Current_Count_Value': 'Low_Clear_Current_Count',
+                                                       'Low_Clear_Current': 'Low_Clear_Current_Count',
                                                        'Clear_Occupied_Clear_Flick_Count': 'COC_Flick_Count',
                                                        'Occupied_Clear_Occupied_Flick_Count': 'OCO_Flick_Count',
                                                        'Poor_Shunt_Count_Value': 'Poor_Shunt_Count',
@@ -450,6 +453,7 @@ def plot_max_smoothed_and_count_tc(date_start, date_end, attribute, count_attrib
     #alarms['attribute'] = alarms['attribute'].apply(lambda x: x.replace('_Value', '').replace('Clear_Occupied_Clear', 'COC').replace('Occupied_Clear_Occupied', 'OCO'))
     alarms_types = pd.Series(alarms_types).replace({'High_Occupied_Current_Count_Value': 'High_Occupied_Current_Count', 
                                                     'Low_Clear_Current_Count_Value': 'Low_Clear_Current_Count',
+                                                    'Low_Clear_Current': 'Low_Clear_Current_Count',
                                                        'Clear_Occupied_Clear_Flick_Count': 'COC_Flick_Count',
                                                        'Occupied_Clear_Occupied_Flick_Count': 'OCO_Flick_Count',
                                                        'Poor_Shunt_Count_Value': 'Poor_Shunt_Count',
