@@ -60,7 +60,7 @@ with tab1:
             st.plotly_chart(fig, use_container_width=True)
 
     with tab12:
-        asset_name_place = pd.read_csv('asset_name_place.csv')
+        asset_name_place = pd.read_csv('asset_name_place.csv').drop_duplicates()
         
         st.header('Failures, Work Orders and Alarms (for the period Jan-July 2020)')
         st.write('Default order by number of Service Affecting Failures. Click on the name of another column to reorder based on that column.')
