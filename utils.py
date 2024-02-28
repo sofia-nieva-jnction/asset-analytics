@@ -323,12 +323,14 @@ def alarms_near_failures(faults_list, radar, work_orders_asset, d=14):
     alarms_types = [x for x in asset_attributes if (x not in ['Total_Occupations_Count', 'Circuit_Current'])]
     alarms = radar_filtered[radar_filtered.attribute.isin(alarms_types)].reset_index(drop=True).copy()
     alarms['attribute'] = alarms['attribute'].replace({'High_Occupied_Current_Count_Value': 'High_Occupied_Current_Count', 
+                                                    'Low_Clear_Current_Count_Value': 'Low_Clear_Current_Count',
                                                     'Clear_Occupied_Clear_Flick_Count': 'COC_Flick_Count',
                                                     'Occupied_Clear_Occupied_Flick_Count': 'OCO_Flick_Count',
                                                     'Poor_Shunt_Count_Value': 'Poor_Shunt_Count',
                                                     'Unstable_Clear_Current_Count_Value': 'Unstable_Clear_Current_Count'})
     alarms = alarms.drop(columns='value').drop_duplicates()
     alarms_types = pd.Series(alarms_types).replace({'High_Occupied_Current_Count_Value': 'High_Occupied_Current_Count', 
+                                                    'Low_Clear_Current_Count_Value': 'Low_Clear_Current_Count',
                                                     'Clear_Occupied_Clear_Flick_Count': 'COC_Flick_Count',
                                                     'Occupied_Clear_Occupied_Flick_Count': 'OCO_Flick_Count',
                                                     'Poor_Shunt_Count_Value': 'Poor_Shunt_Count',
