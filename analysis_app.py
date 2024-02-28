@@ -60,10 +60,13 @@ with tab1:
             st.plotly_chart(fig, use_container_width=True)
 
     with tab12:
+        asset_name_place = pd.read_csv('asset_name_place.csv')
+        
         st.header('Failures, Work Orders and Alarms (for the period Jan-July 2020)')
         st.write('Default order by number of Service Affecting Failures. Click on the name of another column to reorder based on that column.')
       
         worst_perfoming_table = get_worst_perfoming_table(route, asset_class)
+        worst_perfoming_table = asset_name_place.merge(worst_perfoming_table, how='right', on='ellipse_asset_number')
 
         c1, s1, c2 = st.columns([0.26, 0.12, 0.08])
         with c1:
@@ -86,6 +89,8 @@ with tab1:
         if len(worst_perfoming_table) > 0:
             st.dataframe(worst_perfoming_table,
                         column_config={'route': 'Route', 
+                                       'colloquial_name_1': 'Colloquial Name', 
+                                    'place_name': 'Place Name', 
                                     'ellipse_asset_class_group_desc': 'Class Group',
                                     'ellipse_asset_class_desc': 'Class',
                                     'ellipse_asset_number':  st.column_config.TextColumn('Asset Number', disabled=True),
@@ -133,7 +138,8 @@ with tab1:
         trends_df['highlight_3m'] = trends_df['change90'] > threshold
         asc = [False, False, False, False] if asset_class == 'S&C (Signalling) - Point Operating Equipment' else [True, True, True, True,]
         trends_df.sort_values(['highlight_15d', 'highlight_1m', 'highlight_2m', 'highlight_3m'], ascending=asc, inplace=True)
-        trends_df = trends_df[['asset_number', 'days_since_last_fault', 'change15', 'change30', 'change60', 'change90', 'values']]
+        trends_df = asset_name_place.merge(trends_df, how='right', left_on='ellipse_asset_number', right_on='asset_number')
+        trends_df = trends_df[['asset_number', 'colloquial_name_1', 'place_name', 'days_since_last_fault', 'change15', 'change30', 'change60', 'change90', 'values']]
         
         if asset_number_search_trend!='':
             try: 
@@ -148,6 +154,8 @@ with tab1:
             st.dataframe(trends_df_styled,
                          column_config={
                             'asset_number': st.column_config.TextColumn('Asset Number', disabled=True), 
+                            'colloquial_name_1': 'Colloquial Name', 
+                            'place_name': 'Place Name', 
                             'days_since_last_fault': 'Days since last Fault', 
                             'change15': st.column_config.NumberColumn('Change last 15 days', format = "%.2f %%", width='small'), 
                             'change30': st.column_config.NumberColumn('Change last 30 days', format = "%.2f %%", width='small'), 
