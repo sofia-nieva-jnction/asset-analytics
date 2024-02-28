@@ -64,14 +64,21 @@ with tab1:
         st.write('Default order by number of Service Affecting Failures. Click on the name of another column to reorder based on that column.')
       
         worst_perfoming_table = get_worst_perfoming_table(route, asset_class)
-        
-        asset_number_search_worst = st.text_input('Search Asset', placeholder = 'Input Asset Number', key='search_worst')        
+
+        c1, c2 = st.columns([0.26, 0.2])
+        with c1:
+            asset_number_search_worst = st.text_input('Search Asset', placeholder = 'Input Asset Number', key='search_worst')   
+        with c2:
+            on = st.toggle('Only show assets in RADAR', value=True)
         
         if asset_number_search_worst!='':
             try: 
                 worst_perfoming_table = worst_perfoming_table[worst_perfoming_table.ellipse_asset_number==int(asset_number_search_worst)]
             except:
                 st.write('Input a valid Asset Number')
+
+        if on:
+            worst_perfoming_table = worst_perfoming_table[worst_perfoming_table['is_in_radar']]
 
         if len(worst_perfoming_table) > 0:
             st.dataframe(worst_perfoming_table,
