@@ -212,12 +212,10 @@ with tab1:
         with st.expander("RADAR Data", expanded=True):
             st.subheader(f'Long Term Aggregation of RADAR Traces')
 
-            col1, space1, col2 = st.columns([0.1, 0.05, 0.8])
+            col1, col2 = st.columns([0.1, 0.9])
 
             with col1:
                 st.markdown('Total Alarms Count')
-            with space1:
-                st.write('')
             with col2:
                 st.dataframe(worst_perfoming_table[worst_perfoming_table.ellipse_asset_number==asset_number].drop(columns=['ellipse_asset_number', 'is_in_radar']),
                 column_config={'fms_failures_count_6m_2020': 'Total Failures',
