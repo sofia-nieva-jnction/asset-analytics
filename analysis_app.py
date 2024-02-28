@@ -212,7 +212,7 @@ with tab1:
         with st.expander("RADAR Data", expanded=True):
             st.subheader(f'Long Term Aggregation of RADAR Traces')
 
-            col1, space1, col2 = st.columns([0.3, 0.05, 0.8])
+            col1, space1, col2 = st.columns([0.1, 0.05, 0.8])
 
             with col1:
                 st.markdown('Total Alarms Count')
